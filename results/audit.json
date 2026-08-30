@@ -1,0 +1,1068 @@
+{
+  "budget": {
+    "actual_total_token_proxy_by_condition": {
+      "adaptive": 899462.7999999999,
+      "small_only": 172425.0,
+      "strong_only": 893000.0
+    },
+    "first_cutoff_exceeds_or_equals_each_run": {
+      "adaptive": true,
+      "small_only": true,
+      "strong_only": true
+    },
+    "frozen_b0": 4818407.599999999,
+    "frozen_total_token_cutoffs": [
+      1204601.8999999997,
+      2409203.7999999993,
+      3613805.6999999993,
+      4818407.599999999
+    ],
+    "post_hoc_empirical_cumulative_curves": {
+      "adaptive": {
+        "actual_total_token_cost_proxy": 899462.7999999999,
+        "comparability": "condition-relative only; not an equal-budget comparison",
+        "points": [
+          {
+            "cumulative_proxy_spent": 224166.70000000007,
+            "cutoff": 224865.69999999998,
+            "fraction_of_condition_actual_total": 0.25,
+            "tasks_included": 143,
+            "verified_plus_passes": 97
+          },
+          {
+            "cumulative_proxy_spent": 447899.4000000001,
+            "cutoff": 449731.39999999997,
+            "fraction_of_condition_actual_total": 0.5,
+            "tasks_included": 270,
+            "verified_plus_passes": 170
+          },
+          {
+            "cumulative_proxy_spent": 674583.3000000003,
+            "cutoff": 674597.1,
+            "fraction_of_condition_actual_total": 0.75,
+            "tasks_included": 411,
+            "verified_plus_passes": 261
+          },
+          {
+            "cumulative_proxy_spent": 899462.8000000007,
+            "cutoff": 899462.7999999999,
+            "fraction_of_condition_actual_total": 1.0,
+            "tasks_included": 542,
+            "verified_plus_passes": 331
+          }
+        ],
+        "post_hoc": true
+      },
+      "small_only": {
+        "actual_total_token_cost_proxy": 172425.0,
+        "comparability": "condition-relative only; not an equal-budget comparison",
+        "points": [
+          {
+            "cumulative_proxy_spent": 43003.5,
+            "cutoff": 43106.25,
+            "fraction_of_condition_actual_total": 0.25,
+            "tasks_included": 136,
+            "verified_plus_passes": 60
+          },
+          {
+            "cumulative_proxy_spent": 85656.0,
+            "cutoff": 86212.5,
+            "fraction_of_condition_actual_total": 0.5,
+            "tasks_included": 269,
+            "verified_plus_passes": 107
+          },
+          {
+            "cumulative_proxy_spent": 129159.0,
+            "cutoff": 129318.75,
+            "fraction_of_condition_actual_total": 0.75,
+            "tasks_included": 406,
+            "verified_plus_passes": 167
+          },
+          {
+            "cumulative_proxy_spent": 172425.0,
+            "cutoff": 172425.0,
+            "fraction_of_condition_actual_total": 1.0,
+            "tasks_included": 542,
+            "verified_plus_passes": 220
+          }
+        ],
+        "post_hoc": true
+      },
+      "strong_only": {
+        "actual_total_token_cost_proxy": 893000.0,
+        "comparability": "condition-relative only; not an equal-budget comparison",
+        "points": [
+          {
+            "cumulative_proxy_spent": 222535.60000000003,
+            "cutoff": 223250.0,
+            "fraction_of_condition_actual_total": 0.25,
+            "tasks_included": 136,
+            "verified_plus_passes": 88
+          },
+          {
+            "cumulative_proxy_spent": 443262.39999999997,
+            "cutoff": 446500.0,
+            "fraction_of_condition_actual_total": 0.5,
+            "tasks_included": 269,
+            "verified_plus_passes": 158
+          },
+          {
+            "cumulative_proxy_spent": 668784.8000000005,
+            "cutoff": 669750.0,
+            "fraction_of_condition_actual_total": 0.75,
+            "tasks_included": 406,
+            "verified_plus_passes": 236
+          },
+          {
+            "cumulative_proxy_spent": 892999.9999999997,
+            "cutoff": 893000.0,
+            "fraction_of_condition_actual_total": 1.0,
+            "tasks_included": 542,
+            "verified_plus_passes": 297
+          }
+        ],
+        "post_hoc": true
+      }
+    },
+    "stored_budget_curves": {
+      "adaptive": {
+        "generation_cost_proxy": {
+          "available": true,
+          "points": [
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 1054515.1999999916,
+              "verified_plus_passes": 331
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 2109030.399999983,
+              "verified_plus_passes": 331
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 3163545.5999999745,
+              "verified_plus_passes": 331
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 4218060.799999966,
+              "verified_plus_passes": 331
+            }
+          ],
+          "reason": null
+        },
+        "total_token_cost_proxy": {
+          "available": true,
+          "points": [
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 1204601.8999999997,
+              "verified_plus_passes": 331
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 2409203.7999999993,
+              "verified_plus_passes": 331
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 3613805.6999999993,
+              "verified_plus_passes": 331
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 4818407.599999999,
+              "verified_plus_passes": 331
+            }
+          ],
+          "reason": null
+        }
+      },
+      "small_only": {
+        "generation_cost_proxy": {
+          "available": true,
+          "points": [
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 1054515.1999999916,
+              "verified_plus_passes": 220
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 2109030.399999983,
+              "verified_plus_passes": 220
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 3163545.5999999745,
+              "verified_plus_passes": 220
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 4218060.799999966,
+              "verified_plus_passes": 220
+            }
+          ],
+          "reason": null
+        },
+        "total_token_cost_proxy": {
+          "available": true,
+          "points": [
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 1204601.8999999997,
+              "verified_plus_passes": 220
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 2409203.7999999993,
+              "verified_plus_passes": 220
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 3613805.6999999993,
+              "verified_plus_passes": 220
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 4818407.599999999,
+              "verified_plus_passes": 220
+            }
+          ],
+          "reason": null
+        }
+      },
+      "strong_only": {
+        "generation_cost_proxy": {
+          "available": true,
+          "points": [
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 1054515.1999999916,
+              "verified_plus_passes": 297
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 2109030.399999983,
+              "verified_plus_passes": 297
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 3163545.5999999745,
+              "verified_plus_passes": 297
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 4218060.799999966,
+              "verified_plus_passes": 297
+            }
+          ],
+          "reason": null
+        },
+        "total_token_cost_proxy": {
+          "available": true,
+          "points": [
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 1204601.8999999997,
+              "verified_plus_passes": 297
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 2409203.7999999993,
+              "verified_plus_passes": 297
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 3613805.6999999993,
+              "verified_plus_passes": 297
+            },
+            {
+              "condition_exhausted_before_cutoff": true,
+              "cutoff": 4818407.599999999,
+              "verified_plus_passes": 297
+            }
+          ],
+          "reason": null
+        }
+      }
+    },
+    "warning": "The frozen 25/50/75/100% B0 cutoffs are nondiscriminating for this completed run: the first cutoff is at or above every condition's actual expenditure."
+  },
+  "complementarity": {
+    "adaptive_only_vs_strong_by_final_success_tier": {
+      "BALANCED": 12,
+      "FAST": 22
+    },
+    "final_success_tier_distribution": {
+      "BALANCED": 69,
+      "BEST": 46,
+      "FAST": 216
+    },
+    "final_success_tier_percent": {
+      "BALANCED": 0.2084592145015106,
+      "BEST": 0.13897280966767372,
+      "FAST": 0.6525679758308157
+    },
+    "matrices": {
+      "Adaptive_vs_Small_only": {
+        "A": "Adaptive",
+        "A_only_pass": 111,
+        "B": "Small-only",
+        "B_only_pass": 0,
+        "both_fail": 211,
+        "both_pass": 220,
+        "n_overlap": 542
+      },
+      "Adaptive_vs_Strong_only": {
+        "A": "Adaptive",
+        "A_only_pass": 34,
+        "B": "Strong-only",
+        "B_only_pass": 0,
+        "both_fail": 211,
+        "both_pass": 297,
+        "n_overlap": 542
+      },
+      "BALANCED_vs_BEST_observed_overlap": {
+        "A": "BALANCED",
+        "A_only_pass": 0,
+        "B": "BEST",
+        "B_only_pass": 41,
+        "both_fail": 199,
+        "both_pass": 0,
+        "n_overlap": 240
+      },
+      "FAST_vs_BALANCED_observed_overlap": {
+        "A": "FAST",
+        "A_only_pass": 0,
+        "B": "BALANCED",
+        "B_only_pass": 69,
+        "both_fail": 241,
+        "both_pass": 0,
+        "n_overlap": 310
+      },
+      "FAST_vs_BEST_static_full": {
+        "A": "FAST",
+        "A_only_pass": 22,
+        "B": "BEST",
+        "B_only_pass": 99,
+        "both_fail": 223,
+        "both_pass": 198,
+        "n_overlap": 542
+      }
+    },
+    "observed_cascade_union": {
+      "n": 542,
+      "passes": 331,
+      "rate": 0.6107011070110702
+    },
+    "strong_model_avoidance": {
+      "count": 285,
+      "denominator": 331,
+      "rate": 0.8610271903323263
+    },
+    "unobserved_full_tier_matrix_caveat": "BALANCED and adaptive BEST were only generated after earlier-tier deterministic failures; their full 542-task standalone outcomes are not observed."
+  },
+  "condition_results": {
+    "adaptive": {
+      "by_benchmark": {
+        "humaneval": {
+          "n": 164,
+          "passes": 43,
+          "rate": 0.2621951219512195
+        },
+        "mbpp": {
+          "n": 378,
+          "passes": 288,
+          "rate": 0.7619047619047619
+        }
+      },
+      "equal_benchmark_macro_average": 0.5120499419279907,
+      "task_weighted": {
+        "n": 542,
+        "passes": 331,
+        "rate": 0.6107011070110702
+      }
+    },
+    "small_only": {
+      "by_benchmark": {
+        "humaneval": {
+          "n": 164,
+          "passes": 26,
+          "rate": 0.15853658536585366
+        },
+        "mbpp": {
+          "n": 378,
+          "passes": 194,
+          "rate": 0.5132275132275133
+        }
+      },
+      "equal_benchmark_macro_average": 0.33588204929668347,
+      "task_weighted": {
+        "n": 542,
+        "passes": 220,
+        "rate": 0.4059040590405904
+      }
+    },
+    "strong_only": {
+      "by_benchmark": {
+        "humaneval": {
+          "n": 164,
+          "passes": 34,
+          "rate": 0.2073170731707317
+        },
+        "mbpp": {
+          "n": 378,
+          "passes": 263,
+          "rate": 0.6957671957671958
+        }
+      },
+      "equal_benchmark_macro_average": 0.45154213446896374,
+      "task_weighted": {
+        "n": 542,
+        "passes": 297,
+        "rate": 0.5479704797047971
+      }
+    }
+  },
+  "deterministic_equivalence": {
+    "adaptive_best_vs_strong_only": {
+      "common_attempts": 251,
+      "exact_generated_text_comparison_available": false,
+      "mismatch_examples": [],
+      "same_generation_options_by_code": true,
+      "same_model_digest_from_frozen_manifest": true,
+      "stored_metadata_or_outcome_mismatches": 0
+    },
+    "adaptive_fast_vs_small_only": {
+      "common_attempts": 531,
+      "exact_generated_text_comparison_available": false,
+      "mismatch_examples": [],
+      "same_generation_options_by_code": true,
+      "same_model_digest_from_frozen_manifest": true,
+      "stored_metadata_or_outcome_mismatches": 0
+    }
+  },
+  "expenditure": {
+    "adaptive_vs_strong": {
+      "cpu_time_seconds": {
+        "adaptive": 38137.60885,
+        "difference": 4716.153149999998,
+        "relative_difference": 0.14111154200862647,
+        "strong_only": 33421.4557
+      },
+      "model_invocations": {
+        "adaptive": 1092,
+        "difference": 550.0,
+        "relative_difference": 1.014760147601476,
+        "strong_only": 542
+      },
+      "peak_cpu_percent": {
+        "adaptive": 47.1225,
+        "difference": 0.23499999999999943,
+        "relative_difference": 0.005011996800853093,
+        "strong_only": 46.8875
+      },
+      "peak_ram_bytes": {
+        "adaptive": 6897147346.0,
+        "difference": -102240846.0,
+        "relative_difference": -0.01460711182112415,
+        "strong_only": 6999388192.0
+      },
+      "plus_successes": {
+        "adaptive": 331,
+        "difference": 34.0,
+        "relative_difference": 0.11447811447811448,
+        "strong_only": 297
+      },
+      "raw_input_tokens": {
+        "adaptive": 166716.0,
+        "difference": 87723.0,
+        "relative_difference": 1.110516121681668,
+        "strong_only": 78993.0
+      },
+      "raw_output_tokens": {
+        "adaptive": 93006.0,
+        "difference": 54499.0,
+        "relative_difference": 1.4153011140831537,
+        "strong_only": 38507.0
+      },
+      "raw_total_tokens": {
+        "adaptive": 259722.0,
+        "difference": 142222.0,
+        "relative_difference": 1.2104,
+        "strong_only": 117500.0
+      },
+      "verifier_invocations": {
+        "adaptive": 1091,
+        "difference": 549.0,
+        "relative_difference": 1.0129151291512914,
+        "strong_only": 542
+      },
+      "wall_time_ms": {
+        "adaptive": 78701925.0,
+        "difference": 31119609.0,
+        "relative_difference": 0.654016273608876,
+        "strong_only": 47582316.0
+      },
+      "weighted_input_token_proxy": {
+        "adaptive": 579460.7,
+        "difference": -20886.099999999977,
+        "relative_difference": -0.03479005801313504,
+        "strong_only": 600346.7999999999
+      },
+      "weighted_output_token_proxy": {
+        "adaptive": 320002.1,
+        "difference": 27348.899999999965,
+        "relative_difference": 0.09345156656411058,
+        "strong_only": 292653.2
+      },
+      "weighted_total_token_proxy": {
+        "adaptive": 899462.7999999999,
+        "difference": 6462.79999999993,
+        "relative_difference": 0.00723717805151168,
+        "strong_only": 893000.0
+      }
+    },
+    "per_condition": {
+      "adaptive": {
+        "attempts": 1092,
+        "cpu_records_available": 1092,
+        "cpu_time_seconds": 38137.60885,
+        "mean_cpu_percent": 15.019538614403142,
+        "mean_ram_bytes": 1376053977.9551282,
+        "model_invocations": 1092,
+        "peak_cpu_percent": 47.1225,
+        "peak_ram_bytes": 6897147346.0,
+        "plus_successes": 331,
+        "raw_input_tokens": 166716.0,
+        "raw_output_tokens": 93006.0,
+        "raw_total_tokens": 259722.0,
+        "token_records_available": 1092,
+        "useful_work_efficiency": {
+          "successes_per_cpu_second": 0.008679096828064512,
+          "successes_per_raw_total_token": 0.0012744395931033952,
+          "successes_per_weighted_output_token_proxy": 0.001034368211958609,
+          "successes_per_weighted_total_token_proxy": 0.0003679974313556937
+        },
+        "verifier_invocations": 1091,
+        "wall_records_available": 1092,
+        "wall_time_ms": 78701925.0,
+        "weighted_input_token_proxy": 579460.7,
+        "weighted_output_token_proxy": 320002.1,
+        "weighted_total_token_proxy": 899462.7999999999
+      },
+      "small_only": {
+        "attempts": 542,
+        "cpu_records_available": 542,
+        "cpu_time_seconds": 8148.81835,
+        "mean_cpu_percent": 15.362710671224859,
+        "mean_ram_bytes": 769293678.7619926,
+        "model_invocations": 542,
+        "peak_cpu_percent": 29.6,
+        "peak_ram_bytes": 3698304122.0,
+        "plus_successes": 220,
+        "raw_input_tokens": 78993.0,
+        "raw_output_tokens": 35957.0,
+        "raw_total_tokens": 114950.0,
+        "token_records_available": 542,
+        "useful_work_efficiency": {
+          "successes_per_cpu_second": 0.026997779377423477,
+          "successes_per_raw_total_token": 0.0019138755980861245,
+          "successes_per_weighted_output_token_proxy": 0.004078946148640506,
+          "successes_per_weighted_total_token_proxy": 0.0012759170653907496
+        },
+        "verifier_invocations": 542,
+        "wall_records_available": 542,
+        "wall_time_ms": 21708412.0,
+        "weighted_input_token_proxy": 118489.5,
+        "weighted_output_token_proxy": 53935.5,
+        "weighted_total_token_proxy": 172425.0
+      },
+      "strong_only": {
+        "attempts": 542,
+        "cpu_records_available": 542,
+        "cpu_time_seconds": 33421.4557,
+        "mean_cpu_percent": 15.516629132010143,
+        "mean_ram_bytes": 2846178745.202952,
+        "model_invocations": 542,
+        "peak_cpu_percent": 46.8875,
+        "peak_ram_bytes": 6999388192.0,
+        "plus_successes": 297,
+        "raw_input_tokens": 78993.0,
+        "raw_output_tokens": 38507.0,
+        "raw_total_tokens": 117500.0,
+        "token_records_available": 542,
+        "useful_work_efficiency": {
+          "successes_per_cpu_second": 0.008886506999155037,
+          "successes_per_raw_total_token": 0.002527659574468085,
+          "successes_per_weighted_output_token_proxy": 0.001014853075244009,
+          "successes_per_weighted_total_token_proxy": 0.00033258678611422174
+        },
+        "verifier_invocations": 542,
+        "wall_records_available": 542,
+        "wall_time_ms": 47582316.0,
+        "weighted_input_token_proxy": 600346.7999999999,
+        "weighted_output_token_proxy": 292653.2,
+        "weighted_total_token_proxy": 893000.0
+      }
+    },
+    "terminology": "All weighted values are model-size-weighted token proxies, not FLOPs, hardware compute, energy, API usage, credits, or dollar cost."
+  },
+  "experiment_id": "awb-20260826T042018Z-s20260824-300eaad5",
+  "failures": {
+    "attempt_status_counts": {
+      "adaptive": {
+        "failed": 754,
+        "passed": 331,
+        "resource_blocked": 1,
+        "verifier_error": 6
+      },
+      "small_only": {
+        "failed": 316,
+        "passed": 220,
+        "verifier_error": 6
+      },
+      "strong_only": {
+        "failed": 239,
+        "passed": 297,
+        "verifier_error": 6
+      }
+    },
+    "common_verifier_error_task_ids_all_conditions": [
+      "mbpp:Mbpp/106",
+      "mbpp:Mbpp/124",
+      "mbpp:Mbpp/252",
+      "mbpp:Mbpp/255",
+      "mbpp:Mbpp/580",
+      "mbpp:Mbpp/720"
+    ],
+    "failure_class_counts": {
+      "adaptive": {
+        "model_incorrect": 351,
+        "resource_blocked": 1,
+        "test_failure": 98,
+        "timeout": 305,
+        "verified_pass": 331,
+        "verifier_infrastructure_failure": 6
+      },
+      "small_only": {
+        "model_incorrect": 184,
+        "test_failure": 31,
+        "timeout": 101,
+        "verified_pass": 220,
+        "verifier_infrastructure_failure": 6
+      },
+      "strong_only": {
+        "model_incorrect": 105,
+        "test_failure": 39,
+        "timeout": 95,
+        "verified_pass": 297,
+        "verifier_infrastructure_failure": 6
+      }
+    },
+    "total_verifier_error_attempts": 18,
+    "verifier_error_count_by_condition": {
+      "adaptive": 6,
+      "small_only": 6,
+      "strong_only": 6
+    },
+    "verifier_error_task_ids_by_condition": {
+      "adaptive": [
+        "mbpp:Mbpp/106",
+        "mbpp:Mbpp/124",
+        "mbpp:Mbpp/252",
+        "mbpp:Mbpp/255",
+        "mbpp:Mbpp/580",
+        "mbpp:Mbpp/720"
+      ],
+      "small_only": [
+        "mbpp:Mbpp/106",
+        "mbpp:Mbpp/124",
+        "mbpp:Mbpp/252",
+        "mbpp:Mbpp/255",
+        "mbpp:Mbpp/580",
+        "mbpp:Mbpp/720"
+      ],
+      "strong_only": [
+        "mbpp:Mbpp/106",
+        "mbpp:Mbpp/124",
+        "mbpp:Mbpp/252",
+        "mbpp:Mbpp/255",
+        "mbpp:Mbpp/580",
+        "mbpp:Mbpp/720"
+      ]
+    }
+  },
+  "finding_statuses": {
+    "1": {
+      "evidence": "worker._run_cells reuses the frozen BenchmarkTask; ollama.build_generation_prompt adds no prior output or verifier feedback.",
+      "status": "CONFIRMED"
+    },
+    "10": {
+      "evidence": "expenditure_audit recomputes the full Adaptive-versus-Strong tradeoff table and per-metric useful-work efficiencies.",
+      "status": "CONFIRMED"
+    },
+    "11": {
+      "evidence": "no API pricing or dollar-cost inference is made; parameter count is never converted to commercial usage.",
+      "status": "CONFIRMED"
+    },
+    "12": {
+      "evidence": "budget_audit verifies the first frozen cutoff exceeds each condition's actual total; post-hoc curves are labeled condition-relative and post-hoc.",
+      "status": "CONFIRMED"
+    },
+    "13": {
+      "evidence": "condition_summary reports HumanEval+, MBPP+, task-weighted aggregate, and equal-benchmark macro average as distinct fields.",
+      "status": "CONFIRMED"
+    },
+    "14": {
+      "evidence": "reports contain no external leaderboard superiority claim; controlled within-run comparisons are the only comparisons emitted.",
+      "status": "CONFIRMED"
+    },
+    "15": {
+      "evidence": "manifest and generation_protocol record temperature 0, fixed seed, and one attempt per tier; limitations state that variance is unmeasured.",
+      "status": "CONFIRMED"
+    },
+    "16": {
+      "evidence": "audit limitations flag plausible HumanEval/MBPP training contamination and avoid general-intelligence claims.",
+      "status": "CONFIRMED"
+    },
+    "17": {
+      "evidence": "paired_statistics reports b=34, c=0, both-pass=297, both-fail=211 and labels exact McNemar as post-hoc.",
+      "status": "CONFIRMED"
+    },
+    "18": {
+      "evidence": "benchmark audit writes separate audit.json and AUDIT.md through read-only SQLite access and reports historical_records_modified=false.",
+      "status": "CONFIRMED"
+    },
+    "19": {
+      "evidence": "config/router/preparation/worker support Small, Balanced, Strong, fixed cascade, and Adaptive conditions; tests smoke the future modes without running the full ablation.",
+      "status": "CONFIRMED"
+    },
+    "2": {
+      "evidence": "deterministic_equivalence finds zero observable metadata/outcome/token mismatches on 531 FAST/Small and 251 BEST/Strong overlaps; exact generated text was not historically persisted.",
+      "status": "PARTIALLY CONFIRMED"
+    },
+    "3": {
+      "evidence": "complementarity computes paired task-level matrices and the 34 Adaptive-only successes (22 FAST, 12 BALANCED, 0 BEST).",
+      "status": "CONFIRMED"
+    },
+    "4": {
+      "evidence": "initial routes are 531 FAST, 0 BALANCED, 11 BEST; online history also causes eight empty-state replay differences, so routing is not wholly static.",
+      "status": "PARTIALLY CONFIRMED"
+    },
+    "5": {
+      "evidence": "the immutable schedule contains only small_only, strong_only, and adaptive; BALANCED_ONLY is future-supported but has no retrospective score.",
+      "status": "CONFIRMED"
+    },
+    "6": {
+      "evidence": "worker updates RoutingStatistics after Adaptive attempts; task order and online/frozen router-state persistence are now explicit for future runs.",
+      "status": "CONFIRMED"
+    },
+    "7": {
+      "evidence": "failure_audit finds the six listed MBPP IDs in all three conditions (18 verifier-error attempts total).",
+      "status": "CONFIRMED"
+    },
+    "8": {
+      "evidence": "historical raw attempts contain metadata but no generated program/output; future AttemptRecord stores private output plus hashes while public_task_result strips output.",
+      "status": "CONFIRMED"
+    },
+    "9": {
+      "evidence": "reporting and audit label weighted token values as model-size-weighted token proxies and keep raw/system/resource metrics separate.",
+      "status": "CONFIRMED"
+    }
+  },
+  "generation_protocol": {
+    "fixed_generation_options": {
+      "num_thread": 1,
+      "one_attempt_per_tier": true,
+      "temperature": 0,
+      "top_p": 1
+    },
+    "reconciliation": {
+      "entries": [
+        {
+          "attempt_number": 2,
+          "benchmark": "mbpp",
+          "condition": "adaptive",
+          "evidence_method": "llama_server_timing_counters",
+          "generation_cost_proxy": 217.0,
+          "input_tokens": 106,
+          "original_status": "resource_blocked",
+          "output_tokens": 70,
+          "selected_model": "qwen2.5-coder:3b",
+          "selected_tier": "BALANCED",
+          "task_id": "Mbpp/563",
+          "token_metrics_reconciled": true,
+          "total_token_cost_proxy": 545.6,
+          "total_tokens": 176
+        }
+      ],
+      "evidence_end_line": 482352,
+      "evidence_start_line": 482327,
+      "raw_measurements_unchanged": true,
+      "raw_results_sha256": "6926147073d0e5b3ffe93ecb3d9c8619707b24f0b48a843d25db6627602268da",
+      "reconciliation_sha256": "c420b99881c96d087b41ceee0c0b39a13f71965d777e52cd1031b8b365bc03a3",
+      "records_applied": 1,
+      "schema_version": 1,
+      "source_kind": "benchmark_owned_ollama_log",
+      "source_sha256": "cc8c3cb69de1208ce94314e5433b45c301a0020ad078012a6784a9119857b4a9",
+      "status": "applied",
+      "unreconciled_fields": [
+        "status",
+        "verification",
+        "wall_time_ms",
+        "model_load_time_ms",
+        "inference_time_ms"
+      ]
+    },
+    "sampling": {
+      "context_window": 8192,
+      "max_output_tokens": 1024
+    },
+    "seed": 20260824
+  },
+  "integrity": {
+    "all_cells_completed": true,
+    "attempts_derived": 2176,
+    "attempts_raw": 2176,
+    "cells": 1626,
+    "cells_per_condition": {
+      "adaptive": 542,
+      "small_only": 542,
+      "strong_only": 542
+    },
+    "condition_task_orders_identical": true,
+    "current_source_tree_sha256": "1cec3afa76d22414d5c8db9339649b2cc0fd9138bc8385143663a2aed62471c7",
+    "duplicate_attempt_keys": 0,
+    "expected_cells_from_manifest": 1626,
+    "expected_cells_historical_three_conditions": 1626,
+    "frozen_source_tree_sha256": "0d24437e9297466c3f28a7af677a76d7e54c10dc6358edb7b724d586040e7859",
+    "manifest_status": "completed",
+    "raw_results_sha256": "6926147073d0e5b3ffe93ecb3d9c8619707b24f0b48a843d25db6627602268da",
+    "sqlite_sha256": "138d04bc1c2f3b6609a56cc2a5e77a6d024035f22d948f81a674139ef06976e7",
+    "tasks": 542
+  },
+  "paired_statistics": {
+    "A_only_pass": 34,
+    "B_only_pass": 0,
+    "both_fail": 211,
+    "both_pass": 297,
+    "comparison": "Adaptive vs Strong-only",
+    "discordant_pairs": 34,
+    "exact_mcnemar_two_sided_p_value": 1.1641532182693481e-10,
+    "matched_odds_ratio_adaptive_only_over_strong_only": null,
+    "paired_risk_difference": 0.06273062730627306,
+    "post_hoc": true
+  },
+  "post_hoc_diagnostic_excluding_shared_verifier_infrastructure_failures": {
+    "adaptive": {
+      "by_benchmark": {
+        "humaneval": {
+          "n": 164,
+          "passes": 43,
+          "rate": 0.2621951219512195
+        },
+        "mbpp": {
+          "n": 372,
+          "passes": 288,
+          "rate": 0.7741935483870968
+        }
+      },
+      "equal_benchmark_macro_average": 0.5181943351691581,
+      "task_weighted": {
+        "n": 536,
+        "passes": 331,
+        "rate": 0.6175373134328358
+      }
+    },
+    "small_only": {
+      "by_benchmark": {
+        "humaneval": {
+          "n": 164,
+          "passes": 26,
+          "rate": 0.15853658536585366
+        },
+        "mbpp": {
+          "n": 372,
+          "passes": 194,
+          "rate": 0.521505376344086
+        }
+      },
+      "equal_benchmark_macro_average": 0.34002098085496985,
+      "task_weighted": {
+        "n": 536,
+        "passes": 220,
+        "rate": 0.41044776119402987
+      }
+    },
+    "strong_only": {
+      "by_benchmark": {
+        "humaneval": {
+          "n": 164,
+          "passes": 34,
+          "rate": 0.2073170731707317
+        },
+        "mbpp": {
+          "n": 372,
+          "passes": 263,
+          "rate": 0.706989247311828
+        }
+      },
+      "equal_benchmark_macro_average": 0.45715316024127983,
+      "task_weighted": {
+        "n": 536,
+        "passes": 297,
+        "rate": 0.5541044776119403
+      }
+    }
+  },
+  "provenance_recoverability": {
+    "exact_generated_output_persisted": false,
+    "exact_task_prompt_persisted_privately": true,
+    "generated_output_sha256_persisted": false,
+    "model_digest_persisted_in_manifest": true,
+    "prompt_sha256_persisted": false,
+    "raw_response_metadata_persisted": true,
+    "sampling_and_seed_persisted_in_manifest": true,
+    "task_artifact_sha256_persisted": true,
+    "verifier_stdout_stderr_persisted": true
+  },
+  "routing": {
+    "all_tasks_same_router_family": "function_synthesis",
+    "decisions_differing_from_fast_first": 11,
+    "differing_decision_effect_vs_observed_small_only": {
+      "caveat": "This is an observed first-attempt comparison, not a complete counterfactual fixed-cascade cost because BALANCED was not run for these BEST-start tasks.",
+      "first_attempt_metric_difference_adaptive_minus_small": {
+        "generation_cost_proxy": 6848.4,
+        "input_tokens": 0.0,
+        "output_tokens": 137.0,
+        "total_token_cost_proxy": 20292.799999999996,
+        "total_tokens": 137.0
+      },
+      "n": 11,
+      "outcomes": {
+        "A_only_pass": 1,
+        "B_only_pass": 0,
+        "both_fail": 6,
+        "both_pass": 4
+      }
+    },
+    "escalation_paths": {
+      "BEST": 11,
+      "FAST": 221,
+      "FAST->BALANCED": 70,
+      "FAST->BALANCED->BEST": 240
+    },
+    "initial_reason_counts": {
+      "adaptive-rule-router;provider-forced-local;adaptive-router,qualified-history,mode:BALANCED,risk:high": 11,
+      "adaptive-rule-router;provider-forced-local;adaptive-router,qualified-history,mode:BALANCED,risk:low": 531
+    },
+    "initial_tier_by_benchmark": {
+      "humaneval": {
+        "BEST": 3,
+        "FAST": 161
+      },
+      "mbpp": {
+        "BEST": 8,
+        "FAST": 370
+      }
+    },
+    "initial_tier_counts": {
+      "BEST": 11,
+      "FAST": 531
+    },
+    "online_state_replay": {
+      "caveat": "Initial and final router-state hashes were not historically persisted; final state is reconstructed post-hoc from immutable attempt order.",
+      "frozen_mismatch_details": [
+        {
+          "fingerprint_risk": "low",
+          "prompt_characters": 987,
+          "recorded_reason": "adaptive-rule-router;provider-forced-local;adaptive-router,qualified-history,mode:BALANCED,risk:low",
+          "recorded_tier": "FAST",
+          "replayed_tier": "BALANCED",
+          "task_identity": "humaneval:HumanEval/159"
+        },
+        {
+          "fingerprint_risk": "low",
+          "prompt_characters": 926,
+          "recorded_reason": "adaptive-rule-router;provider-forced-local;adaptive-router,qualified-history,mode:BALANCED,risk:low",
+          "recorded_tier": "FAST",
+          "replayed_tier": "BALANCED",
+          "task_identity": "humaneval:HumanEval/127"
+        },
+        {
+          "fingerprint_risk": "low",
+          "prompt_characters": 1167,
+          "recorded_reason": "adaptive-rule-router;provider-forced-local;adaptive-router,qualified-history,mode:BALANCED,risk:low",
+          "recorded_tier": "FAST",
+          "replayed_tier": "BALANCED",
+          "task_identity": "humaneval:HumanEval/68"
+        },
+        {
+          "fingerprint_risk": "low",
+          "prompt_characters": 927,
+          "recorded_reason": "adaptive-rule-router;provider-forced-local;adaptive-router,qualified-history,mode:BALANCED,risk:low",
+          "recorded_tier": "FAST",
+          "replayed_tier": "BALANCED",
+          "task_identity": "humaneval:HumanEval/78"
+        },
+        {
+          "fingerprint_risk": "low",
+          "prompt_characters": 1046,
+          "recorded_reason": "adaptive-rule-router;provider-forced-local;adaptive-router,qualified-history,mode:BALANCED,risk:low",
+          "recorded_tier": "FAST",
+          "replayed_tier": "BALANCED",
+          "task_identity": "humaneval:HumanEval/115"
+        },
+        {
+          "fingerprint_risk": "low",
+          "prompt_characters": 1265,
+          "recorded_reason": "adaptive-rule-router;provider-forced-local;adaptive-router,qualified-history,mode:BALANCED,risk:low",
+          "recorded_tier": "FAST",
+          "replayed_tier": "BALANCED",
+          "task_identity": "humaneval:HumanEval/109"
+        },
+        {
+          "fingerprint_risk": "low",
+          "prompt_characters": 1053,
+          "recorded_reason": "adaptive-rule-router;provider-forced-local;adaptive-router,qualified-history,mode:BALANCED,risk:low",
+          "recorded_tier": "FAST",
+          "replayed_tier": "BALANCED",
+          "task_identity": "humaneval:HumanEval/153"
+        },
+        {
+          "fingerprint_risk": "low",
+          "prompt_characters": 1035,
+          "recorded_reason": "adaptive-rule-router;provider-forced-local;adaptive-router,qualified-history,mode:BALANCED,risk:low",
+          "recorded_tier": "FAST",
+          "replayed_tier": "BALANCED",
+          "task_identity": "humaneval:HumanEval/81"
+        }
+      ],
+      "frozen_mismatch_examples": [
+        "humaneval:HumanEval/159",
+        "humaneval:HumanEval/127",
+        "humaneval:HumanEval/68",
+        "humaneval:HumanEval/78",
+        "humaneval:HumanEval/115",
+        "humaneval:HumanEval/109",
+        "humaneval:HumanEval/153",
+        "humaneval:HumanEval/81"
+      ],
+      "initial_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "online_replay_mismatch_examples": [],
+      "reconstructed_final_rows": 1091,
+      "reconstructed_final_state_sha256": "1df7a8034a6df46a1e234f0bc12ef192b79e1e817a2cb084c4a829af513cbbe5",
+      "recorded_vs_frozen_empty_router_mismatches": 8,
+      "recorded_vs_online_replay_mismatches": 0,
+      "state_is_updated_by_worker_code": true
+    },
+    "parameters": {
+      "BALANCED": 3.1,
+      "BEST": 7.6,
+      "FAST": 1.5
+    }
+  }
+}

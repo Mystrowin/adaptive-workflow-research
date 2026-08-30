@@ -1,0 +1,15 @@
+\begin{tabular}{llll}
+\toprule
+Item & Frozen value & Size/count & Notes \\
+\midrule
+HumanEval+ & v0.1.10 & 164 & EvalPlus augmented tests \\
+MBPP+ & v0.2.0 & 378 & EvalPlus augmented tests \\
+Total & same paired task set & 542 & one completion scored on base and Plus \\
+FAST & qwen2.5-coder:1.5b & 1.5B & Q4\_K\_M \\
+BALANCED & qwen2.5-coder:3b & 3.1B & Q4\_K\_M \\
+BEST & qwen2.5-coder:7b & 7.6B & Q4\_K\_M \\
+Sampling & temperature 0; top\_p 1 & seed 20260824 & one thread; 1024 output cap \\
+Verifier & EvalPlus & v0.3.1 & Docker network none; 120 s timeout \\
+Resource ceiling & CPU 45\% soft / 50\% hard & RAM 45\% soft / 50\% hard & process-tree controls \\
+\bottomrule
+\end{tabular}

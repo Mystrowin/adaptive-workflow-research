@@ -1,0 +1,596 @@
+{
+  "aggregates": [
+    {
+      "base_pass_rate": 0.2621951219512195,
+      "benchmark": "humaneval",
+      "condition": "adaptive",
+      "cpu_time_seconds": 18904.8645,
+      "escalation_count": 255,
+      "failures_plus": 121,
+      "final_pass_rate_after_local_escalation": 0.2621951219512195,
+      "first_attempt_plus_pass_rate": 0.15853658536585366,
+      "input_tokens": 86165,
+      "mean_cpu_percent": 13.580315428254933,
+      "mean_ram_bytes": 1479469292.052506,
+      "mean_task_time_ms": 338903.7804878049,
+      "mean_total_tokens": 296.1002386634845,
+      "median_cpu_percent": 12.823821707010291,
+      "median_ram_bytes": 1212827082,
+      "median_task_time_ms": 455902.5,
+      "median_total_tokens": 279,
+      "model_invocations": {
+        "BALANCED": 135,
+        "BEST": 123,
+        "FAST": 161
+      },
+      "n": 164,
+      "output_tokens": 37901,
+      "passes_base": 43,
+      "passes_plus": 43,
+      "peak_cpu_percent": 47.1225,
+      "peak_ram_bytes": 5501431808,
+      "plus_pass_rate": 0.2621951219512195,
+      "successful_tasks_per_1m_output_tokens": 1134.5347088467322,
+      "successful_tasks_per_1m_total_token_cost_proxy_units": 91.84819501208766,
+      "successful_tasks_per_hour": 2.785163498813067,
+      "total_generation_cost_proxy": 138191.2,
+      "total_inference_time_ms": 8519276,
+      "total_model_load_time_ms": 2267150,
+      "total_task_wall_time_ms": 55580220,
+      "total_token_cost_proxy": 468163.8,
+      "total_tokens": 124066,
+      "total_verification_time_ms": 37489487
+    },
+    {
+      "base_pass_rate": 0.8492063492063492,
+      "benchmark": "mbpp",
+      "condition": "adaptive",
+      "cpu_time_seconds": 19232.74435,
+      "escalation_count": 295,
+      "failures_plus": 90,
+      "final_pass_rate_after_local_escalation": 0.7619047619047619,
+      "first_attempt_plus_pass_rate": 0.5158730158730159,
+      "input_tokens": 80551,
+      "mean_cpu_percent": 15.915578012614288,
+      "mean_ram_bytes": 1311669109.2971768,
+      "mean_task_time_ms": 61168.531746031746,
+      "mean_total_tokens": 201.56909361069836,
+      "median_cpu_percent": 15.639861556982343,
+      "median_ram_bytes": 815677605,
+      "median_task_time_ms": 24329.0,
+      "median_total_tokens": 185,
+      "model_invocations": {
+        "BALANCED": 175,
+        "BEST": 128,
+        "FAST": 370
+      },
+      "n": 378,
+      "output_tokens": 55105,
+      "passes_base": 321,
+      "passes_plus": 288,
+      "peak_cpu_percent": 45.9475,
+      "peak_ram_bytes": 6897147346,
+      "plus_pass_rate": 0.7619047619047619,
+      "successful_tasks_per_1m_output_tokens": 5226.385990381998,
+      "successful_tasks_per_1m_total_token_cost_proxy_units": 667.7502150480293,
+      "successful_tasks_per_hour": 44.840983828830964,
+      "total_generation_cost_proxy": 181810.9,
+      "total_inference_time_ms": null,
+      "total_model_load_time_ms": null,
+      "total_task_wall_time_ms": 23121705,
+      "total_token_cost_proxy": 431299.0,
+      "total_tokens": 135656,
+      "total_verification_time_ms": 3299043
+    },
+    {
+      "base_pass_rate": 0.6715867158671587,
+      "benchmark": "overall",
+      "condition": "adaptive",
+      "cpu_time_seconds": 38137.60885,
+      "escalation_count": 550,
+      "failures_plus": 211,
+      "final_pass_rate_after_local_escalation": 0.6107011070110702,
+      "first_attempt_plus_pass_rate": 0.4077490774907749,
+      "input_tokens": 166716,
+      "mean_cpu_percent": 15.019538614403142,
+      "mean_ram_bytes": 1376053977.9551282,
+      "mean_task_time_ms": 145206.5036900369,
+      "mean_total_tokens": 237.84065934065933,
+      "median_cpu_percent": 15.365744047619046,
+      "median_ram_bytes": 1188009587.5,
+      "median_task_time_ms": 65079.0,
+      "median_total_tokens": 221.5,
+      "model_invocations": {
+        "BALANCED": 310,
+        "BEST": 251,
+        "FAST": 531
+      },
+      "n": 542,
+      "output_tokens": 93006,
+      "passes_base": 364,
+      "passes_plus": 331,
+      "peak_cpu_percent": 47.1225,
+      "peak_ram_bytes": 6897147346,
+      "plus_pass_rate": 0.6107011070110702,
+      "successful_tasks_per_1m_output_tokens": 3558.910177837989,
+      "successful_tasks_per_1m_total_token_cost_proxy_units": 367.99743135569366,
+      "successful_tasks_per_hour": 15.140671590942661,
+      "total_generation_cost_proxy": 320002.1,
+      "total_inference_time_ms": null,
+      "total_model_load_time_ms": null,
+      "total_task_wall_time_ms": 78701925,
+      "total_token_cost_proxy": 899462.7999999999,
+      "total_tokens": 259722,
+      "total_verification_time_ms": 40788530
+    },
+    {
+      "base_pass_rate": 0.17073170731707318,
+      "benchmark": "humaneval",
+      "condition": "small_only",
+      "cpu_time_seconds": 3398.28955,
+      "escalation_count": 0,
+      "failures_plus": 138,
+      "final_pass_rate_after_local_escalation": 0.15853658536585366,
+      "first_attempt_plus_pass_rate": 0.15853658536585366,
+      "input_tokens": 33820,
+      "mean_cpu_percent": 13.98942223710722,
+      "mean_ram_bytes": 762658854.1280488,
+      "mean_task_time_ms": 93988.00609756098,
+      "mean_total_tokens": 288.3170731707317,
+      "median_cpu_percent": 12.756067503489554,
+      "median_ram_bytes": 753990809.5,
+      "median_task_time_ms": 133241.0,
+      "median_total_tokens": 270.0,
+      "model_invocations": {
+        "BALANCED": 0,
+        "BEST": 0,
+        "FAST": 164
+      },
+      "n": 164,
+      "output_tokens": 13464,
+      "passes_base": 28,
+      "passes_plus": 26,
+      "peak_cpu_percent": 28.875,
+      "peak_ram_bytes": 3698304122,
+      "plus_pass_rate": 0.15853658536585366,
+      "successful_tasks_per_1m_output_tokens": 1931.0754604872252,
+      "successful_tasks_per_1m_total_token_cost_proxy_units": 366.5792516143586,
+      "successful_tasks_per_hour": 6.072388712285747,
+      "total_generation_cost_proxy": 20196.0,
+      "total_inference_time_ms": 1391387,
+      "total_model_load_time_ms": 440630,
+      "total_task_wall_time_ms": 15414033,
+      "total_token_cost_proxy": 70926.0,
+      "total_tokens": 47284,
+      "total_verification_time_ms": 12449125
+    },
+    {
+      "base_pass_rate": 0.58994708994709,
+      "benchmark": "mbpp",
+      "condition": "small_only",
+      "cpu_time_seconds": 4750.5288,
+      "escalation_count": 0,
+      "failures_plus": 184,
+      "final_pass_rate_after_local_escalation": 0.5132275132275133,
+      "first_attempt_plus_pass_rate": 0.5132275132275133,
+      "input_tokens": 45173,
+      "mean_cpu_percent": 15.958528933646267,
+      "mean_ram_bytes": 772172279.925926,
+      "mean_task_time_ms": 16651.796296296296,
+      "mean_total_tokens": 179.010582010582,
+      "median_cpu_percent": 15.574864672364672,
+      "median_ram_bytes": 768341730.0,
+      "median_task_time_ms": 14415.5,
+      "median_total_tokens": 162.0,
+      "model_invocations": {
+        "BALANCED": 0,
+        "BEST": 0,
+        "FAST": 378
+      },
+      "n": 378,
+      "output_tokens": 22493,
+      "passes_base": 223,
+      "passes_plus": 194,
+      "peak_cpu_percent": 29.6,
+      "peak_ram_bytes": 3223735599,
+      "plus_pass_rate": 0.5132275132275133,
+      "successful_tasks_per_1m_output_tokens": 8624.905526163695,
+      "successful_tasks_per_1m_total_token_cost_proxy_units": 1911.3488802845347,
+      "successful_tasks_per_hour": 110.95614039129197,
+      "total_generation_cost_proxy": 33739.5,
+      "total_inference_time_ms": 2266250,
+      "total_model_load_time_ms": 1014667,
+      "total_task_wall_time_ms": 6294379,
+      "total_token_cost_proxy": 101499.0,
+      "total_tokens": 67666,
+      "total_verification_time_ms": 1492874
+    },
+    {
+      "base_pass_rate": 0.46309963099630996,
+      "benchmark": "overall",
+      "condition": "small_only",
+      "cpu_time_seconds": 8148.81835,
+      "escalation_count": 0,
+      "failures_plus": 322,
+      "final_pass_rate_after_local_escalation": 0.4059040590405904,
+      "first_attempt_plus_pass_rate": 0.4059040590405904,
+      "input_tokens": 78993,
+      "mean_cpu_percent": 15.362710671224859,
+      "mean_ram_bytes": 769293678.7619926,
+      "mean_task_time_ms": 40052.42066420664,
+      "mean_total_tokens": 212.08487084870848,
+      "median_cpu_percent": 15.459217836257311,
+      "median_ram_bytes": 765561835.0,
+      "median_task_time_ms": 18101.0,
+      "median_total_tokens": 196.5,
+      "model_invocations": {
+        "BALANCED": 0,
+        "BEST": 0,
+        "FAST": 542
+      },
+      "n": 542,
+      "output_tokens": 35957,
+      "passes_base": 251,
+      "passes_plus": 220,
+      "peak_cpu_percent": 29.6,
+      "peak_ram_bytes": 3698304122,
+      "plus_pass_rate": 0.4059040590405904,
+      "successful_tasks_per_1m_output_tokens": 6118.419222960759,
+      "successful_tasks_per_1m_total_token_cost_proxy_units": 1275.9170653907497,
+      "successful_tasks_per_hour": 36.48355301161596,
+      "total_generation_cost_proxy": 53935.5,
+      "total_inference_time_ms": 3657637,
+      "total_model_load_time_ms": 1455297,
+      "total_task_wall_time_ms": 21708412,
+      "total_token_cost_proxy": 172425.0,
+      "total_tokens": 114950,
+      "total_verification_time_ms": 13941999
+    },
+    {
+      "base_pass_rate": 0.2073170731707317,
+      "benchmark": "humaneval",
+      "condition": "strong_only",
+      "cpu_time_seconds": 12656.515,
+      "escalation_count": 0,
+      "failures_plus": 130,
+      "final_pass_rate_after_local_escalation": 0.2073170731707317,
+      "first_attempt_plus_pass_rate": 0.2073170731707317,
+      "input_tokens": 33820,
+      "mean_cpu_percent": 14.311629518433085,
+      "mean_ram_bytes": 2767580908.457317,
+      "mean_task_time_ms": 148668.65853658537,
+      "mean_total_tokens": 285.9573170731707,
+      "median_cpu_percent": 13.068306434586546,
+      "median_ram_bytes": 2718196674.5,
+      "median_task_time_ms": 172488.5,
+      "median_total_tokens": 270.0,
+      "model_invocations": {
+        "BALANCED": 0,
+        "BEST": 164,
+        "FAST": 0
+      },
+      "n": 164,
+      "output_tokens": 13077,
+      "passes_base": 34,
+      "passes_plus": 34,
+      "peak_cpu_percent": 46.8875,
+      "peak_ram_bytes": 5602869248,
+      "plus_pass_rate": 0.2073170731707317,
+      "successful_tasks_per_1m_output_tokens": 2599.984705972318,
+      "successful_tasks_per_1m_total_token_cost_proxy_units": 95.3938249893664,
+      "successful_tasks_per_hour": 5.020166797502713,
+      "total_generation_cost_proxy": 99385.2,
+      "total_inference_time_ms": 5750174,
+      "total_model_load_time_ms": 1222085,
+      "total_task_wall_time_ms": 24381660,
+      "total_token_cost_proxy": 356417.2,
+      "total_tokens": 46897,
+      "total_verification_time_ms": 11872899
+    },
+    {
+      "base_pass_rate": 0.798941798941799,
+      "benchmark": "mbpp",
+      "condition": "strong_only",
+      "cpu_time_seconds": 20764.9407,
+      "escalation_count": 0,
+      "failures_plus": 115,
+      "final_pass_rate_after_local_escalation": 0.6957671957671958,
+      "first_attempt_plus_pass_rate": 0.6957671957671958,
+      "input_tokens": 45173,
+      "mean_cpu_percent": 16.03943319715998,
+      "mean_ram_bytes": 2880279393.9497356,
+      "mean_task_time_ms": 61377.39682539683,
+      "mean_total_tokens": 186.7804232804233,
+      "median_cpu_percent": 15.907561578350348,
+      "median_ram_bytes": 2879231429.5,
+      "median_task_time_ms": 55090.0,
+      "median_total_tokens": 176.5,
+      "model_invocations": {
+        "BALANCED": 0,
+        "BEST": 378,
+        "FAST": 0
+      },
+      "n": 378,
+      "output_tokens": 25430,
+      "passes_base": 302,
+      "passes_plus": 263,
+      "peak_cpu_percent": 41.7475,
+      "peak_ram_bytes": 6999388192,
+      "plus_pass_rate": 0.6957671957671958,
+      "successful_tasks_per_1m_output_tokens": 10342.1156114825,
+      "successful_tasks_per_1m_total_token_cost_proxy_units": 490.1387073905463,
+      "successful_tasks_per_hour": 40.80919091253282,
+      "total_generation_cost_proxy": 193268.0,
+      "total_inference_time_ms": 10950300,
+      "total_model_load_time_ms": 2805485,
+      "total_task_wall_time_ms": 23200656,
+      "total_token_cost_proxy": 536582.7999999999,
+      "total_tokens": 70603,
+      "total_verification_time_ms": 2003492
+    },
+    {
+      "base_pass_rate": 0.6199261992619927,
+      "benchmark": "overall",
+      "condition": "strong_only",
+      "cpu_time_seconds": 33421.4557,
+      "escalation_count": 0,
+      "failures_plus": 245,
+      "final_pass_rate_after_local_escalation": 0.5479704797047971,
+      "first_attempt_plus_pass_rate": 0.5479704797047971,
+      "input_tokens": 78993,
+      "mean_cpu_percent": 15.516629132010143,
+      "mean_ram_bytes": 2846178745.202952,
+      "mean_task_time_ms": 87790.25092250922,
+      "mean_total_tokens": 216.78966789667896,
+      "median_cpu_percent": 15.846674063769651,
+      "median_ram_bytes": 2863927480.5,
+      "median_task_time_ms": 62937.5,
+      "median_total_tokens": 195.0,
+      "model_invocations": {
+        "BALANCED": 0,
+        "BEST": 542,
+        "FAST": 0
+      },
+      "n": 542,
+      "output_tokens": 38507,
+      "passes_base": 336,
+      "passes_plus": 297,
+      "peak_cpu_percent": 46.8875,
+      "peak_ram_bytes": 6999388192,
+      "plus_pass_rate": 0.5479704797047971,
+      "successful_tasks_per_1m_output_tokens": 7712.883371854468,
+      "successful_tasks_per_1m_total_token_cost_proxy_units": 332.58678611422175,
+      "successful_tasks_per_hour": 22.4705329601863,
+      "total_generation_cost_proxy": 292653.2,
+      "total_inference_time_ms": 16700474,
+      "total_model_load_time_ms": 4027570,
+      "total_task_wall_time_ms": 47582316,
+      "total_token_cost_proxy": 893000.0,
+      "total_tokens": 117500,
+      "total_verification_time_ms": 13876391
+    }
+  ],
+  "attempts": 2176,
+  "automatic_efficiency_claim": null,
+  "budget_curves": {
+    "adaptive": {
+      "generation_cost_proxy": {
+        "available": true,
+        "points": [
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 1054515.1999999916,
+            "verified_plus_passes": 331
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 2109030.399999983,
+            "verified_plus_passes": 331
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 3163545.5999999745,
+            "verified_plus_passes": 331
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 4218060.799999966,
+            "verified_plus_passes": 331
+          }
+        ],
+        "reason": null
+      },
+      "total_token_cost_proxy": {
+        "available": true,
+        "points": [
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 1204601.8999999997,
+            "verified_plus_passes": 331
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 2409203.7999999993,
+            "verified_plus_passes": 331
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 3613805.6999999993,
+            "verified_plus_passes": 331
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 4818407.599999999,
+            "verified_plus_passes": 331
+          }
+        ],
+        "reason": null
+      }
+    },
+    "small_only": {
+      "generation_cost_proxy": {
+        "available": true,
+        "points": [
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 1054515.1999999916,
+            "verified_plus_passes": 220
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 2109030.399999983,
+            "verified_plus_passes": 220
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 3163545.5999999745,
+            "verified_plus_passes": 220
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 4218060.799999966,
+            "verified_plus_passes": 220
+          }
+        ],
+        "reason": null
+      },
+      "total_token_cost_proxy": {
+        "available": true,
+        "points": [
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 1204601.8999999997,
+            "verified_plus_passes": 220
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 2409203.7999999993,
+            "verified_plus_passes": 220
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 3613805.6999999993,
+            "verified_plus_passes": 220
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 4818407.599999999,
+            "verified_plus_passes": 220
+          }
+        ],
+        "reason": null
+      }
+    },
+    "strong_only": {
+      "generation_cost_proxy": {
+        "available": true,
+        "points": [
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 1054515.1999999916,
+            "verified_plus_passes": 297
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 2109030.399999983,
+            "verified_plus_passes": 297
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 3163545.5999999745,
+            "verified_plus_passes": 297
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 4218060.799999966,
+            "verified_plus_passes": 297
+          }
+        ],
+        "reason": null
+      },
+      "total_token_cost_proxy": {
+        "available": true,
+        "points": [
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 1204601.8999999997,
+            "verified_plus_passes": 297
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 2409203.7999999993,
+            "verified_plus_passes": 297
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 3613805.6999999993,
+            "verified_plus_passes": 297
+          },
+          {
+            "condition_exhausted_before_cutoff": true,
+            "cutoff": 4818407.599999999,
+            "verified_plus_passes": 297
+          }
+        ],
+        "reason": null
+      }
+    }
+  },
+  "cost_proxy_notice": "Model-weighted token values are cost proxies, not measured FLOPs or hardware compute.",
+  "derived_token_metrics_available_attempts": 2176,
+  "derived_token_metrics_complete": true,
+  "experiment_id": "awb-20260826T042018Z-s20260824-300eaad5",
+  "experiment_resource_extrema": {
+    "peak_cpu_percent": 47.1225,
+    "peak_ram_bytes": 6999388192,
+    "peak_ram_percent": 27.28555788485852
+  },
+  "generated_at": "2026-08-29T01:07:56.151691+00:00",
+  "raw_token_metrics_available_attempts": 2175,
+  "raw_token_metrics_complete": false,
+  "raw_token_metrics_total_attempts": 2176,
+  "resource_metrics_complete": true,
+  "resource_violation": false,
+  "status": "completed",
+  "strong_model_avoidance_rate": 0.8610271903323263,
+  "task_condition_cells": 1626,
+  "telemetry_reconciliation": {
+    "entries": [
+      {
+        "attempt_number": 2,
+        "benchmark": "mbpp",
+        "condition": "adaptive",
+        "evidence_method": "llama_server_timing_counters",
+        "generation_cost_proxy": 217.0,
+        "input_tokens": 106,
+        "original_status": "resource_blocked",
+        "output_tokens": 70,
+        "selected_model": "qwen2.5-coder:3b",
+        "selected_tier": "BALANCED",
+        "task_id": "Mbpp/563",
+        "token_metrics_reconciled": true,
+        "total_token_cost_proxy": 545.6,
+        "total_tokens": 176
+      }
+    ],
+    "evidence_end_line": 482352,
+    "evidence_start_line": 482327,
+    "raw_measurements_unchanged": true,
+    "raw_results_sha256": "6926147073d0e5b3ffe93ecb3d9c8619707b24f0b48a843d25db6627602268da",
+    "reconciliation_sha256": "c420b99881c96d087b41ceee0c0b39a13f71965d777e52cd1031b8b365bc03a3",
+    "records_applied": 1,
+    "schema_version": 1,
+    "source_kind": "benchmark_owned_ollama_log",
+    "source_sha256": "cc8c3cb69de1208ce94314e5433b45c301a0020ad078012a6784a9119857b4a9",
+    "status": "applied",
+    "unreconciled_fields": [
+      "status",
+      "verification",
+      "wall_time_ms",
+      "model_load_time_ms",
+      "inference_time_ms"
+    ]
+  },
+  "token_metrics_complete": true,
+  "unique_tasks": 542
+}

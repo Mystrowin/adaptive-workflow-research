@@ -1,0 +1,55 @@
+{
+  "actual_total_proxy": {
+    "adaptive": 899462.7999999999,
+    "small_only": 172425.0,
+    "strong_only": 893000.0
+  },
+  "adaptive_minus_strong": {
+    "percentage_points": 0.06273062730627306,
+    "relative_successes": 0.1144781144781144,
+    "successes": 34
+  },
+  "adaptive_strong_weighted_total_proxy_relative_difference": 0.00723717805151168,
+  "experiment_id": "awb-20260826T042018Z-s20260824-300eaad5",
+  "frozen_budget": 4818407.599999999,
+  "frozen_budget_cutoffs": [
+    1204601.8999999997,
+    2409203.7999999993,
+    3613805.6999999993,
+    4818407.599999999
+  ],
+  "initial_routes": {
+    "BEST": 11,
+    "FAST": 531
+  },
+  "plus_pass_rates": {
+    "adaptive": 0.6107011070110702,
+    "small_only": 0.4059040590405904,
+    "strong_only": 0.5479704797047971
+  },
+  "plus_successes": {
+    "adaptive": 331,
+    "small_only": 220,
+    "strong_only": 297
+  },
+  "raw_hashes": {
+    "raw_results_jsonl": "6926147073d0e5b3ffe93ecb3d9c8619707b24f0b48a843d25db6627602268da",
+    "results_sqlite": "138d04bc1c2f3b6609a56cc2a5e77a6d024035f22d948f81a674139ef06976e7"
+  },
+  "resource_violation": false,
+  "shared_verifier_error_tasks": [
+    "mbpp:Mbpp/106",
+    "mbpp:Mbpp/124",
+    "mbpp:Mbpp/252",
+    "mbpp:Mbpp/255",
+    "mbpp:Mbpp/580",
+    "mbpp:Mbpp/720"
+  ],
+  "source_hashes": {
+    "audited_current": "1cec3afa76d22414d5c8db9339649b2cc0fd9138bc8385143663a2aed62471c7",
+    "frozen": "0d24437e9297466c3f28a7af677a76d7e54c10dc6358edb7b724d586040e7859"
+  },
+  "strong_model_avoidance_rate": 0.8610271903323263,
+  "successes_per_weighted_total_proxy_relative_difference": 0.10647039124792745,
+  "tasks": 542
+}

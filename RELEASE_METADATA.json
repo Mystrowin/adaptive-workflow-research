@@ -1,0 +1,12 @@
+{
+  "release_version": "1.0.0-research",
+  "paper_version": "1.0",
+  "benchmark_run_id": "awb-20260826T042018Z-s20260824-300eaad5",
+  "audit_version": "scientific-validity-audit-v1",
+  "source_tree_sha256": "0d24437e9297466c3f28a7af677a76d7e54c10dc6358edb7b724d586040e7859",
+  "publication_bundle_sha256": "6eec2f7d16a48ee0c5d0efeb3699439307406e74a56d99fcada5953486afb860",
+  "status": "local_preprint_not_published",
+  "doi": null,
+  "venue": null,
+  "push_or_upload_authorized": false
+}

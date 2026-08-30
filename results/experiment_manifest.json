@@ -1,0 +1,6644 @@
+{
+  "adaptive_workflow_version": "0.19.4",
+  "benchmarks": [
+    {
+      "license": "MIT (repository-level license; no separate dataset license asserted)",
+      "name": "HumanEval",
+      "version": "6d43fb980f9fee3c892a914eda09951f772ad10d"
+    },
+    {
+      "license": "CC BY 4.0 International (dataset); Apache-2.0 (repository source)",
+      "name": "MBPP",
+      "version": "f46ca8374b4cddef97ca4208ad986049d74d296a"
+    },
+    {
+      "license": "Apache-2.0",
+      "name": "EvalPlus",
+      "version": "v0.3.1"
+    },
+    {
+      "license": "Apache-2.0 with upstream HumanEval MIT obligations retained",
+      "name": "HumanEval+",
+      "version": "v0.1.10"
+    },
+    {
+      "license": "Apache-2.0 with upstream MBPP CC BY 4.0 obligations retained",
+      "name": "MBPP+",
+      "version": "v0.2.0"
+    }
+  ],
+  "budget": {
+    "generation_baseline_g0": 4218060.799999966,
+    "generation_cutoffs": [
+      1054515.1999999916,
+      2109030.399999983,
+      3163545.5999999745,
+      4218060.799999966
+    ],
+    "max_output_tokens": 1024,
+    "task_budgets": [
+      {
+        "adaptive_limit": 14957.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 202,
+        "reservations": {
+          "BALANCED": 3800.6,
+          "BEST": 9317.6,
+          "FAST": 1839.0
+        },
+        "task_identity": "humaneval:HumanEval/92"
+      },
+      {
+        "adaptive_limit": 14823.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 191,
+        "reservations": {
+          "BALANCED": 3766.5,
+          "BEST": 9234.0,
+          "FAST": 1822.5
+        },
+        "task_identity": "humaneval:HumanEval/90"
+      },
+      {
+        "adaptive_limit": 13749.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 103,
+        "reservations": {
+          "BALANCED": 3493.7000000000003,
+          "BEST": 8565.199999999999,
+          "FAST": 1690.5
+        },
+        "task_identity": "mbpp:Mbpp/422"
+      },
+      {
+        "adaptive_limit": 13822.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 109,
+        "reservations": {
+          "BALANCED": 3512.3,
+          "BEST": 8610.8,
+          "FAST": 1699.5
+        },
+        "task_identity": "mbpp:Mbpp/172"
+      },
+      {
+        "adaptive_limit": 13956.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 120,
+        "reservations": {
+          "BALANCED": 3546.4,
+          "BEST": 8694.4,
+          "FAST": 1716.0
+        },
+        "task_identity": "mbpp:Mbpp/106"
+      },
+      {
+        "adaptive_limit": 15530.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 249,
+        "reservations": {
+          "BALANCED": 3946.3,
+          "BEST": 9674.8,
+          "FAST": 1909.5
+        },
+        "task_identity": "humaneval:HumanEval/113"
+      },
+      {
+        "adaptive_limit": 13798.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 107,
+        "reservations": {
+          "BALANCED": 3506.1,
+          "BEST": 8595.6,
+          "FAST": 1696.5
+        },
+        "task_identity": "mbpp:Mbpp/18"
+      },
+      {
+        "adaptive_limit": 13700.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 99,
+        "reservations": {
+          "BALANCED": 3481.3,
+          "BEST": 8534.8,
+          "FAST": 1684.5
+        },
+        "task_identity": "mbpp:Mbpp/453"
+      },
+      {
+        "adaptive_limit": 13749.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 103,
+        "reservations": {
+          "BALANCED": 3493.7000000000003,
+          "BEST": 8565.199999999999,
+          "FAST": 1690.5
+        },
+        "task_identity": "mbpp:Mbpp/760"
+      },
+      {
+        "adaptive_limit": 13639.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 94,
+        "reservations": {
+          "BALANCED": 3465.8,
+          "BEST": 8496.8,
+          "FAST": 1677.0
+        },
+        "task_identity": "mbpp:Mbpp/605"
+      },
+      {
+        "adaptive_limit": 14188.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 139,
+        "reservations": {
+          "BALANCED": 3605.3,
+          "BEST": 8838.8,
+          "FAST": 1744.5
+        },
+        "task_identity": "mbpp:Mbpp/805"
+      },
+      {
+        "adaptive_limit": 15359.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 235,
+        "reservations": {
+          "BALANCED": 3902.9,
+          "BEST": 9568.4,
+          "FAST": 1888.5
+        },
+        "task_identity": "humaneval:HumanEval/147"
+      },
+      {
+        "adaptive_limit": 13895.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 115,
+        "reservations": {
+          "BALANCED": 3530.9,
+          "BEST": 8656.4,
+          "FAST": 1708.5
+        },
+        "task_identity": "mbpp:Mbpp/166"
+      },
+      {
+        "adaptive_limit": 13956.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 120,
+        "reservations": {
+          "BALANCED": 3546.4,
+          "BEST": 8694.4,
+          "FAST": 1716.0
+        },
+        "task_identity": "mbpp:Mbpp/750"
+      },
+      {
+        "adaptive_limit": 13712.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 100,
+        "reservations": {
+          "BALANCED": 3484.4,
+          "BEST": 8542.4,
+          "FAST": 1686.0
+        },
+        "task_identity": "mbpp:Mbpp/455"
+      },
+      {
+        "adaptive_limit": 16714.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 346,
+        "reservations": {
+          "BALANCED": 4247.0,
+          "BEST": 10412.0,
+          "FAST": 2055.0
+        },
+        "task_identity": "humaneval:HumanEval/105"
+      },
+      {
+        "adaptive_limit": 14615.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 174,
+        "reservations": {
+          "BALANCED": 3713.8,
+          "BEST": 9104.8,
+          "FAST": 1797.0
+        },
+        "task_identity": "humaneval:HumanEval/91"
+      },
+      {
+        "adaptive_limit": 13615.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 92,
+        "reservations": {
+          "BALANCED": 3459.6,
+          "BEST": 8481.6,
+          "FAST": 1674.0
+        },
+        "task_identity": "mbpp:Mbpp/437"
+      },
+      {
+        "adaptive_limit": 14078.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 130,
+        "reservations": {
+          "BALANCED": 3577.4,
+          "BEST": 8770.4,
+          "FAST": 1731.0
+        },
+        "task_identity": "mbpp:Mbpp/456"
+      },
+      {
+        "adaptive_limit": 14627.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 175,
+        "reservations": {
+          "BALANCED": 3716.9,
+          "BEST": 9112.4,
+          "FAST": 1798.5
+        },
+        "task_identity": "humaneval:HumanEval/156"
+      },
+      {
+        "adaptive_limit": 13761.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 104,
+        "reservations": {
+          "BALANCED": 3496.8,
+          "BEST": 8572.8,
+          "FAST": 1692.0
+        },
+        "task_identity": "mbpp:Mbpp/296"
+      },
+      {
+        "adaptive_limit": 13761.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 104,
+        "reservations": {
+          "BALANCED": 3496.8,
+          "BEST": 8572.8,
+          "FAST": 1692.0
+        },
+        "task_identity": "mbpp:Mbpp/19"
+      },
+      {
+        "adaptive_limit": 14078.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 130,
+        "reservations": {
+          "BALANCED": 3577.4,
+          "BEST": 8770.4,
+          "FAST": 1731.0
+        },
+        "task_identity": "mbpp:Mbpp/579"
+      },
+      {
+        "adaptive_limit": 13871.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 113,
+        "reservations": {
+          "BALANCED": 3524.7000000000003,
+          "BEST": 8641.199999999999,
+          "FAST": 1705.5
+        },
+        "task_identity": "mbpp:Mbpp/293"
+      },
+      {
+        "adaptive_limit": 13908.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 116,
+        "reservations": {
+          "BALANCED": 3534.0,
+          "BEST": 8664.0,
+          "FAST": 1710.0
+        },
+        "task_identity": "mbpp:Mbpp/7"
+      },
+      {
+        "adaptive_limit": 14493.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 164,
+        "reservations": {
+          "BALANCED": 3682.8,
+          "BEST": 9028.8,
+          "FAST": 1782.0
+        },
+        "task_identity": "humaneval:HumanEval/44"
+      },
+      {
+        "adaptive_limit": 13725.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 101,
+        "reservations": {
+          "BALANCED": 3487.5,
+          "BEST": 8550.0,
+          "FAST": 1687.5
+        },
+        "task_identity": "mbpp:Mbpp/292"
+      },
+      {
+        "adaptive_limit": 13932.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 118,
+        "reservations": {
+          "BALANCED": 3540.2000000000003,
+          "BEST": 8679.199999999999,
+          "FAST": 1713.0
+        },
+        "task_identity": "mbpp:Mbpp/791"
+      },
+      {
+        "adaptive_limit": 13737.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 102,
+        "reservations": {
+          "BALANCED": 3490.6,
+          "BEST": 8557.6,
+          "FAST": 1689.0
+        },
+        "task_identity": "mbpp:Mbpp/281"
+      },
+      {
+        "adaptive_limit": 14005.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 124,
+        "reservations": {
+          "BALANCED": 3558.8,
+          "BEST": 8724.8,
+          "FAST": 1722.0
+        },
+        "task_identity": "mbpp:Mbpp/312"
+      },
+      {
+        "adaptive_limit": 13737.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 102,
+        "reservations": {
+          "BALANCED": 3490.6,
+          "BEST": 8557.6,
+          "FAST": 1689.0
+        },
+        "task_identity": "mbpp:Mbpp/807"
+      },
+      {
+        "adaptive_limit": 13895.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 115,
+        "reservations": {
+          "BALANCED": 3530.9,
+          "BEST": 8656.4,
+          "FAST": 1708.5
+        },
+        "task_identity": "mbpp:Mbpp/628"
+      },
+      {
+        "adaptive_limit": 14432.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 159,
+        "reservations": {
+          "BALANCED": 3667.3,
+          "BEST": 8990.8,
+          "FAST": 1774.5
+        },
+        "task_identity": "mbpp:Mbpp/259"
+      },
+      {
+        "adaptive_limit": 13810.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 108,
+        "reservations": {
+          "BALANCED": 3509.2000000000003,
+          "BEST": 8603.199999999999,
+          "FAST": 1698.0
+        },
+        "task_identity": "mbpp:Mbpp/61"
+      },
+      {
+        "adaptive_limit": 14298.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 148,
+        "reservations": {
+          "BALANCED": 3633.2000000000003,
+          "BEST": 8907.199999999999,
+          "FAST": 1758.0
+        },
+        "task_identity": "humaneval:HumanEval/47"
+      },
+      {
+        "adaptive_limit": 13883.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 114,
+        "reservations": {
+          "BALANCED": 3527.8,
+          "BEST": 8648.8,
+          "FAST": 1707.0
+        },
+        "task_identity": "mbpp:Mbpp/777"
+      },
+      {
+        "adaptive_limit": 13639.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 94,
+        "reservations": {
+          "BALANCED": 3465.8,
+          "BEST": 8496.8,
+          "FAST": 1677.0
+        },
+        "task_identity": "mbpp:Mbpp/404"
+      },
+      {
+        "adaptive_limit": 13871.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 113,
+        "reservations": {
+          "BALANCED": 3524.7000000000003,
+          "BEST": 8641.199999999999,
+          "FAST": 1705.5
+        },
+        "task_identity": "mbpp:Mbpp/459"
+      },
+      {
+        "adaptive_limit": 13761.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 104,
+        "reservations": {
+          "BALANCED": 3496.8,
+          "BEST": 8572.8,
+          "FAST": 1692.0
+        },
+        "task_identity": "mbpp:Mbpp/100"
+      },
+      {
+        "adaptive_limit": 14139.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 135,
+        "reservations": {
+          "BALANCED": 3592.9,
+          "BEST": 8808.4,
+          "FAST": 1738.5
+        },
+        "task_identity": "mbpp:Mbpp/104"
+      },
+      {
+        "adaptive_limit": 13664.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 96,
+        "reservations": {
+          "BALANCED": 3472.0,
+          "BEST": 8512.0,
+          "FAST": 1680.0
+        },
+        "task_identity": "mbpp:Mbpp/135"
+      },
+      {
+        "adaptive_limit": 14152.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 136,
+        "reservations": {
+          "BALANCED": 3596.0,
+          "BEST": 8816.0,
+          "FAST": 1740.0
+        },
+        "task_identity": "mbpp:Mbpp/573"
+      },
+      {
+        "adaptive_limit": 13664.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 96,
+        "reservations": {
+          "BALANCED": 3472.0,
+          "BEST": 8512.0,
+          "FAST": 1680.0
+        },
+        "task_identity": "mbpp:Mbpp/105"
+      },
+      {
+        "adaptive_limit": 13712.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 100,
+        "reservations": {
+          "BALANCED": 3484.4,
+          "BEST": 8542.4,
+          "FAST": 1686.0
+        },
+        "task_identity": "mbpp:Mbpp/226"
+      },
+      {
+        "adaptive_limit": 13651.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 95,
+        "reservations": {
+          "BALANCED": 3468.9,
+          "BEST": 8504.4,
+          "FAST": 1678.5
+        },
+        "task_identity": "mbpp:Mbpp/781"
+      },
+      {
+        "adaptive_limit": 14335.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 151,
+        "reservations": {
+          "BALANCED": 3642.5,
+          "BEST": 8930.0,
+          "FAST": 1762.5
+        },
+        "task_identity": "humaneval:HumanEval/52"
+      },
+      {
+        "adaptive_limit": 13822.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 109,
+        "reservations": {
+          "BALANCED": 3512.3,
+          "BEST": 8610.8,
+          "FAST": 1699.5
+        },
+        "task_identity": "mbpp:Mbpp/631"
+      },
+      {
+        "adaptive_limit": 13822.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 109,
+        "reservations": {
+          "BALANCED": 3512.3,
+          "BEST": 8610.8,
+          "FAST": 1699.5
+        },
+        "task_identity": "mbpp:Mbpp/256"
+      },
+      {
+        "adaptive_limit": 13969.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 121,
+        "reservations": {
+          "BALANCED": 3549.5,
+          "BEST": 8702.0,
+          "FAST": 1717.5
+        },
+        "task_identity": "mbpp:Mbpp/465"
+      },
+      {
+        "adaptive_limit": 14359.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 153,
+        "reservations": {
+          "BALANCED": 3648.7000000000003,
+          "BEST": 8945.199999999999,
+          "FAST": 1765.5
+        },
+        "task_identity": "mbpp:Mbpp/161"
+      },
+      {
+        "adaptive_limit": 14408.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 157,
+        "reservations": {
+          "BALANCED": 3661.1,
+          "BEST": 8975.6,
+          "FAST": 1771.5
+        },
+        "task_identity": "mbpp:Mbpp/749"
+      },
+      {
+        "adaptive_limit": 13651.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 95,
+        "reservations": {
+          "BALANCED": 3468.9,
+          "BEST": 8504.4,
+          "FAST": 1678.5
+        },
+        "task_identity": "mbpp:Mbpp/279"
+      },
+      {
+        "adaptive_limit": 13615.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 92,
+        "reservations": {
+          "BALANCED": 3459.6,
+          "BEST": 8481.6,
+          "FAST": 1674.0
+        },
+        "task_identity": "mbpp:Mbpp/269"
+      },
+      {
+        "adaptive_limit": 13712.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 100,
+        "reservations": {
+          "BALANCED": 3484.4,
+          "BEST": 8542.4,
+          "FAST": 1686.0
+        },
+        "task_identity": "mbpp:Mbpp/93"
+      },
+      {
+        "adaptive_limit": 14298.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 148,
+        "reservations": {
+          "BALANCED": 3633.2000000000003,
+          "BEST": 8907.199999999999,
+          "FAST": 1758.0
+        },
+        "task_identity": "mbpp:Mbpp/12"
+      },
+      {
+        "adaptive_limit": 14810.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 190,
+        "reservations": {
+          "BALANCED": 3763.4,
+          "BEST": 9226.4,
+          "FAST": 1821.0
+        },
+        "task_identity": "humaneval:HumanEval/58"
+      },
+      {
+        "adaptive_limit": 13871.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 113,
+        "reservations": {
+          "BALANCED": 3524.7000000000003,
+          "BEST": 8641.199999999999,
+          "FAST": 1705.5
+        },
+        "task_identity": "mbpp:Mbpp/440"
+      },
+      {
+        "adaptive_limit": 14103.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 132,
+        "reservations": {
+          "BALANCED": 3583.6,
+          "BEST": 8785.6,
+          "FAST": 1734.0
+        },
+        "task_identity": "mbpp:Mbpp/276"
+      },
+      {
+        "adaptive_limit": 13834.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 110,
+        "reservations": {
+          "BALANCED": 3515.4,
+          "BEST": 8618.4,
+          "FAST": 1701.0
+        },
+        "task_identity": "mbpp:Mbpp/734"
+      },
+      {
+        "adaptive_limit": 15664.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 260,
+        "reservations": {
+          "BALANCED": 3980.4,
+          "BEST": 9758.4,
+          "FAST": 1926.0
+        },
+        "task_identity": "humaneval:HumanEval/74"
+      },
+      {
+        "adaptive_limit": 13895.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 115,
+        "reservations": {
+          "BALANCED": 3530.9,
+          "BEST": 8656.4,
+          "FAST": 1708.5
+        },
+        "task_identity": "mbpp:Mbpp/109"
+      },
+      {
+        "adaptive_limit": 16848.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 357,
+        "reservations": {
+          "BALANCED": 4281.1,
+          "BEST": 10495.6,
+          "FAST": 2071.5
+        },
+        "task_identity": "humaneval:HumanEval/159"
+      },
+      {
+        "adaptive_limit": 13639.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 94,
+        "reservations": {
+          "BALANCED": 3465.8,
+          "BEST": 8496.8,
+          "FAST": 1677.0
+        },
+        "task_identity": "mbpp:Mbpp/59"
+      },
+      {
+        "adaptive_limit": 15835.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 274,
+        "reservations": {
+          "BALANCED": 4023.8,
+          "BEST": 9864.8,
+          "FAST": 1947.0
+        },
+        "task_identity": "humaneval:HumanEval/160"
+      },
+      {
+        "adaptive_limit": 13822.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 109,
+        "reservations": {
+          "BALANCED": 3512.3,
+          "BEST": 8610.8,
+          "FAST": 1699.5
+        },
+        "task_identity": "mbpp:Mbpp/62"
+      },
+      {
+        "adaptive_limit": 13615.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 92,
+        "reservations": {
+          "BALANCED": 3459.6,
+          "BEST": 8481.6,
+          "FAST": 1674.0
+        },
+        "task_identity": "mbpp:Mbpp/3"
+      },
+      {
+        "adaptive_limit": 13810.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 108,
+        "reservations": {
+          "BALANCED": 3509.2000000000003,
+          "BEST": 8603.199999999999,
+          "FAST": 1698.0
+        },
+        "task_identity": "mbpp:Mbpp/57"
+      },
+      {
+        "adaptive_limit": 14640.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 176,
+        "reservations": {
+          "BALANCED": 3720.0,
+          "BEST": 9120.0,
+          "FAST": 1800.0
+        },
+        "task_identity": "humaneval:HumanEval/93"
+      },
+      {
+        "adaptive_limit": 14005.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 124,
+        "reservations": {
+          "BALANCED": 3558.8,
+          "BEST": 8724.8,
+          "FAST": 1722.0
+        },
+        "task_identity": "mbpp:Mbpp/559"
+      },
+      {
+        "adaptive_limit": 16116.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 297,
+        "reservations": {
+          "BALANCED": 4095.1,
+          "BEST": 10039.6,
+          "FAST": 1981.5
+        },
+        "task_identity": "humaneval:HumanEval/152"
+      },
+      {
+        "adaptive_limit": 17299.6,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 394,
+        "reservations": {
+          "BALANCED": 4395.8,
+          "BEST": 10776.8,
+          "FAST": 2127.0
+        },
+        "task_identity": "humaneval:HumanEval/94"
+      },
+      {
+        "adaptive_limit": 13798.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 107,
+        "reservations": {
+          "BALANCED": 3506.1,
+          "BEST": 8595.6,
+          "FAST": 1696.5
+        },
+        "task_identity": "mbpp:Mbpp/637"
+      },
+      {
+        "adaptive_limit": 13883.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 114,
+        "reservations": {
+          "BALANCED": 3527.8,
+          "BEST": 8648.8,
+          "FAST": 1707.0
+        },
+        "task_identity": "mbpp:Mbpp/165"
+      },
+      {
+        "adaptive_limit": 15884.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 278,
+        "reservations": {
+          "BALANCED": 4036.2000000000003,
+          "BEST": 9895.199999999999,
+          "FAST": 1953.0
+        },
+        "task_identity": "humaneval:HumanEval/148"
+      },
+      {
+        "adaptive_limit": 14847.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 193,
+        "reservations": {
+          "BALANCED": 3772.7000000000003,
+          "BEST": 9249.199999999999,
+          "FAST": 1825.5
+        },
+        "task_identity": "humaneval:HumanEval/106"
+      },
+      {
+        "adaptive_limit": 14164.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 137,
+        "reservations": {
+          "BALANCED": 3599.1,
+          "BEST": 8823.6,
+          "FAST": 1741.5
+        },
+        "task_identity": "humaneval:HumanEval/16"
+      },
+      {
+        "adaptive_limit": 13883.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 114,
+        "reservations": {
+          "BALANCED": 3527.8,
+          "BEST": 8648.8,
+          "FAST": 1707.0
+        },
+        "task_identity": "mbpp:Mbpp/433"
+      },
+      {
+        "adaptive_limit": 14274.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 146,
+        "reservations": {
+          "BALANCED": 3627.0,
+          "BEST": 8892.0,
+          "FAST": 1755.0
+        },
+        "task_identity": "mbpp:Mbpp/250"
+      },
+      {
+        "adaptive_limit": 13895.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 115,
+        "reservations": {
+          "BALANCED": 3530.9,
+          "BEST": 8656.4,
+          "FAST": 1708.5
+        },
+        "task_identity": "mbpp:Mbpp/757"
+      },
+      {
+        "adaptive_limit": 14066.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 129,
+        "reservations": {
+          "BALANCED": 3574.3,
+          "BEST": 8762.8,
+          "FAST": 1729.5
+        },
+        "task_identity": "mbpp:Mbpp/607"
+      },
+      {
+        "adaptive_limit": 13822.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 109,
+        "reservations": {
+          "BALANCED": 3512.3,
+          "BEST": 8610.8,
+          "FAST": 1699.5
+        },
+        "task_identity": "mbpp:Mbpp/294"
+      },
+      {
+        "adaptive_limit": 14188.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 139,
+        "reservations": {
+          "BALANCED": 3605.3,
+          "BEST": 8838.8,
+          "FAST": 1744.5
+        },
+        "task_identity": "humaneval:HumanEval/98"
+      },
+      {
+        "adaptive_limit": 14310.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 149,
+        "reservations": {
+          "BALANCED": 3636.3,
+          "BEST": 8914.8,
+          "FAST": 1759.5
+        },
+        "task_identity": "humaneval:HumanEval/11"
+      },
+      {
+        "adaptive_limit": 13749.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 103,
+        "reservations": {
+          "BALANCED": 3493.7000000000003,
+          "BEST": 8565.199999999999,
+          "FAST": 1690.5
+        },
+        "task_identity": "mbpp:Mbpp/11"
+      },
+      {
+        "adaptive_limit": 13798.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 107,
+        "reservations": {
+          "BALANCED": 3506.1,
+          "BEST": 8595.6,
+          "FAST": 1696.5
+        },
+        "task_identity": "mbpp:Mbpp/224"
+      },
+      {
+        "adaptive_limit": 13700.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 99,
+        "reservations": {
+          "BALANCED": 3481.3,
+          "BEST": 8534.8,
+          "FAST": 1684.5
+        },
+        "task_identity": "mbpp:Mbpp/20"
+      },
+      {
+        "adaptive_limit": 14310.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 149,
+        "reservations": {
+          "BALANCED": 3636.3,
+          "BEST": 8914.8,
+          "FAST": 1759.5
+        },
+        "task_identity": "mbpp:Mbpp/585"
+      },
+      {
+        "adaptive_limit": 14091.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 131,
+        "reservations": {
+          "BALANCED": 3580.5,
+          "BEST": 8778.0,
+          "FAST": 1732.5
+        },
+        "task_identity": "mbpp:Mbpp/261"
+      },
+      {
+        "adaptive_limit": 13700.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 99,
+        "reservations": {
+          "BALANCED": 3481.3,
+          "BEST": 8534.8,
+          "FAST": 1684.5
+        },
+        "task_identity": "mbpp:Mbpp/798"
+      },
+      {
+        "adaptive_limit": 15018.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 207,
+        "reservations": {
+          "BALANCED": 3816.1,
+          "BEST": 9355.6,
+          "FAST": 1846.5
+        },
+        "task_identity": "humaneval:HumanEval/54"
+      },
+      {
+        "adaptive_limit": 14493.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 164,
+        "reservations": {
+          "BALANCED": 3682.8,
+          "BEST": 9028.8,
+          "FAST": 1782.0
+        },
+        "task_identity": "mbpp:Mbpp/237"
+      },
+      {
+        "adaptive_limit": 13786.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 106,
+        "reservations": {
+          "BALANCED": 3503.0,
+          "BEST": 8588.0,
+          "FAST": 1695.0
+        },
+        "task_identity": "mbpp:Mbpp/247"
+      },
+      {
+        "adaptive_limit": 14237.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 143,
+        "reservations": {
+          "BALANCED": 3617.7000000000003,
+          "BEST": 8869.199999999999,
+          "FAST": 1750.5
+        },
+        "task_identity": "mbpp:Mbpp/769"
+      },
+      {
+        "adaptive_limit": 13725.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 101,
+        "reservations": {
+          "BALANCED": 3487.5,
+          "BEST": 8550.0,
+          "FAST": 1687.5
+        },
+        "task_identity": "mbpp:Mbpp/58"
+      },
+      {
+        "adaptive_limit": 13761.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 104,
+        "reservations": {
+          "BALANCED": 3496.8,
+          "BEST": 8572.8,
+          "FAST": 1692.0
+        },
+        "task_identity": "mbpp:Mbpp/629"
+      },
+      {
+        "adaptive_limit": 14359.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 153,
+        "reservations": {
+          "BALANCED": 3648.7000000000003,
+          "BEST": 8945.199999999999,
+          "FAST": 1765.5
+        },
+        "task_identity": "mbpp:Mbpp/245"
+      },
+      {
+        "adaptive_limit": 14762.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 186,
+        "reservations": {
+          "BALANCED": 3751.0,
+          "BEST": 9196.0,
+          "FAST": 1815.0
+        },
+        "task_identity": "mbpp:Mbpp/97"
+      },
+      {
+        "adaptive_limit": 14530.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 167,
+        "reservations": {
+          "BALANCED": 3692.1,
+          "BEST": 9051.6,
+          "FAST": 1786.5
+        },
+        "task_identity": "humaneval:HumanEval/9"
+      },
+      {
+        "adaptive_limit": 16177.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 302,
+        "reservations": {
+          "BALANCED": 4110.6,
+          "BEST": 10077.6,
+          "FAST": 1989.0
+        },
+        "task_identity": "humaneval:HumanEval/130"
+      },
+      {
+        "adaptive_limit": 13822.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 109,
+        "reservations": {
+          "BALANCED": 3512.3,
+          "BEST": 8610.8,
+          "FAST": 1699.5
+        },
+        "task_identity": "mbpp:Mbpp/128"
+      },
+      {
+        "adaptive_limit": 15921.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 281,
+        "reservations": {
+          "BALANCED": 4045.5,
+          "BEST": 9918.0,
+          "FAST": 1957.5
+        },
+        "task_identity": "humaneval:HumanEval/141"
+      },
+      {
+        "adaptive_limit": 13834.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 110,
+        "reservations": {
+          "BALANCED": 3515.4,
+          "BEST": 8618.4,
+          "FAST": 1701.0
+        },
+        "task_identity": "mbpp:Mbpp/257"
+      },
+      {
+        "adaptive_limit": 13749.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 103,
+        "reservations": {
+          "BALANCED": 3493.7000000000003,
+          "BEST": 8565.199999999999,
+          "FAST": 1690.5
+        },
+        "task_identity": "mbpp:Mbpp/782"
+      },
+      {
+        "adaptive_limit": 13810.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 108,
+        "reservations": {
+          "BALANCED": 3509.2000000000003,
+          "BEST": 8603.199999999999,
+          "FAST": 1698.0
+        },
+        "task_identity": "mbpp:Mbpp/394"
+      },
+      {
+        "adaptive_limit": 13908.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 116,
+        "reservations": {
+          "BALANCED": 3534.0,
+          "BEST": 8664.0,
+          "FAST": 1710.0
+        },
+        "task_identity": "mbpp:Mbpp/271"
+      },
+      {
+        "adaptive_limit": 15518.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 248,
+        "reservations": {
+          "BALANCED": 3943.2000000000003,
+          "BEST": 9667.199999999999,
+          "FAST": 1908.0
+        },
+        "task_identity": "humaneval:HumanEval/117"
+      },
+      {
+        "adaptive_limit": 14176.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 138,
+        "reservations": {
+          "BALANCED": 3602.2000000000003,
+          "BEST": 8831.199999999999,
+          "FAST": 1743.0
+        },
+        "task_identity": "humaneval:HumanEval/48"
+      },
+      {
+        "adaptive_limit": 13883.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 114,
+        "reservations": {
+          "BALANCED": 3527.8,
+          "BEST": 8648.8,
+          "FAST": 1707.0
+        },
+        "task_identity": "mbpp:Mbpp/414"
+      },
+      {
+        "adaptive_limit": 14286.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 147,
+        "reservations": {
+          "BALANCED": 3630.1,
+          "BEST": 8899.6,
+          "FAST": 1756.5
+        },
+        "task_identity": "mbpp:Mbpp/308"
+      },
+      {
+        "adaptive_limit": 14579.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 171,
+        "reservations": {
+          "BALANCED": 3704.5,
+          "BEST": 9082.0,
+          "FAST": 1792.5
+        },
+        "task_identity": "mbpp:Mbpp/445"
+      },
+      {
+        "adaptive_limit": 14396.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 156,
+        "reservations": {
+          "BALANCED": 3658.0,
+          "BEST": 8968.0,
+          "FAST": 1770.0
+        },
+        "task_identity": "mbpp:Mbpp/726"
+      },
+      {
+        "adaptive_limit": 13749.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 103,
+        "reservations": {
+          "BALANCED": 3493.7000000000003,
+          "BEST": 8565.199999999999,
+          "FAST": 1690.5
+        },
+        "task_identity": "mbpp:Mbpp/457"
+      },
+      {
+        "adaptive_limit": 14420.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 158,
+        "reservations": {
+          "BALANCED": 3664.2000000000003,
+          "BEST": 8983.199999999999,
+          "FAST": 1773.0
+        },
+        "task_identity": "humaneval:HumanEval/50"
+      },
+      {
+        "adaptive_limit": 15030.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 208,
+        "reservations": {
+          "BALANCED": 3819.2000000000003,
+          "BEST": 9363.199999999999,
+          "FAST": 1848.0
+        },
+        "task_identity": "mbpp:Mbpp/722"
+      },
+      {
+        "adaptive_limit": 13786.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 106,
+        "reservations": {
+          "BALANCED": 3503.0,
+          "BEST": 8588.0,
+          "FAST": 1695.0
+        },
+        "task_identity": "mbpp:Mbpp/6"
+      },
+      {
+        "adaptive_limit": 13773.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 105,
+        "reservations": {
+          "BALANCED": 3499.9,
+          "BEST": 8580.4,
+          "FAST": 1693.5
+        },
+        "task_identity": "mbpp:Mbpp/432"
+      },
+      {
+        "adaptive_limit": 14871.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 195,
+        "reservations": {
+          "BALANCED": 3778.9,
+          "BEST": 9264.4,
+          "FAST": 1828.5
+        },
+        "task_identity": "mbpp:Mbpp/721"
+      },
+      {
+        "adaptive_limit": 13688.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 98,
+        "reservations": {
+          "BALANCED": 3478.2000000000003,
+          "BEST": 8527.199999999999,
+          "FAST": 1683.0
+        },
+        "task_identity": "mbpp:Mbpp/566"
+      },
+      {
+        "adaptive_limit": 14322.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 150,
+        "reservations": {
+          "BALANCED": 3639.4,
+          "BEST": 8922.4,
+          "FAST": 1761.0
+        },
+        "task_identity": "mbpp:Mbpp/723"
+      },
+      {
+        "adaptive_limit": 14200.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 140,
+        "reservations": {
+          "BALANCED": 3608.4,
+          "BEST": 8846.4,
+          "FAST": 1746.0
+        },
+        "task_identity": "mbpp:Mbpp/560"
+      },
+      {
+        "adaptive_limit": 15786.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 270,
+        "reservations": {
+          "BALANCED": 4011.4,
+          "BEST": 9834.4,
+          "FAST": 1941.0
+        },
+        "task_identity": "humaneval:HumanEval/88"
+      },
+      {
+        "adaptive_limit": 14993.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 205,
+        "reservations": {
+          "BALANCED": 3809.9,
+          "BEST": 9340.4,
+          "FAST": 1843.5
+        },
+        "task_identity": "humaneval:HumanEval/136"
+      },
+      {
+        "adaptive_limit": 13859.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 112,
+        "reservations": {
+          "BALANCED": 3521.6,
+          "BEST": 8633.6,
+          "FAST": 1704.0
+        },
+        "task_identity": "mbpp:Mbpp/775"
+      },
+      {
+        "adaptive_limit": 13688.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 98,
+        "reservations": {
+          "BALANCED": 3478.2000000000003,
+          "BEST": 8527.199999999999,
+          "FAST": 1683.0
+        },
+        "task_identity": "mbpp:Mbpp/406"
+      },
+      {
+        "adaptive_limit": 13773.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 105,
+        "reservations": {
+          "BALANCED": 3499.9,
+          "BEST": 8580.4,
+          "FAST": 1693.5
+        },
+        "task_identity": "mbpp:Mbpp/119"
+      },
+      {
+        "adaptive_limit": 13700.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 99,
+        "reservations": {
+          "BALANCED": 3481.3,
+          "BEST": 8534.8,
+          "FAST": 1684.5
+        },
+        "task_identity": "mbpp:Mbpp/602"
+      },
+      {
+        "adaptive_limit": 13737.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 102,
+        "reservations": {
+          "BALANCED": 3490.6,
+          "BEST": 8557.6,
+          "FAST": 1689.0
+        },
+        "task_identity": "mbpp:Mbpp/116"
+      },
+      {
+        "adaptive_limit": 13725.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 101,
+        "reservations": {
+          "BALANCED": 3487.5,
+          "BEST": 8550.0,
+          "FAST": 1687.5
+        },
+        "task_identity": "mbpp:Mbpp/558"
+      },
+      {
+        "adaptive_limit": 13688.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 98,
+        "reservations": {
+          "BALANCED": 3478.2000000000003,
+          "BEST": 8527.199999999999,
+          "FAST": 1683.0
+        },
+        "task_identity": "mbpp:Mbpp/311"
+      },
+      {
+        "adaptive_limit": 14579.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 171,
+        "reservations": {
+          "BALANCED": 3704.5,
+          "BEST": 9082.0,
+          "FAST": 1792.5
+        },
+        "task_identity": "humaneval:HumanEval/60"
+      },
+      {
+        "adaptive_limit": 15225.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 224,
+        "reservations": {
+          "BALANCED": 3868.8,
+          "BEST": 9484.8,
+          "FAST": 1872.0
+        },
+        "task_identity": "humaneval:HumanEval/144"
+      },
+      {
+        "adaptive_limit": 13956.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 120,
+        "reservations": {
+          "BALANCED": 3546.4,
+          "BEST": 8694.4,
+          "FAST": 1716.0
+        },
+        "task_identity": "mbpp:Mbpp/63"
+      },
+      {
+        "adaptive_limit": 15103.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 214,
+        "reservations": {
+          "BALANCED": 3837.8,
+          "BEST": 9408.8,
+          "FAST": 1857.0
+        },
+        "task_identity": "humaneval:HumanEval/84"
+      },
+      {
+        "adaptive_limit": 13859.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 112,
+        "reservations": {
+          "BALANCED": 3521.6,
+          "BEST": 8633.6,
+          "FAST": 1704.0
+        },
+        "task_identity": "mbpp:Mbpp/138"
+      },
+      {
+        "adaptive_limit": 14188.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 139,
+        "reservations": {
+          "BALANCED": 3605.3,
+          "BEST": 8838.8,
+          "FAST": 1744.5
+        },
+        "task_identity": "humaneval:HumanEval/13"
+      },
+      {
+        "adaptive_limit": 14469.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 162,
+        "reservations": {
+          "BALANCED": 3676.6,
+          "BEST": 9013.6,
+          "FAST": 1779.0
+        },
+        "task_identity": "mbpp:Mbpp/780"
+      },
+      {
+        "adaptive_limit": 14408.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 157,
+        "reservations": {
+          "BALANCED": 3661.1,
+          "BEST": 8975.6,
+          "FAST": 1771.5
+        },
+        "task_identity": "humaneval:HumanEval/150"
+      },
+      {
+        "adaptive_limit": 14884.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 196,
+        "reservations": {
+          "BALANCED": 3782.0,
+          "BEST": 9272.0,
+          "FAST": 1830.0
+        },
+        "task_identity": "humaneval:HumanEval/146"
+      },
+      {
+        "adaptive_limit": 13810.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 108,
+        "reservations": {
+          "BALANCED": 3509.2000000000003,
+          "BEST": 8603.199999999999,
+          "FAST": 1698.0
+        },
+        "task_identity": "mbpp:Mbpp/99"
+      },
+      {
+        "adaptive_limit": 13956.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 120,
+        "reservations": {
+          "BALANCED": 3546.4,
+          "BEST": 8694.4,
+          "FAST": 1716.0
+        },
+        "task_identity": "mbpp:Mbpp/270"
+      },
+      {
+        "adaptive_limit": 13822.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 109,
+        "reservations": {
+          "BALANCED": 3512.3,
+          "BEST": 8610.8,
+          "FAST": 1699.5
+        },
+        "task_identity": "mbpp:Mbpp/755"
+      },
+      {
+        "adaptive_limit": 14420.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 158,
+        "reservations": {
+          "BALANCED": 3664.2000000000003,
+          "BEST": 8983.199999999999,
+          "FAST": 1773.0
+        },
+        "task_identity": "mbpp:Mbpp/232"
+      },
+      {
+        "adaptive_limit": 13847.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 111,
+        "reservations": {
+          "BALANCED": 3518.5,
+          "BEST": 8626.0,
+          "FAST": 1702.5
+        },
+        "task_identity": "mbpp:Mbpp/421"
+      },
+      {
+        "adaptive_limit": 14347.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 152,
+        "reservations": {
+          "BALANCED": 3645.6,
+          "BEST": 8937.6,
+          "FAST": 1764.0
+        },
+        "task_identity": "humaneval:HumanEval/2"
+      },
+      {
+        "adaptive_limit": 13847.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 111,
+        "reservations": {
+          "BALANCED": 3518.5,
+          "BEST": 8626.0,
+          "FAST": 1702.5
+        },
+        "task_identity": "mbpp:Mbpp/230"
+      },
+      {
+        "adaptive_limit": 13981.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 122,
+        "reservations": {
+          "BALANCED": 3552.6,
+          "BEST": 8709.6,
+          "FAST": 1719.0
+        },
+        "task_identity": "humaneval:HumanEval/55"
+      },
+      {
+        "adaptive_limit": 13859.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 112,
+        "reservations": {
+          "BALANCED": 3521.6,
+          "BEST": 8633.6,
+          "FAST": 1704.0
+        },
+        "task_identity": "mbpp:Mbpp/784"
+      },
+      {
+        "adaptive_limit": 13651.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 95,
+        "reservations": {
+          "BALANCED": 3468.9,
+          "BEST": 8504.4,
+          "FAST": 1678.5
+        },
+        "task_identity": "mbpp:Mbpp/89"
+      },
+      {
+        "adaptive_limit": 14359.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 153,
+        "reservations": {
+          "BALANCED": 3648.7000000000003,
+          "BEST": 8945.199999999999,
+          "FAST": 1765.5
+        },
+        "task_identity": "mbpp:Mbpp/64"
+      },
+      {
+        "adaptive_limit": 13883.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 114,
+        "reservations": {
+          "BALANCED": 3527.8,
+          "BEST": 8648.8,
+          "FAST": 1707.0
+        },
+        "task_identity": "mbpp:Mbpp/603"
+      },
+      {
+        "adaptive_limit": 13737.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 102,
+        "reservations": {
+          "BALANCED": 3490.6,
+          "BEST": 8557.6,
+          "FAST": 1689.0
+        },
+        "task_identity": "mbpp:Mbpp/14"
+      },
+      {
+        "adaptive_limit": 14749.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 185,
+        "reservations": {
+          "BALANCED": 3747.9,
+          "BEST": 9188.4,
+          "FAST": 1813.5
+        },
+        "task_identity": "humaneval:HumanEval/30"
+      },
+      {
+        "adaptive_limit": 14322.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 150,
+        "reservations": {
+          "BALANCED": 3639.4,
+          "BEST": 8922.4,
+          "FAST": 1761.0
+        },
+        "task_identity": "mbpp:Mbpp/630"
+      },
+      {
+        "adaptive_limit": 13749.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 103,
+        "reservations": {
+          "BALANCED": 3493.7000000000003,
+          "BEST": 8565.199999999999,
+          "FAST": 1690.5
+        },
+        "task_identity": "mbpp:Mbpp/436"
+      },
+      {
+        "adaptive_limit": 13859.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 112,
+        "reservations": {
+          "BALANCED": 3521.6,
+          "BEST": 8633.6,
+          "FAST": 1704.0
+        },
+        "task_identity": "mbpp:Mbpp/418"
+      },
+      {
+        "adaptive_limit": 15201.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 222,
+        "reservations": {
+          "BALANCED": 3862.6,
+          "BEST": 9469.6,
+          "FAST": 1869.0
+        },
+        "task_identity": "humaneval:HumanEval/96"
+      },
+      {
+        "adaptive_limit": 13810.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 108,
+        "reservations": {
+          "BALANCED": 3509.2000000000003,
+          "BEST": 8603.199999999999,
+          "FAST": 1698.0
+        },
+        "task_identity": "mbpp:Mbpp/65"
+      },
+      {
+        "adaptive_limit": 14774.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 187,
+        "reservations": {
+          "BALANCED": 3754.1,
+          "BEST": 9203.6,
+          "FAST": 1816.5
+        },
+        "task_identity": "humaneval:HumanEval/158"
+      },
+      {
+        "adaptive_limit": 13737.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 102,
+        "reservations": {
+          "BALANCED": 3490.6,
+          "BEST": 8557.6,
+          "FAST": 1689.0
+        },
+        "task_identity": "mbpp:Mbpp/801"
+      },
+      {
+        "adaptive_limit": 13761.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 104,
+        "reservations": {
+          "BALANCED": 3496.8,
+          "BEST": 8572.8,
+          "FAST": 1692.0
+        },
+        "task_identity": "mbpp:Mbpp/398"
+      },
+      {
+        "adaptive_limit": 14335.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 151,
+        "reservations": {
+          "BALANCED": 3642.5,
+          "BEST": 8930.0,
+          "FAST": 1762.5
+        },
+        "task_identity": "humaneval:HumanEval/26"
+      },
+      {
+        "adaptive_limit": 13798.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 107,
+        "reservations": {
+          "BALANCED": 3506.1,
+          "BEST": 8595.6,
+          "FAST": 1696.5
+        },
+        "task_identity": "mbpp:Mbpp/9"
+      },
+      {
+        "adaptive_limit": 13676.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 97,
+        "reservations": {
+          "BALANCED": 3475.1,
+          "BEST": 8519.6,
+          "FAST": 1681.5
+        },
+        "task_identity": "mbpp:Mbpp/96"
+      },
+      {
+        "adaptive_limit": 14298.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 148,
+        "reservations": {
+          "BALANCED": 3633.2000000000003,
+          "BEST": 8907.199999999999,
+          "FAST": 1758.0
+        },
+        "task_identity": "humaneval:HumanEval/82"
+      },
+      {
+        "adaptive_limit": 13773.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 105,
+        "reservations": {
+          "BALANCED": 3499.9,
+          "BEST": 8580.4,
+          "FAST": 1693.5
+        },
+        "task_identity": "mbpp:Mbpp/588"
+      },
+      {
+        "adaptive_limit": 14591.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 172,
+        "reservations": {
+          "BALANCED": 3707.6,
+          "BEST": 9089.6,
+          "FAST": 1794.0
+        },
+        "task_identity": "humaneval:HumanEval/19"
+      },
+      {
+        "adaptive_limit": 14066.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 129,
+        "reservations": {
+          "BALANCED": 3574.3,
+          "BEST": 8762.8,
+          "FAST": 1729.5
+        },
+        "task_identity": "mbpp:Mbpp/596"
+      },
+      {
+        "adaptive_limit": 13993.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 123,
+        "reservations": {
+          "BALANCED": 3555.7000000000003,
+          "BEST": 8717.199999999999,
+          "FAST": 1720.5
+        },
+        "task_identity": "mbpp:Mbpp/71"
+      },
+      {
+        "adaptive_limit": 14810.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 190,
+        "reservations": {
+          "BALANCED": 3763.4,
+          "BEST": 9226.4,
+          "FAST": 1821.0
+        },
+        "task_identity": "humaneval:HumanEval/71"
+      },
+      {
+        "adaptive_limit": 13883.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 114,
+        "reservations": {
+          "BALANCED": 3527.8,
+          "BEST": 8648.8,
+          "FAST": 1707.0
+        },
+        "task_identity": "mbpp:Mbpp/424"
+      },
+      {
+        "adaptive_limit": 14139.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 135,
+        "reservations": {
+          "BALANCED": 3592.9,
+          "BEST": 8808.4,
+          "FAST": 1738.5
+        },
+        "task_identity": "humaneval:HumanEval/155"
+      },
+      {
+        "adaptive_limit": 14030.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 126,
+        "reservations": {
+          "BALANCED": 3565.0,
+          "BEST": 8740.0,
+          "FAST": 1725.0
+        },
+        "task_identity": "mbpp:Mbpp/141"
+      },
+      {
+        "adaptive_limit": 15420.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 240,
+        "reservations": {
+          "BALANCED": 3918.4,
+          "BEST": 9606.4,
+          "FAST": 1896.0
+        },
+        "task_identity": "humaneval:HumanEval/95"
+      },
+      {
+        "adaptive_limit": 13847.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 111,
+        "reservations": {
+          "BALANCED": 3518.5,
+          "BEST": 8626.0,
+          "FAST": 1702.5
+        },
+        "task_identity": "mbpp:Mbpp/283"
+      },
+      {
+        "adaptive_limit": 13725.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 101,
+        "reservations": {
+          "BALANCED": 3487.5,
+          "BEST": 8550.0,
+          "FAST": 1687.5
+        },
+        "task_identity": "mbpp:Mbpp/77"
+      },
+      {
+        "adaptive_limit": 15018.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 207,
+        "reservations": {
+          "BALANCED": 3816.1,
+          "BEST": 9355.6,
+          "FAST": 1846.5
+        },
+        "task_identity": "mbpp:Mbpp/758"
+      },
+      {
+        "adaptive_limit": 14432.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 159,
+        "reservations": {
+          "BALANCED": 3667.3,
+          "BEST": 8990.8,
+          "FAST": 1774.5
+        },
+        "task_identity": "humaneval:HumanEval/56"
+      },
+      {
+        "adaptive_limit": 13749.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 103,
+        "reservations": {
+          "BALANCED": 3493.7000000000003,
+          "BEST": 8565.199999999999,
+          "FAST": 1690.5
+        },
+        "task_identity": "mbpp:Mbpp/92"
+      },
+      {
+        "adaptive_limit": 14359.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 153,
+        "reservations": {
+          "BALANCED": 3648.7000000000003,
+          "BEST": 8945.199999999999,
+          "FAST": 1765.5
+        },
+        "task_identity": "humaneval:HumanEval/162"
+      },
+      {
+        "adaptive_limit": 14054.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 128,
+        "reservations": {
+          "BALANCED": 3571.2000000000003,
+          "BEST": 8755.199999999999,
+          "FAST": 1728.0
+        },
+        "task_identity": "mbpp:Mbpp/429"
+      },
+      {
+        "adaptive_limit": 14847.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 193,
+        "reservations": {
+          "BALANCED": 3772.7000000000003,
+          "BEST": 9249.199999999999,
+          "FAST": 1825.5
+        },
+        "task_identity": "humaneval:HumanEval/64"
+      },
+      {
+        "adaptive_limit": 13664.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 96,
+        "reservations": {
+          "BALANCED": 3472.0,
+          "BEST": 8512.0,
+          "FAST": 1680.0
+        },
+        "task_identity": "mbpp:Mbpp/80"
+      },
+      {
+        "adaptive_limit": 14213.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 141,
+        "reservations": {
+          "BALANCED": 3611.5,
+          "BEST": 8854.0,
+          "FAST": 1747.5
+        },
+        "task_identity": "mbpp:Mbpp/299"
+      },
+      {
+        "adaptive_limit": 14798.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 189,
+        "reservations": {
+          "BALANCED": 3760.3,
+          "BEST": 9218.8,
+          "FAST": 1819.5
+        },
+        "task_identity": "mbpp:Mbpp/754"
+      },
+      {
+        "adaptive_limit": 14005.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 124,
+        "reservations": {
+          "BALANCED": 3558.8,
+          "BEST": 8724.8,
+          "FAST": 1722.0
+        },
+        "task_identity": "mbpp:Mbpp/470"
+      },
+      {
+        "adaptive_limit": 13956.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 120,
+        "reservations": {
+          "BALANCED": 3546.4,
+          "BEST": 8694.4,
+          "FAST": 1716.0
+        },
+        "task_identity": "mbpp:Mbpp/82"
+      },
+      {
+        "adaptive_limit": 13676.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 97,
+        "reservations": {
+          "BALANCED": 3475.1,
+          "BEST": 8519.6,
+          "FAST": 1681.5
+        },
+        "task_identity": "mbpp:Mbpp/86"
+      },
+      {
+        "adaptive_limit": 14786.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 188,
+        "reservations": {
+          "BALANCED": 3757.2000000000003,
+          "BEST": 9211.199999999999,
+          "FAST": 1818.0
+        },
+        "task_identity": "mbpp:Mbpp/778"
+      },
+      {
+        "adaptive_limit": 14054.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 128,
+        "reservations": {
+          "BALANCED": 3571.2000000000003,
+          "BEST": 8755.199999999999,
+          "FAST": 1728.0
+        },
+        "task_identity": "mbpp:Mbpp/591"
+      },
+      {
+        "adaptive_limit": 13688.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 98,
+        "reservations": {
+          "BALANCED": 3478.2000000000003,
+          "BEST": 8527.199999999999,
+          "FAST": 1683.0
+        },
+        "task_identity": "mbpp:Mbpp/741"
+      },
+      {
+        "adaptive_limit": 15030.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 208,
+        "reservations": {
+          "BALANCED": 3819.2000000000003,
+          "BEST": 9363.199999999999,
+          "FAST": 1848.0
+        },
+        "task_identity": "humaneval:HumanEval/125"
+      },
+      {
+        "adaptive_limit": 14725.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 183,
+        "reservations": {
+          "BALANCED": 3741.7000000000003,
+          "BEST": 9173.199999999999,
+          "FAST": 1810.5
+        },
+        "task_identity": "humaneval:HumanEval/101"
+      },
+      {
+        "adaptive_limit": 13737.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 102,
+        "reservations": {
+          "BALANCED": 3490.6,
+          "BEST": 8557.6,
+          "FAST": 1689.0
+        },
+        "task_identity": "mbpp:Mbpp/592"
+      },
+      {
+        "adaptive_limit": 13749.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 103,
+        "reservations": {
+          "BALANCED": 3493.7000000000003,
+          "BEST": 8565.199999999999,
+          "FAST": 1690.5
+        },
+        "task_identity": "mbpp:Mbpp/430"
+      },
+      {
+        "adaptive_limit": 13969.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 121,
+        "reservations": {
+          "BALANCED": 3549.5,
+          "BEST": 8702.0,
+          "FAST": 1717.5
+        },
+        "task_identity": "humaneval:HumanEval/53"
+      },
+      {
+        "adaptive_limit": 14139.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 135,
+        "reservations": {
+          "BALANCED": 3592.9,
+          "BEST": 8808.4,
+          "FAST": 1738.5
+        },
+        "task_identity": "mbpp:Mbpp/273"
+      },
+      {
+        "adaptive_limit": 13981.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 122,
+        "reservations": {
+          "BALANCED": 3552.6,
+          "BEST": 8709.6,
+          "FAST": 1719.0
+        },
+        "task_identity": "mbpp:Mbpp/767"
+      },
+      {
+        "adaptive_limit": 13737.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 102,
+        "reservations": {
+          "BALANCED": 3490.6,
+          "BEST": 8557.6,
+          "FAST": 1689.0
+        },
+        "task_identity": "mbpp:Mbpp/735"
+      },
+      {
+        "adaptive_limit": 13676.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 97,
+        "reservations": {
+          "BALANCED": 3475.1,
+          "BEST": 8519.6,
+          "FAST": 1681.5
+        },
+        "task_identity": "mbpp:Mbpp/771"
+      },
+      {
+        "adaptive_limit": 15225.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 224,
+        "reservations": {
+          "BALANCED": 3868.8,
+          "BEST": 9484.8,
+          "FAST": 1872.0
+        },
+        "task_identity": "humaneval:HumanEval/43"
+      },
+      {
+        "adaptive_limit": 14774.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 187,
+        "reservations": {
+          "BALANCED": 3754.1,
+          "BEST": 9203.6,
+          "FAST": 1816.5
+        },
+        "task_identity": "humaneval:HumanEval/66"
+      },
+      {
+        "adaptive_limit": 13920.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 117,
+        "reservations": {
+          "BALANCED": 3537.1,
+          "BEST": 8671.6,
+          "FAST": 1711.5
+        },
+        "task_identity": "mbpp:Mbpp/632"
+      },
+      {
+        "adaptive_limit": 13993.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 123,
+        "reservations": {
+          "BALANCED": 3555.7000000000003,
+          "BEST": 8717.199999999999,
+          "FAST": 1720.5
+        },
+        "task_identity": "mbpp:Mbpp/620"
+      },
+      {
+        "adaptive_limit": 14603.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 173,
+        "reservations": {
+          "BALANCED": 3710.7000000000003,
+          "BEST": 9097.199999999999,
+          "FAST": 1795.5
+        },
+        "task_identity": "humaneval:HumanEval/163"
+      },
+      {
+        "adaptive_limit": 13700.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 99,
+        "reservations": {
+          "BALANCED": 3481.3,
+          "BEST": 8534.8,
+          "FAST": 1684.5
+        },
+        "task_identity": "mbpp:Mbpp/748"
+      },
+      {
+        "adaptive_limit": 14005.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 124,
+        "reservations": {
+          "BALANCED": 3558.8,
+          "BEST": 8724.8,
+          "FAST": 1722.0
+        },
+        "task_identity": "mbpp:Mbpp/405"
+      },
+      {
+        "adaptive_limit": 13725.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 101,
+        "reservations": {
+          "BALANCED": 3487.5,
+          "BEST": 8550.0,
+          "FAST": 1687.5
+        },
+        "task_identity": "mbpp:Mbpp/577"
+      },
+      {
+        "adaptive_limit": 14005.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 124,
+        "reservations": {
+          "BALANCED": 3558.8,
+          "BEST": 8724.8,
+          "FAST": 1722.0
+        },
+        "task_identity": "mbpp:Mbpp/120"
+      },
+      {
+        "adaptive_limit": 14432.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 159,
+        "reservations": {
+          "BALANCED": 3667.3,
+          "BEST": 8990.8,
+          "FAST": 1774.5
+        },
+        "task_identity": "humaneval:HumanEval/22"
+      },
+      {
+        "adaptive_limit": 14139.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 135,
+        "reservations": {
+          "BALANCED": 3592.9,
+          "BEST": 8808.4,
+          "FAST": 1738.5
+        },
+        "task_identity": "mbpp:Mbpp/130"
+      },
+      {
+        "adaptive_limit": 13725.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 101,
+        "reservations": {
+          "BALANCED": 3487.5,
+          "BEST": 8550.0,
+          "FAST": 1687.5
+        },
+        "task_identity": "mbpp:Mbpp/238"
+      },
+      {
+        "adaptive_limit": 13822.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 109,
+        "reservations": {
+          "BALANCED": 3512.3,
+          "BEST": 8610.8,
+          "FAST": 1699.5
+        },
+        "task_identity": "mbpp:Mbpp/410"
+      },
+      {
+        "adaptive_limit": 13859.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 112,
+        "reservations": {
+          "BALANCED": 3521.6,
+          "BEST": 8633.6,
+          "FAST": 1704.0
+        },
+        "task_identity": "mbpp:Mbpp/564"
+      },
+      {
+        "adaptive_limit": 15591.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 254,
+        "reservations": {
+          "BALANCED": 3961.8,
+          "BEST": 9712.8,
+          "FAST": 1917.0
+        },
+        "task_identity": "humaneval:HumanEval/149"
+      },
+      {
+        "adaptive_limit": 14139.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 135,
+        "reservations": {
+          "BALANCED": 3592.9,
+          "BEST": 8808.4,
+          "FAST": 1738.5
+        },
+        "task_identity": "mbpp:Mbpp/586"
+      },
+      {
+        "adaptive_limit": 15140.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 217,
+        "reservations": {
+          "BALANCED": 3847.1,
+          "BEST": 9431.6,
+          "FAST": 1861.5
+        },
+        "task_identity": "humaneval:HumanEval/103"
+      },
+      {
+        "adaptive_limit": 14481.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 163,
+        "reservations": {
+          "BALANCED": 3679.7000000000003,
+          "BEST": 9021.199999999999,
+          "FAST": 1780.5
+        },
+        "task_identity": "mbpp:Mbpp/419"
+      },
+      {
+        "adaptive_limit": 14017.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 125,
+        "reservations": {
+          "BALANCED": 3561.9,
+          "BEST": 8732.4,
+          "FAST": 1723.5
+        },
+        "task_identity": "mbpp:Mbpp/597"
+      },
+      {
+        "adaptive_limit": 14603.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 173,
+        "reservations": {
+          "BALANCED": 3710.7000000000003,
+          "BEST": 9097.199999999999,
+          "FAST": 1795.5
+        },
+        "task_identity": "humaneval:HumanEval/31"
+      },
+      {
+        "adaptive_limit": 13664.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 96,
+        "reservations": {
+          "BALANCED": 3472.0,
+          "BEST": 8512.0,
+          "FAST": 1680.0
+        },
+        "task_identity": "mbpp:Mbpp/557"
+      },
+      {
+        "adaptive_limit": 13664.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 96,
+        "reservations": {
+          "BALANCED": 3472.0,
+          "BEST": 8512.0,
+          "FAST": 1680.0
+        },
+        "task_identity": "mbpp:Mbpp/242"
+      },
+      {
+        "adaptive_limit": 13847.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 111,
+        "reservations": {
+          "BALANCED": 3518.5,
+          "BEST": 8626.0,
+          "FAST": 1702.5
+        },
+        "task_identity": "humaneval:HumanEval/83"
+      },
+      {
+        "adaptive_limit": 14225.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 142,
+        "reservations": {
+          "BALANCED": 3614.6,
+          "BEST": 8861.6,
+          "FAST": 1749.0
+        },
+        "task_identity": "mbpp:Mbpp/272"
+      },
+      {
+        "adaptive_limit": 13798.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 107,
+        "reservations": {
+          "BALANCED": 3506.1,
+          "BEST": 8595.6,
+          "FAST": 1696.5
+        },
+        "task_identity": "mbpp:Mbpp/606"
+      },
+      {
+        "adaptive_limit": 14932.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 200,
+        "reservations": {
+          "BALANCED": 3794.4,
+          "BEST": 9302.4,
+          "FAST": 1836.0
+        },
+        "task_identity": "humaneval:HumanEval/132"
+      },
+      {
+        "adaptive_limit": 14566.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 170,
+        "reservations": {
+          "BALANCED": 3701.4,
+          "BEST": 9074.4,
+          "FAST": 1791.0
+        },
+        "task_identity": "humaneval:HumanEval/121"
+      },
+      {
+        "adaptive_limit": 14664.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 178,
+        "reservations": {
+          "BALANCED": 3726.2000000000003,
+          "BEST": 9135.199999999999,
+          "FAST": 1803.0
+        },
+        "task_identity": "mbpp:Mbpp/87"
+      },
+      {
+        "adaptive_limit": 13932.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 118,
+        "reservations": {
+          "BALANCED": 3540.2000000000003,
+          "BEST": 8679.199999999999,
+          "FAST": 1713.0
+        },
+        "task_identity": "mbpp:Mbpp/809"
+      },
+      {
+        "adaptive_limit": 15152.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 218,
+        "reservations": {
+          "BALANCED": 3850.2000000000003,
+          "BEST": 9439.199999999999,
+          "FAST": 1863.0
+        },
+        "task_identity": "humaneval:HumanEval/111"
+      },
+      {
+        "adaptive_limit": 14518.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 166,
+        "reservations": {
+          "BALANCED": 3689.0,
+          "BEST": 9044.0,
+          "FAST": 1785.0
+        },
+        "task_identity": "humaneval:HumanEval/39"
+      },
+      {
+        "adaptive_limit": 14676.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 179,
+        "reservations": {
+          "BALANCED": 3729.3,
+          "BEST": 9142.8,
+          "FAST": 1804.5
+        },
+        "task_identity": "humaneval:HumanEval/6"
+      },
+      {
+        "adaptive_limit": 14030.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 126,
+        "reservations": {
+          "BALANCED": 3565.0,
+          "BEST": 8740.0,
+          "FAST": 1725.0
+        },
+        "task_identity": "mbpp:Mbpp/792"
+      },
+      {
+        "adaptive_limit": 14884.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 196,
+        "reservations": {
+          "BALANCED": 3782.0,
+          "BEST": 9272.0,
+          "FAST": 1830.0
+        },
+        "task_identity": "humaneval:HumanEval/154"
+      },
+      {
+        "adaptive_limit": 18141.399999999998,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 463,
+        "reservations": {
+          "BALANCED": 4609.7,
+          "BEST": 11301.199999999999,
+          "FAST": 2230.5
+        },
+        "task_identity": "humaneval:HumanEval/129"
+      },
+      {
+        "adaptive_limit": 14017.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 125,
+        "reservations": {
+          "BALANCED": 3561.9,
+          "BEST": 8732.4,
+          "FAST": 1723.5
+        },
+        "task_identity": "mbpp:Mbpp/426"
+      },
+      {
+        "adaptive_limit": 13859.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 112,
+        "reservations": {
+          "BALANCED": 3521.6,
+          "BEST": 8633.6,
+          "FAST": 1704.0
+        },
+        "task_identity": "mbpp:Mbpp/751"
+      },
+      {
+        "adaptive_limit": 13761.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 104,
+        "reservations": {
+          "BALANCED": 3496.8,
+          "BEST": 8572.8,
+          "FAST": 1692.0
+        },
+        "task_identity": "mbpp:Mbpp/131"
+      },
+      {
+        "adaptive_limit": 14713.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 182,
+        "reservations": {
+          "BALANCED": 3738.6,
+          "BEST": 9165.6,
+          "FAST": 1809.0
+        },
+        "task_identity": "mbpp:Mbpp/615"
+      },
+      {
+        "adaptive_limit": 14432.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 159,
+        "reservations": {
+          "BALANCED": 3667.3,
+          "BEST": 8990.8,
+          "FAST": 1774.5
+        },
+        "task_identity": "mbpp:Mbpp/280"
+      },
+      {
+        "adaptive_limit": 13688.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 98,
+        "reservations": {
+          "BALANCED": 3478.2000000000003,
+          "BEST": 8527.199999999999,
+          "FAST": 1683.0
+        },
+        "task_identity": "mbpp:Mbpp/803"
+      },
+      {
+        "adaptive_limit": 13993.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 123,
+        "reservations": {
+          "BALANCED": 3555.7000000000003,
+          "BEST": 8717.199999999999,
+          "FAST": 1720.5
+        },
+        "task_identity": "mbpp:Mbpp/460"
+      },
+      {
+        "adaptive_limit": 14005.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 124,
+        "reservations": {
+          "BALANCED": 3558.8,
+          "BEST": 8724.8,
+          "FAST": 1722.0
+        },
+        "task_identity": "mbpp:Mbpp/468"
+      },
+      {
+        "adaptive_limit": 14542.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 168,
+        "reservations": {
+          "BALANCED": 3695.2000000000003,
+          "BEST": 9059.199999999999,
+          "FAST": 1788.0
+        },
+        "task_identity": "mbpp:Mbpp/730"
+      },
+      {
+        "adaptive_limit": 13676.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 97,
+        "reservations": {
+          "BALANCED": 3475.1,
+          "BEST": 8519.6,
+          "FAST": 1681.5
+        },
+        "task_identity": "mbpp:Mbpp/604"
+      },
+      {
+        "adaptive_limit": 14676.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 179,
+        "reservations": {
+          "BALANCED": 3729.3,
+          "BEST": 9142.8,
+          "FAST": 1804.5
+        },
+        "task_identity": "humaneval:HumanEval/8"
+      },
+      {
+        "adaptive_limit": 15103.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 214,
+        "reservations": {
+          "BALANCED": 3837.8,
+          "BEST": 9408.8,
+          "FAST": 1857.0
+        },
+        "task_identity": "humaneval:HumanEval/79"
+      },
+      {
+        "adaptive_limit": 13834.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 110,
+        "reservations": {
+          "BALANCED": 3515.4,
+          "BEST": 8618.4,
+          "FAST": 1701.0
+        },
+        "task_identity": "mbpp:Mbpp/589"
+      },
+      {
+        "adaptive_limit": 14920.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 199,
+        "reservations": {
+          "BALANCED": 3791.3,
+          "BEST": 9294.8,
+          "FAST": 1834.5
+        },
+        "task_identity": "humaneval:HumanEval/100"
+      },
+      {
+        "adaptive_limit": 13981.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 122,
+        "reservations": {
+          "BALANCED": 3552.6,
+          "BEST": 8709.6,
+          "FAST": 1719.0
+        },
+        "task_identity": "mbpp:Mbpp/2"
+      },
+      {
+        "adaptive_limit": 14798.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 189,
+        "reservations": {
+          "BALANCED": 3760.3,
+          "BEST": 9218.8,
+          "FAST": 1819.5
+        },
+        "task_identity": "mbpp:Mbpp/265"
+      },
+      {
+        "adaptive_limit": 14054.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 128,
+        "reservations": {
+          "BALANCED": 3571.2000000000003,
+          "BEST": 8755.199999999999,
+          "FAST": 1728.0
+        },
+        "task_identity": "mbpp:Mbpp/619"
+      },
+      {
+        "adaptive_limit": 13725.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 101,
+        "reservations": {
+          "BALANCED": 3487.5,
+          "BEST": 8550.0,
+          "FAST": 1687.5
+        },
+        "task_identity": "mbpp:Mbpp/599"
+      },
+      {
+        "adaptive_limit": 14274.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 146,
+        "reservations": {
+          "BALANCED": 3627.0,
+          "BEST": 8892.0,
+          "FAST": 1755.0
+        },
+        "task_identity": "mbpp:Mbpp/129"
+      },
+      {
+        "adaptive_limit": 13749.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 103,
+        "reservations": {
+          "BALANCED": 3493.7000000000003,
+          "BEST": 8565.199999999999,
+          "FAST": 1690.5
+        },
+        "task_identity": "mbpp:Mbpp/793"
+      },
+      {
+        "adaptive_limit": 13737.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 102,
+        "reservations": {
+          "BALANCED": 3490.6,
+          "BEST": 8557.6,
+          "FAST": 1689.0
+        },
+        "task_identity": "mbpp:Mbpp/123"
+      },
+      {
+        "adaptive_limit": 13651.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 95,
+        "reservations": {
+          "BALANCED": 3468.9,
+          "BEST": 8504.4,
+          "FAST": 1678.5
+        },
+        "task_identity": "mbpp:Mbpp/264"
+      },
+      {
+        "adaptive_limit": 14396.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 156,
+        "reservations": {
+          "BALANCED": 3658.0,
+          "BEST": 8968.0,
+          "FAST": 1770.0
+        },
+        "task_identity": "mbpp:Mbpp/240"
+      },
+      {
+        "adaptive_limit": 13664.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 96,
+        "reservations": {
+          "BALANCED": 3472.0,
+          "BEST": 8512.0,
+          "FAST": 1680.0
+        },
+        "task_identity": "mbpp:Mbpp/478"
+      },
+      {
+        "adaptive_limit": 14945.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 201,
+        "reservations": {
+          "BALANCED": 3797.5,
+          "BEST": 9310.0,
+          "FAST": 1837.5
+        },
+        "task_identity": "mbpp:Mbpp/462"
+      },
+      {
+        "adaptive_limit": 14530.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 167,
+        "reservations": {
+          "BALANCED": 3692.1,
+          "BEST": 9051.6,
+          "FAST": 1786.5
+        },
+        "task_identity": "mbpp:Mbpp/413"
+      },
+      {
+        "adaptive_limit": 15396.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 238,
+        "reservations": {
+          "BALANCED": 3912.2000000000003,
+          "BEST": 9591.199999999999,
+          "FAST": 1893.0
+        },
+        "task_identity": "humaneval:HumanEval/142"
+      },
+      {
+        "adaptive_limit": 14554.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 169,
+        "reservations": {
+          "BALANCED": 3698.3,
+          "BEST": 9066.8,
+          "FAST": 1789.5
+        },
+        "task_identity": "humaneval:HumanEval/12"
+      },
+      {
+        "adaptive_limit": 13810.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 108,
+        "reservations": {
+          "BALANCED": 3509.2000000000003,
+          "BEST": 8603.199999999999,
+          "FAST": 1698.0
+        },
+        "task_identity": "mbpp:Mbpp/145"
+      },
+      {
+        "adaptive_limit": 16409.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 321,
+        "reservations": {
+          "BALANCED": 4169.5,
+          "BEST": 10222.0,
+          "FAST": 2017.5
+        },
+        "task_identity": "humaneval:HumanEval/127"
+      },
+      {
+        "adaptive_limit": 13725.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 101,
+        "reservations": {
+          "BALANCED": 3487.5,
+          "BEST": 8550.0,
+          "FAST": 1687.5
+        },
+        "task_identity": "mbpp:Mbpp/770"
+      },
+      {
+        "adaptive_limit": 13651.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 95,
+        "reservations": {
+          "BALANCED": 3468.9,
+          "BEST": 8504.4,
+          "FAST": 1678.5
+        },
+        "task_identity": "mbpp:Mbpp/268"
+      },
+      {
+        "adaptive_limit": 14420.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 158,
+        "reservations": {
+          "BALANCED": 3664.2000000000003,
+          "BEST": 8983.199999999999,
+          "FAST": 1773.0
+        },
+        "task_identity": "mbpp:Mbpp/752"
+      },
+      {
+        "adaptive_limit": 13761.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 104,
+        "reservations": {
+          "BALANCED": 3496.8,
+          "BEST": 8572.8,
+          "FAST": 1692.0
+        },
+        "task_identity": "mbpp:Mbpp/797"
+      },
+      {
+        "adaptive_limit": 14493.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 164,
+        "reservations": {
+          "BALANCED": 3682.8,
+          "BEST": 9028.8,
+          "FAST": 1782.0
+        },
+        "task_identity": "humaneval:HumanEval/139"
+      },
+      {
+        "adaptive_limit": 17153.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 382,
+        "reservations": {
+          "BALANCED": 4358.6,
+          "BEST": 10685.6,
+          "FAST": 2109.0
+        },
+        "task_identity": "humaneval:HumanEval/68"
+      },
+      {
+        "adaptive_limit": 14713.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 182,
+        "reservations": {
+          "BALANCED": 3738.6,
+          "BEST": 9165.6,
+          "FAST": 1809.0
+        },
+        "task_identity": "humaneval:HumanEval/104"
+      },
+      {
+        "adaptive_limit": 13651.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 95,
+        "reservations": {
+          "BALANCED": 3468.9,
+          "BEST": 8504.4,
+          "FAST": 1678.5
+        },
+        "task_identity": "mbpp:Mbpp/477"
+      },
+      {
+        "adaptive_limit": 14493.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 164,
+        "reservations": {
+          "BALANCED": 3682.8,
+          "BEST": 9028.8,
+          "FAST": 1782.0
+        },
+        "task_identity": "mbpp:Mbpp/473"
+      },
+      {
+        "adaptive_limit": 16836.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 356,
+        "reservations": {
+          "BALANCED": 4278.0,
+          "BEST": 10488.0,
+          "FAST": 2070.0
+        },
+        "task_identity": "humaneval:HumanEval/124"
+      },
+      {
+        "adaptive_limit": 14444.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 160,
+        "reservations": {
+          "BALANCED": 3670.4,
+          "BEST": 8998.4,
+          "FAST": 1776.0
+        },
+        "task_identity": "mbpp:Mbpp/262"
+      },
+      {
+        "adaptive_limit": 14005.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 124,
+        "reservations": {
+          "BALANCED": 3558.8,
+          "BEST": 8724.8,
+          "FAST": 1722.0
+        },
+        "task_identity": "mbpp:Mbpp/124"
+      },
+      {
+        "adaptive_limit": 14981.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 204,
+        "reservations": {
+          "BALANCED": 3806.8,
+          "BEST": 9332.8,
+          "FAST": 1842.0
+        },
+        "task_identity": "humaneval:HumanEval/134"
+      },
+      {
+        "adaptive_limit": 15042.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 209,
+        "reservations": {
+          "BALANCED": 3822.3,
+          "BEST": 9370.8,
+          "FAST": 1849.5
+        },
+        "task_identity": "humaneval:HumanEval/10"
+      },
+      {
+        "adaptive_limit": 13773.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 105,
+        "reservations": {
+          "BALANCED": 3499.9,
+          "BEST": 8580.4,
+          "FAST": 1693.5
+        },
+        "task_identity": "mbpp:Mbpp/785"
+      },
+      {
+        "adaptive_limit": 15713.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 264,
+        "reservations": {
+          "BALANCED": 3992.8,
+          "BEST": 9788.8,
+          "FAST": 1932.0
+        },
+        "task_identity": "humaneval:HumanEval/110"
+      },
+      {
+        "adaptive_limit": 14127.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 134,
+        "reservations": {
+          "BALANCED": 3589.8,
+          "BEST": 8800.8,
+          "FAST": 1737.0
+        },
+        "task_identity": "mbpp:Mbpp/255"
+      },
+      {
+        "adaptive_limit": 13810.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 108,
+        "reservations": {
+          "BALANCED": 3509.2000000000003,
+          "BEST": 8603.199999999999,
+          "FAST": 1698.0
+        },
+        "task_identity": "mbpp:Mbpp/788"
+      },
+      {
+        "adaptive_limit": 16030.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 290,
+        "reservations": {
+          "BALANCED": 4073.4,
+          "BEST": 9986.4,
+          "FAST": 1971.0
+        },
+        "task_identity": "humaneval:HumanEval/120"
+      },
+      {
+        "adaptive_limit": 13834.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 110,
+        "reservations": {
+          "BALANCED": 3515.4,
+          "BEST": 8618.4,
+          "FAST": 1701.0
+        },
+        "task_identity": "mbpp:Mbpp/74"
+      },
+      {
+        "adaptive_limit": 13664.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 96,
+        "reservations": {
+          "BALANCED": 3472.0,
+          "BEST": 8512.0,
+          "FAST": 1680.0
+        },
+        "task_identity": "mbpp:Mbpp/800"
+      },
+      {
+        "adaptive_limit": 14810.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 190,
+        "reservations": {
+          "BALANCED": 3763.4,
+          "BEST": 9226.4,
+          "FAST": 1821.0
+        },
+        "task_identity": "humaneval:HumanEval/37"
+      },
+      {
+        "adaptive_limit": 14164.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 137,
+        "reservations": {
+          "BALANCED": 3599.1,
+          "BEST": 8823.6,
+          "FAST": 1741.5
+        },
+        "task_identity": "mbpp:Mbpp/622"
+      },
+      {
+        "adaptive_limit": 13810.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 108,
+        "reservations": {
+          "BALANCED": 3509.2000000000003,
+          "BEST": 8603.199999999999,
+          "FAST": 1698.0
+        },
+        "task_identity": "mbpp:Mbpp/68"
+      },
+      {
+        "adaptive_limit": 14249.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 144,
+        "reservations": {
+          "BALANCED": 3620.8,
+          "BEST": 8876.8,
+          "FAST": 1752.0
+        },
+        "task_identity": "humaneval:HumanEval/34"
+      },
+      {
+        "adaptive_limit": 14298.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 148,
+        "reservations": {
+          "BALANCED": 3633.2000000000003,
+          "BEST": 8907.199999999999,
+          "FAST": 1758.0
+        },
+        "task_identity": "mbpp:Mbpp/4"
+      },
+      {
+        "adaptive_limit": 13810.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 108,
+        "reservations": {
+          "BALANCED": 3509.2000000000003,
+          "BEST": 8603.199999999999,
+          "FAST": 1698.0
+        },
+        "task_identity": "mbpp:Mbpp/274"
+      },
+      {
+        "adaptive_limit": 13664.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 96,
+        "reservations": {
+          "BALANCED": 3472.0,
+          "BEST": 8512.0,
+          "FAST": 1680.0
+        },
+        "task_identity": "mbpp:Mbpp/787"
+      },
+      {
+        "adaptive_limit": 13944.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 119,
+        "reservations": {
+          "BALANCED": 3543.3,
+          "BEST": 8686.8,
+          "FAST": 1714.5
+        },
+        "task_identity": "mbpp:Mbpp/773"
+      },
+      {
+        "adaptive_limit": 13651.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 95,
+        "reservations": {
+          "BALANCED": 3468.9,
+          "BEST": 8504.4,
+          "FAST": 1678.5
+        },
+        "task_identity": "mbpp:Mbpp/583"
+      },
+      {
+        "adaptive_limit": 13847.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 111,
+        "reservations": {
+          "BALANCED": 3518.5,
+          "BEST": 8626.0,
+          "FAST": 1702.5
+        },
+        "task_identity": "mbpp:Mbpp/799"
+      },
+      {
+        "adaptive_limit": 14859.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 194,
+        "reservations": {
+          "BALANCED": 3775.8,
+          "BEST": 9256.8,
+          "FAST": 1827.0
+        },
+        "task_identity": "mbpp:Mbpp/297"
+      },
+      {
+        "adaptive_limit": 14383.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 155,
+        "reservations": {
+          "BALANCED": 3654.9,
+          "BEST": 8960.4,
+          "FAST": 1768.5
+        },
+        "task_identity": "mbpp:Mbpp/223"
+      },
+      {
+        "adaptive_limit": 15237.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 225,
+        "reservations": {
+          "BALANCED": 3871.9,
+          "BEST": 9492.4,
+          "FAST": 1873.5
+        },
+        "task_identity": "humaneval:HumanEval/38"
+      },
+      {
+        "adaptive_limit": 13944.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 119,
+        "reservations": {
+          "BALANCED": 3543.3,
+          "BEST": 8686.8,
+          "FAST": 1714.5
+        },
+        "task_identity": "mbpp:Mbpp/278"
+      },
+      {
+        "adaptive_limit": 14408.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 157,
+        "reservations": {
+          "BALANCED": 3661.1,
+          "BEST": 8975.6,
+          "FAST": 1771.5
+        },
+        "task_identity": "mbpp:Mbpp/743"
+      },
+      {
+        "adaptive_limit": 14603.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 173,
+        "reservations": {
+          "BALANCED": 3710.7000000000003,
+          "BEST": 9097.199999999999,
+          "FAST": 1795.5
+        },
+        "task_identity": "humaneval:HumanEval/140"
+      },
+      {
+        "adaptive_limit": 14688.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 180,
+        "reservations": {
+          "BALANCED": 3732.4,
+          "BEST": 9150.4,
+          "FAST": 1806.0
+        },
+        "task_identity": "humaneval:HumanEval/97"
+      },
+      {
+        "adaptive_limit": 13773.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 105,
+        "reservations": {
+          "BALANCED": 3499.9,
+          "BEST": 8580.4,
+          "FAST": 1693.5
+        },
+        "task_identity": "mbpp:Mbpp/287"
+      },
+      {
+        "adaptive_limit": 13798.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 107,
+        "reservations": {
+          "BALANCED": 3506.1,
+          "BEST": 8595.6,
+          "FAST": 1696.5
+        },
+        "task_identity": "mbpp:Mbpp/388"
+      },
+      {
+        "adaptive_limit": 13859.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 112,
+        "reservations": {
+          "BALANCED": 3521.6,
+          "BEST": 8633.6,
+          "FAST": 1704.0
+        },
+        "task_identity": "mbpp:Mbpp/762"
+      },
+      {
+        "adaptive_limit": 14359.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 153,
+        "reservations": {
+          "BALANCED": 3648.7000000000003,
+          "BEST": 8945.199999999999,
+          "FAST": 1765.5
+        },
+        "task_identity": "humaneval:HumanEval/65"
+      },
+      {
+        "adaptive_limit": 15128.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 216,
+        "reservations": {
+          "BALANCED": 3844.0,
+          "BEST": 9424.0,
+          "FAST": 1860.0
+        },
+        "task_identity": "humaneval:HumanEval/143"
+      },
+      {
+        "adaptive_limit": 14823.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 191,
+        "reservations": {
+          "BALANCED": 3766.5,
+          "BEST": 9234.0,
+          "FAST": 1822.5
+        },
+        "task_identity": "humaneval:HumanEval/70"
+      },
+      {
+        "adaptive_limit": 13786.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 106,
+        "reservations": {
+          "BALANCED": 3503.0,
+          "BEST": 8588.0,
+          "FAST": 1695.0
+        },
+        "task_identity": "mbpp:Mbpp/736"
+      },
+      {
+        "adaptive_limit": 14237.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 143,
+        "reservations": {
+          "BALANCED": 3617.7000000000003,
+          "BEST": 8869.199999999999,
+          "FAST": 1750.5
+        },
+        "task_identity": "mbpp:Mbpp/635"
+      },
+      {
+        "adaptive_limit": 13700.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 99,
+        "reservations": {
+          "BALANCED": 3481.3,
+          "BEST": 8534.8,
+          "FAST": 1684.5
+        },
+        "task_identity": "mbpp:Mbpp/235"
+      },
+      {
+        "adaptive_limit": 13786.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 106,
+        "reservations": {
+          "BALANCED": 3503.0,
+          "BEST": 8588.0,
+          "FAST": 1695.0
+        },
+        "task_identity": "mbpp:Mbpp/282"
+      },
+      {
+        "adaptive_limit": 13810.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 108,
+        "reservations": {
+          "BALANCED": 3509.2000000000003,
+          "BEST": 8603.199999999999,
+          "FAST": 1698.0
+        },
+        "task_identity": "mbpp:Mbpp/267"
+      },
+      {
+        "adaptive_limit": 13664.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 96,
+        "reservations": {
+          "BALANCED": 3472.0,
+          "BEST": 8512.0,
+          "FAST": 1680.0
+        },
+        "task_identity": "mbpp:Mbpp/641"
+      },
+      {
+        "adaptive_limit": 13700.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 99,
+        "reservations": {
+          "BALANCED": 3481.3,
+          "BEST": 8534.8,
+          "FAST": 1684.5
+        },
+        "task_identity": "mbpp:Mbpp/90"
+      },
+      {
+        "adaptive_limit": 13615.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 92,
+        "reservations": {
+          "BALANCED": 3459.6,
+          "BEST": 8481.6,
+          "FAST": 1674.0
+        },
+        "task_identity": "mbpp:Mbpp/624"
+      },
+      {
+        "adaptive_limit": 15286.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 229,
+        "reservations": {
+          "BALANCED": 3884.3,
+          "BEST": 9522.8,
+          "FAST": 1879.5
+        },
+        "task_identity": "humaneval:HumanEval/112"
+      },
+      {
+        "adaptive_limit": 14078.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 130,
+        "reservations": {
+          "BALANCED": 3577.4,
+          "BEST": 8770.4,
+          "FAST": 1731.0
+        },
+        "task_identity": "mbpp:Mbpp/233"
+      },
+      {
+        "adaptive_limit": 13981.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 122,
+        "reservations": {
+          "BALANCED": 3552.6,
+          "BEST": 8709.6,
+          "FAST": 1719.0
+        },
+        "task_identity": "mbpp:Mbpp/125"
+      },
+      {
+        "adaptive_limit": 14054.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 128,
+        "reservations": {
+          "BALANCED": 3571.2000000000003,
+          "BEST": 8755.199999999999,
+          "FAST": 1728.0
+        },
+        "task_identity": "mbpp:Mbpp/98"
+      },
+      {
+        "adaptive_limit": 14786.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 188,
+        "reservations": {
+          "BALANCED": 3757.2000000000003,
+          "BEST": 9211.199999999999,
+          "FAST": 1818.0
+        },
+        "task_identity": "humaneval:HumanEval/145"
+      },
+      {
+        "adaptive_limit": 14127.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 134,
+        "reservations": {
+          "BALANCED": 3589.8,
+          "BEST": 8800.8,
+          "FAST": 1737.0
+        },
+        "task_identity": "mbpp:Mbpp/740"
+      },
+      {
+        "adaptive_limit": 14091.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 131,
+        "reservations": {
+          "BALANCED": 3580.5,
+          "BEST": 8778.0,
+          "FAST": 1732.5
+        },
+        "task_identity": "mbpp:Mbpp/392"
+      },
+      {
+        "adaptive_limit": 13725.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 101,
+        "reservations": {
+          "BALANCED": 3487.5,
+          "BEST": 8550.0,
+          "FAST": 1687.5
+        },
+        "task_identity": "mbpp:Mbpp/395"
+      },
+      {
+        "adaptive_limit": 15445.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 242,
+        "reservations": {
+          "BALANCED": 3924.6,
+          "BEST": 9621.6,
+          "FAST": 1899.0
+        },
+        "task_identity": "mbpp:Mbpp/578"
+      },
+      {
+        "adaptive_limit": 13786.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 106,
+        "reservations": {
+          "BALANCED": 3503.0,
+          "BEST": 8588.0,
+          "FAST": 1695.0
+        },
+        "task_identity": "mbpp:Mbpp/581"
+      },
+      {
+        "adaptive_limit": 14103.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 132,
+        "reservations": {
+          "BALANCED": 3583.6,
+          "BEST": 8785.6,
+          "FAST": 1734.0
+        },
+        "task_identity": "mbpp:Mbpp/251"
+      },
+      {
+        "adaptive_limit": 13822.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 109,
+        "reservations": {
+          "BALANCED": 3512.3,
+          "BEST": 8610.8,
+          "FAST": 1699.5
+        },
+        "task_identity": "mbpp:Mbpp/439"
+      },
+      {
+        "adaptive_limit": 13773.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 105,
+        "reservations": {
+          "BALANCED": 3499.9,
+          "BEST": 8580.4,
+          "FAST": 1693.5
+        },
+        "task_identity": "mbpp:Mbpp/786"
+      },
+      {
+        "adaptive_limit": 14664.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 178,
+        "reservations": {
+          "BALANCED": 3726.2000000000003,
+          "BEST": 9135.199999999999,
+          "FAST": 1803.0
+        },
+        "task_identity": "humaneval:HumanEval/161"
+      },
+      {
+        "adaptive_limit": 16140.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 299,
+        "reservations": {
+          "BALANCED": 4101.3,
+          "BEST": 10054.8,
+          "FAST": 1984.5
+        },
+        "task_identity": "humaneval:HumanEval/123"
+      },
+      {
+        "adaptive_limit": 13761.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 104,
+        "reservations": {
+          "BALANCED": 3496.8,
+          "BEST": 8572.8,
+          "FAST": 1692.0
+        },
+        "task_identity": "mbpp:Mbpp/168"
+      },
+      {
+        "adaptive_limit": 14835.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 192,
+        "reservations": {
+          "BALANCED": 3769.6,
+          "BEST": 9241.6,
+          "FAST": 1824.0
+        },
+        "task_identity": "humaneval:HumanEval/21"
+      },
+      {
+        "adaptive_limit": 13688.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 98,
+        "reservations": {
+          "BALANCED": 3478.2000000000003,
+          "BEST": 8527.199999999999,
+          "FAST": 1683.0
+        },
+        "task_identity": "mbpp:Mbpp/102"
+      },
+      {
+        "adaptive_limit": 13847.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 111,
+        "reservations": {
+          "BALANCED": 3518.5,
+          "BEST": 8626.0,
+          "FAST": 1702.5
+        },
+        "task_identity": "mbpp:Mbpp/554"
+      },
+      {
+        "adaptive_limit": 13834.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 110,
+        "reservations": {
+          "BALANCED": 3515.4,
+          "BEST": 8618.4,
+          "FAST": 1701.0
+        },
+        "task_identity": "mbpp:Mbpp/556"
+      },
+      {
+        "adaptive_limit": 14261.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 145,
+        "reservations": {
+          "BALANCED": 3623.9,
+          "BEST": 8884.4,
+          "FAST": 1753.5
+        },
+        "task_identity": "mbpp:Mbpp/728"
+      },
+      {
+        "adaptive_limit": 14139.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 135,
+        "reservations": {
+          "BALANCED": 3592.9,
+          "BEST": 8808.4,
+          "FAST": 1738.5
+        },
+        "task_identity": "mbpp:Mbpp/170"
+      },
+      {
+        "adaptive_limit": 13895.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 115,
+        "reservations": {
+          "BALANCED": 3530.9,
+          "BEST": 8656.4,
+          "FAST": 1708.5
+        },
+        "task_identity": "mbpp:Mbpp/415"
+      },
+      {
+        "adaptive_limit": 13932.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 118,
+        "reservations": {
+          "BALANCED": 3540.2000000000003,
+          "BEST": 8679.199999999999,
+          "FAST": 1713.0
+        },
+        "task_identity": "mbpp:Mbpp/160"
+      },
+      {
+        "adaptive_limit": 13737.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 102,
+        "reservations": {
+          "BALANCED": 3490.6,
+          "BEST": 8557.6,
+          "FAST": 1689.0
+        },
+        "task_identity": "mbpp:Mbpp/66"
+      },
+      {
+        "adaptive_limit": 13847.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 111,
+        "reservations": {
+          "BALANCED": 3518.5,
+          "BEST": 8626.0,
+          "FAST": 1702.5
+        },
+        "task_identity": "mbpp:Mbpp/724"
+      },
+      {
+        "adaptive_limit": 13883.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 114,
+        "reservations": {
+          "BALANCED": 3527.8,
+          "BEST": 8648.8,
+          "FAST": 1707.0
+        },
+        "task_identity": "mbpp:Mbpp/222"
+      },
+      {
+        "adaptive_limit": 13810.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 108,
+        "reservations": {
+          "BALANCED": 3509.2000000000003,
+          "BEST": 8603.199999999999,
+          "FAST": 1698.0
+        },
+        "task_identity": "mbpp:Mbpp/562"
+      },
+      {
+        "adaptive_limit": 14566.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 170,
+        "reservations": {
+          "BALANCED": 3701.4,
+          "BEST": 9074.4,
+          "FAST": 1791.0
+        },
+        "task_identity": "humaneval:HumanEval/135"
+      },
+      {
+        "adaptive_limit": 13969.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 121,
+        "reservations": {
+          "BALANCED": 3549.5,
+          "BEST": 8702.0,
+          "FAST": 1717.5
+        },
+        "task_identity": "mbpp:Mbpp/409"
+      },
+      {
+        "adaptive_limit": 13871.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 113,
+        "reservations": {
+          "BALANCED": 3524.7000000000003,
+          "BEST": 8641.199999999999,
+          "FAST": 1705.5
+        },
+        "task_identity": "humaneval:HumanEval/45"
+      },
+      {
+        "adaptive_limit": 13859.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 112,
+        "reservations": {
+          "BALANCED": 3521.6,
+          "BEST": 8633.6,
+          "FAST": 1704.0
+        },
+        "task_identity": "mbpp:Mbpp/618"
+      },
+      {
+        "adaptive_limit": 13700.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 99,
+        "reservations": {
+          "BALANCED": 3481.3,
+          "BEST": 8534.8,
+          "FAST": 1684.5
+        },
+        "task_identity": "mbpp:Mbpp/451"
+      },
+      {
+        "adaptive_limit": 14139.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 135,
+        "reservations": {
+          "BALANCED": 3592.9,
+          "BEST": 8808.4,
+          "FAST": 1738.5
+        },
+        "task_identity": "mbpp:Mbpp/140"
+      },
+      {
+        "adaptive_limit": 14347.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 152,
+        "reservations": {
+          "BALANCED": 3645.6,
+          "BEST": 8937.6,
+          "FAST": 1764.0
+        },
+        "task_identity": "mbpp:Mbpp/766"
+      },
+      {
+        "adaptive_limit": 13664.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 96,
+        "reservations": {
+          "BALANCED": 3472.0,
+          "BEST": 8512.0,
+          "FAST": 1680.0
+        },
+        "task_identity": "mbpp:Mbpp/568"
+      },
+      {
+        "adaptive_limit": 15408.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 239,
+        "reservations": {
+          "BALANCED": 3915.3,
+          "BEST": 9598.8,
+          "FAST": 1894.5
+        },
+        "task_identity": "humaneval:HumanEval/46"
+      },
+      {
+        "adaptive_limit": 13627.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 93,
+        "reservations": {
+          "BALANCED": 3462.7000000000003,
+          "BEST": 8489.199999999999,
+          "FAST": 1675.5
+        },
+        "task_identity": "mbpp:Mbpp/127"
+      },
+      {
+        "adaptive_limit": 15030.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 208,
+        "reservations": {
+          "BALANCED": 3819.2000000000003,
+          "BEST": 9363.199999999999,
+          "FAST": 1848.0
+        },
+        "task_identity": "humaneval:HumanEval/137"
+      },
+      {
+        "adaptive_limit": 13932.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 118,
+        "reservations": {
+          "BALANCED": 3540.2000000000003,
+          "BEST": 8679.199999999999,
+          "FAST": 1713.0
+        },
+        "task_identity": "mbpp:Mbpp/427"
+      },
+      {
+        "adaptive_limit": 13700.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 99,
+        "reservations": {
+          "BALANCED": 3481.3,
+          "BEST": 8534.8,
+          "FAST": 1684.5
+        },
+        "task_identity": "mbpp:Mbpp/17"
+      },
+      {
+        "adaptive_limit": 16116.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 297,
+        "reservations": {
+          "BALANCED": 4095.1,
+          "BEST": 10039.6,
+          "FAST": 1981.5
+        },
+        "task_identity": "humaneval:HumanEval/72"
+      },
+      {
+        "adaptive_limit": 14432.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 159,
+        "reservations": {
+          "BALANCED": 3667.3,
+          "BEST": 8990.8,
+          "FAST": 1774.5
+        },
+        "task_identity": "humaneval:HumanEval/5"
+      },
+      {
+        "adaptive_limit": 13798.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 107,
+        "reservations": {
+          "BALANCED": 3506.1,
+          "BEST": 8595.6,
+          "FAST": 1696.5
+        },
+        "task_identity": "mbpp:Mbpp/643"
+      },
+      {
+        "adaptive_limit": 14457.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 161,
+        "reservations": {
+          "BALANCED": 3673.5,
+          "BEST": 9006.0,
+          "FAST": 1777.5
+        },
+        "task_identity": "mbpp:Mbpp/623"
+      },
+      {
+        "adaptive_limit": 14444.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 160,
+        "reservations": {
+          "BALANCED": 3670.4,
+          "BEST": 8998.4,
+          "FAST": 1776.0
+        },
+        "task_identity": "humaneval:HumanEval/7"
+      },
+      {
+        "adaptive_limit": 14005.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 124,
+        "reservations": {
+          "BALANCED": 3558.8,
+          "BEST": 8724.8,
+          "FAST": 1722.0
+        },
+        "task_identity": "humaneval:HumanEval/28"
+      },
+      {
+        "adaptive_limit": 15140.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 217,
+        "reservations": {
+          "BALANCED": 3847.1,
+          "BEST": 9431.6,
+          "FAST": 1861.5
+        },
+        "task_identity": "humaneval:HumanEval/63"
+      },
+      {
+        "adaptive_limit": 13773.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 105,
+        "reservations": {
+          "BALANCED": 3499.9,
+          "BEST": 8580.4,
+          "FAST": 1693.5
+        },
+        "task_identity": "mbpp:Mbpp/472"
+      },
+      {
+        "adaptive_limit": 13773.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 105,
+        "reservations": {
+          "BALANCED": 3499.9,
+          "BEST": 8580.4,
+          "FAST": 1693.5
+        },
+        "task_identity": "mbpp:Mbpp/253"
+      },
+      {
+        "adaptive_limit": 13908.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 116,
+        "reservations": {
+          "BALANCED": 3534.0,
+          "BEST": 8664.0,
+          "FAST": 1710.0
+        },
+        "task_identity": "mbpp:Mbpp/450"
+      },
+      {
+        "adaptive_limit": 14383.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 155,
+        "reservations": {
+          "BALANCED": 3654.9,
+          "BEST": 8960.4,
+          "FAST": 1768.5
+        },
+        "task_identity": "humaneval:HumanEval/18"
+      },
+      {
+        "adaptive_limit": 13688.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 98,
+        "reservations": {
+          "BALANCED": 3478.2000000000003,
+          "BEST": 8527.199999999999,
+          "FAST": 1683.0
+        },
+        "task_identity": "mbpp:Mbpp/412"
+      },
+      {
+        "adaptive_limit": 13761.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 104,
+        "reservations": {
+          "BALANCED": 3496.8,
+          "BEST": 8572.8,
+          "FAST": 1692.0
+        },
+        "task_identity": "mbpp:Mbpp/95"
+      },
+      {
+        "adaptive_limit": 13822.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 109,
+        "reservations": {
+          "BALANCED": 3512.3,
+          "BEST": 8610.8,
+          "FAST": 1699.5
+        },
+        "task_identity": "mbpp:Mbpp/16"
+      },
+      {
+        "adaptive_limit": 13895.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 115,
+        "reservations": {
+          "BALANCED": 3530.9,
+          "BEST": 8656.4,
+          "FAST": 1708.5
+        },
+        "task_identity": "mbpp:Mbpp/572"
+      },
+      {
+        "adaptive_limit": 13993.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 123,
+        "reservations": {
+          "BALANCED": 3555.7000000000003,
+          "BEST": 8717.199999999999,
+          "FAST": 1720.5
+        },
+        "task_identity": "mbpp:Mbpp/614"
+      },
+      {
+        "adaptive_limit": 14981.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 204,
+        "reservations": {
+          "BALANCED": 3806.8,
+          "BEST": 9332.8,
+          "FAST": 1842.0
+        },
+        "task_identity": "humaneval:HumanEval/122"
+      },
+      {
+        "adaptive_limit": 13908.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 116,
+        "reservations": {
+          "BALANCED": 3534.0,
+          "BEST": 8664.0,
+          "FAST": 1710.0
+        },
+        "task_identity": "mbpp:Mbpp/763"
+      },
+      {
+        "adaptive_limit": 13651.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 95,
+        "reservations": {
+          "BALANCED": 3468.9,
+          "BEST": 8504.4,
+          "FAST": 1678.5
+        },
+        "task_identity": "mbpp:Mbpp/474"
+      },
+      {
+        "adaptive_limit": 14493.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 164,
+        "reservations": {
+          "BALANCED": 3682.8,
+          "BEST": 9028.8,
+          "FAST": 1782.0
+        },
+        "task_identity": "mbpp:Mbpp/111"
+      },
+      {
+        "adaptive_limit": 13712.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 100,
+        "reservations": {
+          "BALANCED": 3484.4,
+          "BEST": 8542.4,
+          "FAST": 1686.0
+        },
+        "task_identity": "mbpp:Mbpp/266"
+      },
+      {
+        "adaptive_limit": 15042.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 209,
+        "reservations": {
+          "BALANCED": 3822.3,
+          "BEST": 9370.8,
+          "FAST": 1849.5
+        },
+        "task_identity": "humaneval:HumanEval/76"
+      },
+      {
+        "adaptive_limit": 14420.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 158,
+        "reservations": {
+          "BALANCED": 3664.2000000000003,
+          "BEST": 8983.199999999999,
+          "FAST": 1773.0
+        },
+        "task_identity": "humaneval:HumanEval/57"
+      },
+      {
+        "adaptive_limit": 14481.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 163,
+        "reservations": {
+          "BALANCED": 3679.7000000000003,
+          "BEST": 9021.199999999999,
+          "FAST": 1780.5
+        },
+        "task_identity": "mbpp:Mbpp/447"
+      },
+      {
+        "adaptive_limit": 15225.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 224,
+        "reservations": {
+          "BALANCED": 3868.8,
+          "BEST": 9484.8,
+          "FAST": 1872.0
+        },
+        "task_identity": "humaneval:HumanEval/73"
+      },
+      {
+        "adaptive_limit": 13688.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 98,
+        "reservations": {
+          "BALANCED": 3478.2000000000003,
+          "BEST": 8527.199999999999,
+          "FAST": 1683.0
+        },
+        "task_identity": "mbpp:Mbpp/435"
+      },
+      {
+        "adaptive_limit": 14713.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 182,
+        "reservations": {
+          "BALANCED": 3738.6,
+          "BEST": 9165.6,
+          "FAST": 1809.0
+        },
+        "task_identity": "humaneval:HumanEval/1"
+      },
+      {
+        "adaptive_limit": 14139.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 135,
+        "reservations": {
+          "BALANCED": 3592.9,
+          "BEST": 8808.4,
+          "FAST": 1738.5
+        },
+        "task_identity": "mbpp:Mbpp/569"
+      },
+      {
+        "adaptive_limit": 16494.399999999998,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 328,
+        "reservations": {
+          "BALANCED": 4191.2,
+          "BEST": 10275.199999999999,
+          "FAST": 2028.0
+        },
+        "task_identity": "humaneval:HumanEval/32"
+      },
+      {
+        "adaptive_limit": 14871.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 195,
+        "reservations": {
+          "BALANCED": 3778.9,
+          "BEST": 9264.4,
+          "FAST": 1828.5
+        },
+        "task_identity": "humaneval:HumanEval/25"
+      },
+      {
+        "adaptive_limit": 13737.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 102,
+        "reservations": {
+          "BALANCED": 3490.6,
+          "BEST": 8557.6,
+          "FAST": 1689.0
+        },
+        "task_identity": "mbpp:Mbpp/118"
+      },
+      {
+        "adaptive_limit": 13761.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 104,
+        "reservations": {
+          "BALANCED": 3496.8,
+          "BEST": 8572.8,
+          "FAST": 1692.0
+        },
+        "task_identity": "mbpp:Mbpp/476"
+      },
+      {
+        "adaptive_limit": 13664.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 96,
+        "reservations": {
+          "BALANCED": 3472.0,
+          "BEST": 8512.0,
+          "FAST": 1680.0
+        },
+        "task_identity": "mbpp:Mbpp/389"
+      },
+      {
+        "adaptive_limit": 14652.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 177,
+        "reservations": {
+          "BALANCED": 3723.1,
+          "BEST": 9127.6,
+          "FAST": 1801.5
+        },
+        "task_identity": "humaneval:HumanEval/89"
+      },
+      {
+        "adaptive_limit": 14383.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 155,
+        "reservations": {
+          "BALANCED": 3654.9,
+          "BEST": 8960.4,
+          "FAST": 1768.5
+        },
+        "task_identity": "mbpp:Mbpp/137"
+      },
+      {
+        "adaptive_limit": 15359.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 235,
+        "reservations": {
+          "BALANCED": 3902.9,
+          "BEST": 9568.4,
+          "FAST": 1888.5
+        },
+        "task_identity": "humaneval:HumanEval/119"
+      },
+      {
+        "adaptive_limit": 13956.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 120,
+        "reservations": {
+          "BALANCED": 3546.4,
+          "BEST": 8694.4,
+          "FAST": 1716.0
+        },
+        "task_identity": "humaneval:HumanEval/24"
+      },
+      {
+        "adaptive_limit": 13676.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 97,
+        "reservations": {
+          "BALANCED": 3475.1,
+          "BEST": 8519.6,
+          "FAST": 1681.5
+        },
+        "task_identity": "mbpp:Mbpp/84"
+      },
+      {
+        "adaptive_limit": 13969.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 121,
+        "reservations": {
+          "BALANCED": 3549.5,
+          "BEST": 8702.0,
+          "FAST": 1717.5
+        },
+        "task_identity": "mbpp:Mbpp/471"
+      },
+      {
+        "adaptive_limit": 14091.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 131,
+        "reservations": {
+          "BALANCED": 3580.5,
+          "BEST": 8778.0,
+          "FAST": 1732.5
+        },
+        "task_identity": "mbpp:Mbpp/616"
+      },
+      {
+        "adaptive_limit": 13737.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 102,
+        "reservations": {
+          "BALANCED": 3490.6,
+          "BEST": 8557.6,
+          "FAST": 1689.0
+        },
+        "task_identity": "mbpp:Mbpp/790"
+      },
+      {
+        "adaptive_limit": 13847.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 111,
+        "reservations": {
+          "BALANCED": 3518.5,
+          "BEST": 8626.0,
+          "FAST": 1702.5
+        },
+        "task_identity": "mbpp:Mbpp/808"
+      },
+      {
+        "adaptive_limit": 13749.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 103,
+        "reservations": {
+          "BALANCED": 3493.7000000000003,
+          "BEST": 8565.199999999999,
+          "FAST": 1690.5
+        },
+        "task_identity": "mbpp:Mbpp/72"
+      },
+      {
+        "adaptive_limit": 13920.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 117,
+        "reservations": {
+          "BALANCED": 3537.1,
+          "BEST": 8671.6,
+          "FAST": 1711.5
+        },
+        "task_identity": "mbpp:Mbpp/70"
+      },
+      {
+        "adaptive_limit": 13749.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 103,
+        "reservations": {
+          "BALANCED": 3493.7000000000003,
+          "BEST": 8565.199999999999,
+          "FAST": 1690.5
+        },
+        "task_identity": "mbpp:Mbpp/765"
+      },
+      {
+        "adaptive_limit": 15335.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 233,
+        "reservations": {
+          "BALANCED": 3896.7000000000003,
+          "BEST": 9553.199999999999,
+          "FAST": 1885.5
+        },
+        "task_identity": "humaneval:HumanEval/20"
+      },
+      {
+        "adaptive_limit": 13712.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 100,
+        "reservations": {
+          "BALANCED": 3484.4,
+          "BEST": 8542.4,
+          "FAST": 1686.0
+        },
+        "task_identity": "mbpp:Mbpp/397"
+      },
+      {
+        "adaptive_limit": 13603.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 91,
+        "reservations": {
+          "BALANCED": 3456.5,
+          "BEST": 8474.0,
+          "FAST": 1672.5
+        },
+        "task_identity": "mbpp:Mbpp/608"
+      },
+      {
+        "adaptive_limit": 14371.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 154,
+        "reservations": {
+          "BALANCED": 3651.8,
+          "BEST": 8952.8,
+          "FAST": 1767.0
+        },
+        "task_identity": "mbpp:Mbpp/306"
+      },
+      {
+        "adaptive_limit": 13798.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 107,
+        "reservations": {
+          "BALANCED": 3506.1,
+          "BEST": 8595.6,
+          "FAST": 1696.5
+        },
+        "task_identity": "mbpp:Mbpp/626"
+      },
+      {
+        "adaptive_limit": 13688.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 98,
+        "reservations": {
+          "BALANCED": 3478.2000000000003,
+          "BEST": 8527.199999999999,
+          "FAST": 1683.0
+        },
+        "task_identity": "mbpp:Mbpp/479"
+      },
+      {
+        "adaptive_limit": 14396.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 156,
+        "reservations": {
+          "BALANCED": 3658.0,
+          "BEST": 8968.0,
+          "FAST": 1770.0
+        },
+        "task_identity": "mbpp:Mbpp/8"
+      },
+      {
+        "adaptive_limit": 13908.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 116,
+        "reservations": {
+          "BALANCED": 3534.0,
+          "BEST": 8664.0,
+          "FAST": 1710.0
+        },
+        "task_identity": "mbpp:Mbpp/796"
+      },
+      {
+        "adaptive_limit": 13676.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 97,
+        "reservations": {
+          "BALANCED": 3475.1,
+          "BEST": 8519.6,
+          "FAST": 1681.5
+        },
+        "task_identity": "mbpp:Mbpp/598"
+      },
+      {
+        "adaptive_limit": 15152.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 218,
+        "reservations": {
+          "BALANCED": 3850.2000000000003,
+          "BEST": 9439.199999999999,
+          "FAST": 1863.0
+        },
+        "task_identity": "humaneval:HumanEval/41"
+      },
+      {
+        "adaptive_limit": 13700.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 99,
+        "reservations": {
+          "BALANCED": 3481.3,
+          "BEST": 8534.8,
+          "FAST": 1684.5
+        },
+        "task_identity": "mbpp:Mbpp/252"
+      },
+      {
+        "adaptive_limit": 13895.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 115,
+        "reservations": {
+          "BALANCED": 3530.9,
+          "BEST": 8656.4,
+          "FAST": 1708.5
+        },
+        "task_identity": "humaneval:HumanEval/27"
+      },
+      {
+        "adaptive_limit": 14347.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 152,
+        "reservations": {
+          "BALANCED": 3645.6,
+          "BEST": 8937.6,
+          "FAST": 1764.0
+        },
+        "task_identity": "mbpp:Mbpp/745"
+      },
+      {
+        "adaptive_limit": 14078.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 130,
+        "reservations": {
+          "BALANCED": 3577.4,
+          "BEST": 8770.4,
+          "FAST": 1731.0
+        },
+        "task_identity": "mbpp:Mbpp/580"
+      },
+      {
+        "adaptive_limit": 13761.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 104,
+        "reservations": {
+          "BALANCED": 3496.8,
+          "BEST": 8572.8,
+          "FAST": 1692.0
+        },
+        "task_identity": "mbpp:Mbpp/759"
+      },
+      {
+        "adaptive_limit": 13749.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 103,
+        "reservations": {
+          "BALANCED": 3493.7000000000003,
+          "BEST": 8565.199999999999,
+          "FAST": 1690.5
+        },
+        "task_identity": "mbpp:Mbpp/167"
+      },
+      {
+        "adaptive_limit": 14871.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 195,
+        "reservations": {
+          "BALANCED": 3778.9,
+          "BEST": 9264.4,
+          "FAST": 1828.5
+        },
+        "task_identity": "humaneval:HumanEval/108"
+      },
+      {
+        "adaptive_limit": 14396.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 156,
+        "reservations": {
+          "BALANCED": 3658.0,
+          "BEST": 8968.0,
+          "FAST": 1770.0
+        },
+        "task_identity": "humaneval:HumanEval/61"
+      },
+      {
+        "adaptive_limit": 14335.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 151,
+        "reservations": {
+          "BALANCED": 3642.5,
+          "BEST": 8930.0,
+          "FAST": 1762.5
+        },
+        "task_identity": "humaneval:HumanEval/36"
+      },
+      {
+        "adaptive_limit": 14030.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 126,
+        "reservations": {
+          "BALANCED": 3565.0,
+          "BEST": 8740.0,
+          "FAST": 1725.0
+        },
+        "task_identity": "humaneval:HumanEval/14"
+      },
+      {
+        "adaptive_limit": 14798.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 189,
+        "reservations": {
+          "BALANCED": 3760.3,
+          "BEST": 9218.8,
+          "FAST": 1819.5
+        },
+        "task_identity": "humaneval:HumanEval/51"
+      },
+      {
+        "adaptive_limit": 13688.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 98,
+        "reservations": {
+          "BALANCED": 3478.2000000000003,
+          "BEST": 8527.199999999999,
+          "FAST": 1683.0
+        },
+        "task_identity": "mbpp:Mbpp/441"
+      },
+      {
+        "adaptive_limit": 13920.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 117,
+        "reservations": {
+          "BALANCED": 3537.1,
+          "BEST": 8671.6,
+          "FAST": 1711.5
+        },
+        "task_identity": "mbpp:Mbpp/132"
+      },
+      {
+        "adaptive_limit": 13834.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 110,
+        "reservations": {
+          "BALANCED": 3515.4,
+          "BEST": 8618.4,
+          "FAST": 1701.0
+        },
+        "task_identity": "humaneval:HumanEval/23"
+      },
+      {
+        "adaptive_limit": 14640.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 176,
+        "reservations": {
+          "BALANCED": 3720.0,
+          "BEST": 9120.0,
+          "FAST": 1800.0
+        },
+        "task_identity": "humaneval:HumanEval/157"
+      },
+      {
+        "adaptive_limit": 14762.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 186,
+        "reservations": {
+          "BALANCED": 3751.0,
+          "BEST": 9196.0,
+          "FAST": 1815.0
+        },
+        "task_identity": "humaneval:HumanEval/3"
+      },
+      {
+        "adaptive_limit": 14737.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 184,
+        "reservations": {
+          "BALANCED": 3744.8,
+          "BEST": 9180.8,
+          "FAST": 1812.0
+        },
+        "task_identity": "humaneval:HumanEval/4"
+      },
+      {
+        "adaptive_limit": 13664.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 96,
+        "reservations": {
+          "BALANCED": 3472.0,
+          "BEST": 8512.0,
+          "FAST": 1680.0
+        },
+        "task_identity": "mbpp:Mbpp/227"
+      },
+      {
+        "adaptive_limit": 17153.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 382,
+        "reservations": {
+          "BALANCED": 4358.6,
+          "BEST": 10685.6,
+          "FAST": 2109.0
+        },
+        "task_identity": "humaneval:HumanEval/78"
+      },
+      {
+        "adaptive_limit": 14786.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 188,
+        "reservations": {
+          "BALANCED": 3757.2000000000003,
+          "BEST": 9211.199999999999,
+          "FAST": 1818.0
+        },
+        "task_identity": "humaneval:HumanEval/80"
+      },
+      {
+        "adaptive_limit": 14396.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 156,
+        "reservations": {
+          "BALANCED": 3658.0,
+          "BEST": 8968.0,
+          "FAST": 1770.0
+        },
+        "task_identity": "mbpp:Mbpp/612"
+      },
+      {
+        "adaptive_limit": 13700.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 99,
+        "reservations": {
+          "BALANCED": 3481.3,
+          "BEST": 8534.8,
+          "FAST": 1684.5
+        },
+        "task_identity": "mbpp:Mbpp/103"
+      },
+      {
+        "adaptive_limit": 14518.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 166,
+        "reservations": {
+          "BALANCED": 3689.0,
+          "BEST": 9044.0,
+          "FAST": 1785.0
+        },
+        "task_identity": "humaneval:HumanEval/102"
+      },
+      {
+        "adaptive_limit": 16348.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 316,
+        "reservations": {
+          "BALANCED": 4154.0,
+          "BEST": 10184.0,
+          "FAST": 2010.0
+        },
+        "task_identity": "humaneval:HumanEval/126"
+      },
+      {
+        "adaptive_limit": 17275.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 392,
+        "reservations": {
+          "BALANCED": 4389.6,
+          "BEST": 10761.6,
+          "FAST": 2124.0
+        },
+        "task_identity": "humaneval:HumanEval/115"
+      },
+      {
+        "adaptive_limit": 13920.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 117,
+        "reservations": {
+          "BALANCED": 3537.1,
+          "BEST": 8671.6,
+          "FAST": 1711.5
+        },
+        "task_identity": "mbpp:Mbpp/742"
+      },
+      {
+        "adaptive_limit": 14005.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 124,
+        "reservations": {
+          "BALANCED": 3558.8,
+          "BEST": 8724.8,
+          "FAST": 1722.0
+        },
+        "task_identity": "mbpp:Mbpp/425"
+      },
+      {
+        "adaptive_limit": 13932.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 118,
+        "reservations": {
+          "BALANCED": 3540.2000000000003,
+          "BEST": 8679.199999999999,
+          "FAST": 1713.0
+        },
+        "task_identity": "mbpp:Mbpp/463"
+      },
+      {
+        "adaptive_limit": 14322.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 150,
+        "reservations": {
+          "BALANCED": 3639.4,
+          "BEST": 8922.4,
+          "FAST": 1761.0
+        },
+        "task_identity": "humaneval:HumanEval/75"
+      },
+      {
+        "adaptive_limit": 13664.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 96,
+        "reservations": {
+          "BALANCED": 3472.0,
+          "BEST": 8512.0,
+          "FAST": 1680.0
+        },
+        "task_identity": "mbpp:Mbpp/458"
+      },
+      {
+        "adaptive_limit": 13688.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 98,
+        "reservations": {
+          "BALANCED": 3478.2000000000003,
+          "BEST": 8527.199999999999,
+          "FAST": 1683.0
+        },
+        "task_identity": "mbpp:Mbpp/79"
+      },
+      {
+        "adaptive_limit": 14383.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 155,
+        "reservations": {
+          "BALANCED": 3654.9,
+          "BEST": 8960.4,
+          "FAST": 1768.5
+        },
+        "task_identity": "humaneval:HumanEval/114"
+      },
+      {
+        "adaptive_limit": 15067.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 211,
+        "reservations": {
+          "BALANCED": 3828.5,
+          "BEST": 9386.0,
+          "FAST": 1852.5
+        },
+        "task_identity": "mbpp:Mbpp/391"
+      },
+      {
+        "adaptive_limit": 13700.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 99,
+        "reservations": {
+          "BALANCED": 3481.3,
+          "BEST": 8534.8,
+          "FAST": 1684.5
+        },
+        "task_identity": "mbpp:Mbpp/420"
+      },
+      {
+        "adaptive_limit": 13688.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 98,
+        "reservations": {
+          "BALANCED": 3478.2000000000003,
+          "BEST": 8527.199999999999,
+          "FAST": 1683.0
+        },
+        "task_identity": "mbpp:Mbpp/764"
+      },
+      {
+        "adaptive_limit": 13908.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 116,
+        "reservations": {
+          "BALANCED": 3534.0,
+          "BEST": 8664.0,
+          "FAST": 1710.0
+        },
+        "task_identity": "mbpp:Mbpp/284"
+      },
+      {
+        "adaptive_limit": 14701.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 181,
+        "reservations": {
+          "BALANCED": 3735.5,
+          "BEST": 9158.0,
+          "FAST": 1807.5
+        },
+        "task_identity": "mbpp:Mbpp/277"
+      },
+      {
+        "adaptive_limit": 14188.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 139,
+        "reservations": {
+          "BALANCED": 3605.3,
+          "BEST": 8838.8,
+          "FAST": 1744.5
+        },
+        "task_identity": "mbpp:Mbpp/290"
+      },
+      {
+        "adaptive_limit": 15128.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 216,
+        "reservations": {
+          "BALANCED": 3844.0,
+          "BEST": 9424.0,
+          "FAST": 1860.0
+        },
+        "task_identity": "humaneval:HumanEval/118"
+      },
+      {
+        "adaptive_limit": 15408.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 239,
+        "reservations": {
+          "BALANCED": 3915.3,
+          "BEST": 9598.8,
+          "FAST": 1894.5
+        },
+        "task_identity": "humaneval:HumanEval/17"
+      },
+      {
+        "adaptive_limit": 13651.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 95,
+        "reservations": {
+          "BALANCED": 3468.9,
+          "BEST": 8504.4,
+          "FAST": 1678.5
+        },
+        "task_identity": "mbpp:Mbpp/234"
+      },
+      {
+        "adaptive_limit": 13810.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 108,
+        "reservations": {
+          "BALANCED": 3509.2000000000003,
+          "BEST": 8603.199999999999,
+          "FAST": 1698.0
+        },
+        "task_identity": "mbpp:Mbpp/772"
+      },
+      {
+        "adaptive_limit": 15384.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 237,
+        "reservations": {
+          "BALANCED": 3909.1,
+          "BEST": 9583.6,
+          "FAST": 1891.5
+        },
+        "task_identity": "humaneval:HumanEval/116"
+      },
+      {
+        "adaptive_limit": 13895.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 115,
+        "reservations": {
+          "BALANCED": 3530.9,
+          "BEST": 8656.4,
+          "FAST": 1708.5
+        },
+        "task_identity": "mbpp:Mbpp/91"
+      },
+      {
+        "adaptive_limit": 13786.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 106,
+        "reservations": {
+          "BALANCED": 3503.0,
+          "BEST": 8588.0,
+          "FAST": 1695.0
+        },
+        "task_identity": "mbpp:Mbpp/806"
+      },
+      {
+        "adaptive_limit": 13749.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 103,
+        "reservations": {
+          "BALANCED": 3493.7000000000003,
+          "BEST": 8565.199999999999,
+          "FAST": 1690.5
+        },
+        "task_identity": "mbpp:Mbpp/171"
+      },
+      {
+        "adaptive_limit": 14444.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 160,
+        "reservations": {
+          "BALANCED": 3670.4,
+          "BEST": 8998.4,
+          "FAST": 1776.0
+        },
+        "task_identity": "mbpp:Mbpp/428"
+      },
+      {
+        "adaptive_limit": 14688.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 180,
+        "reservations": {
+          "BALANCED": 3732.4,
+          "BEST": 9150.4,
+          "FAST": 1806.0
+        },
+        "task_identity": "humaneval:HumanEval/77"
+      },
+      {
+        "adaptive_limit": 14261.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 145,
+        "reservations": {
+          "BALANCED": 3623.9,
+          "BEST": 8884.4,
+          "FAST": 1753.5
+        },
+        "task_identity": "mbpp:Mbpp/142"
+      },
+      {
+        "adaptive_limit": 15323.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 232,
+        "reservations": {
+          "BALANCED": 3893.6,
+          "BEST": 9545.6,
+          "FAST": 1884.0
+        },
+        "task_identity": "mbpp:Mbpp/108"
+      },
+      {
+        "adaptive_limit": 13725.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 101,
+        "reservations": {
+          "BALANCED": 3487.5,
+          "BEST": 8550.0,
+          "FAST": 1687.5
+        },
+        "task_identity": "mbpp:Mbpp/126"
+      },
+      {
+        "adaptive_limit": 13883.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 114,
+        "reservations": {
+          "BALANCED": 3527.8,
+          "BEST": 8648.8,
+          "FAST": 1707.0
+        },
+        "task_identity": "mbpp:Mbpp/594"
+      },
+      {
+        "adaptive_limit": 13664.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 96,
+        "reservations": {
+          "BALANCED": 3472.0,
+          "BEST": 8512.0,
+          "FAST": 1680.0
+        },
+        "task_identity": "mbpp:Mbpp/600"
+      },
+      {
+        "adaptive_limit": 16958.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 366,
+        "reservations": {
+          "BALANCED": 4309.0,
+          "BEST": 10564.0,
+          "FAST": 2085.0
+        },
+        "task_identity": "humaneval:HumanEval/109"
+      },
+      {
+        "adaptive_limit": 13664.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 96,
+        "reservations": {
+          "BALANCED": 3472.0,
+          "BEST": 8512.0,
+          "FAST": 1680.0
+        },
+        "task_identity": "mbpp:Mbpp/737"
+      },
+      {
+        "adaptive_limit": 15323.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 232,
+        "reservations": {
+          "BALANCED": 3893.6,
+          "BEST": 9545.6,
+          "FAST": 1884.0
+        },
+        "task_identity": "humaneval:HumanEval/69"
+      },
+      {
+        "adaptive_limit": 14152.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 136,
+        "reservations": {
+          "BALANCED": 3596.0,
+          "BEST": 8816.0,
+          "FAST": 1740.0
+        },
+        "task_identity": "humaneval:HumanEval/59"
+      },
+      {
+        "adaptive_limit": 15006.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 206,
+        "reservations": {
+          "BALANCED": 3813.0,
+          "BEST": 9348.0,
+          "FAST": 1845.0
+        },
+        "task_identity": "humaneval:HumanEval/151"
+      },
+      {
+        "adaptive_limit": 13859.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 112,
+        "reservations": {
+          "BALANCED": 3521.6,
+          "BEST": 8633.6,
+          "FAST": 1704.0
+        },
+        "task_identity": "mbpp:Mbpp/633"
+      },
+      {
+        "adaptive_limit": 13737.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 102,
+        "reservations": {
+          "BALANCED": 3490.6,
+          "BEST": 8557.6,
+          "FAST": 1689.0
+        },
+        "task_identity": "mbpp:Mbpp/244"
+      },
+      {
+        "adaptive_limit": 15140.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 217,
+        "reservations": {
+          "BALANCED": 3847.1,
+          "BEST": 9431.6,
+          "FAST": 1861.5
+        },
+        "task_identity": "humaneval:HumanEval/33"
+      },
+      {
+        "adaptive_limit": 14213.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 141,
+        "reservations": {
+          "BALANCED": 3611.5,
+          "BEST": 8854.0,
+          "FAST": 1747.5
+        },
+        "task_identity": "humaneval:HumanEval/131"
+      },
+      {
+        "adaptive_limit": 13920.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 117,
+        "reservations": {
+          "BALANCED": 3537.1,
+          "BEST": 8671.6,
+          "FAST": 1711.5
+        },
+        "task_identity": "mbpp:Mbpp/593"
+      },
+      {
+        "adaptive_limit": 13773.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 105,
+        "reservations": {
+          "BALANCED": 3499.9,
+          "BEST": 8580.4,
+          "FAST": 1693.5
+        },
+        "task_identity": "mbpp:Mbpp/301"
+      },
+      {
+        "adaptive_limit": 14725.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 183,
+        "reservations": {
+          "BALANCED": 3741.7000000000003,
+          "BEST": 9173.199999999999,
+          "FAST": 1810.5
+        },
+        "task_identity": "humaneval:HumanEval/49"
+      },
+      {
+        "adaptive_limit": 13749.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 103,
+        "reservations": {
+          "BALANCED": 3493.7000000000003,
+          "BEST": 8565.199999999999,
+          "FAST": 1690.5
+        },
+        "task_identity": "mbpp:Mbpp/794"
+      },
+      {
+        "adaptive_limit": 14798.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 189,
+        "reservations": {
+          "BALANCED": 3760.3,
+          "BEST": 9218.8,
+          "FAST": 1819.5
+        },
+        "task_identity": "humaneval:HumanEval/128"
+      },
+      {
+        "adaptive_limit": 13664.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 96,
+        "reservations": {
+          "BALANCED": 3472.0,
+          "BEST": 8512.0,
+          "FAST": 1680.0
+        },
+        "task_identity": "mbpp:Mbpp/67"
+      },
+      {
+        "adaptive_limit": 14078.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 130,
+        "reservations": {
+          "BALANCED": 3577.4,
+          "BEST": 8770.4,
+          "FAST": 1731.0
+        },
+        "task_identity": "mbpp:Mbpp/133"
+      },
+      {
+        "adaptive_limit": 13956.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 120,
+        "reservations": {
+          "BALANCED": 3546.4,
+          "BEST": 8694.4,
+          "FAST": 1716.0
+        },
+        "task_identity": "mbpp:Mbpp/446"
+      },
+      {
+        "adaptive_limit": 16689.6,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 344,
+        "reservations": {
+          "BALANCED": 4240.8,
+          "BEST": 10396.8,
+          "FAST": 2052.0
+        },
+        "task_identity": "humaneval:HumanEval/153"
+      },
+      {
+        "adaptive_limit": 13798.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 107,
+        "reservations": {
+          "BALANCED": 3506.1,
+          "BEST": 8595.6,
+          "FAST": 1696.5
+        },
+        "task_identity": "mbpp:Mbpp/576"
+      },
+      {
+        "adaptive_limit": 15250.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 226,
+        "reservations": {
+          "BALANCED": 3875.0,
+          "BEST": 9500.0,
+          "FAST": 1875.0
+        },
+        "task_identity": "humaneval:HumanEval/40"
+      },
+      {
+        "adaptive_limit": 13883.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 114,
+        "reservations": {
+          "BALANCED": 3527.8,
+          "BEST": 8648.8,
+          "FAST": 1707.0
+        },
+        "task_identity": "mbpp:Mbpp/638"
+      },
+      {
+        "adaptive_limit": 14091.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 131,
+        "reservations": {
+          "BALANCED": 3580.5,
+          "BEST": 8778.0,
+          "FAST": 1732.5
+        },
+        "task_identity": "mbpp:Mbpp/286"
+      },
+      {
+        "adaptive_limit": 14688.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 180,
+        "reservations": {
+          "BALANCED": 3732.4,
+          "BEST": 9150.4,
+          "FAST": 1806.0
+        },
+        "task_identity": "humaneval:HumanEval/42"
+      },
+      {
+        "adaptive_limit": 14249.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 144,
+        "reservations": {
+          "BALANCED": 3620.8,
+          "BEST": 8876.8,
+          "FAST": 1752.0
+        },
+        "task_identity": "humaneval:HumanEval/138"
+      },
+      {
+        "adaptive_limit": 14139.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 135,
+        "reservations": {
+          "BALANCED": 3592.9,
+          "BEST": 8808.4,
+          "FAST": 1738.5
+        },
+        "task_identity": "humaneval:HumanEval/15"
+      },
+      {
+        "adaptive_limit": 16470.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 326,
+        "reservations": {
+          "BALANCED": 4185.0,
+          "BEST": 10260.0,
+          "FAST": 2025.0
+        },
+        "task_identity": "humaneval:HumanEval/87"
+      },
+      {
+        "adaptive_limit": 13725.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 101,
+        "reservations": {
+          "BALANCED": 3487.5,
+          "BEST": 8550.0,
+          "FAST": 1687.5
+        },
+        "task_identity": "mbpp:Mbpp/565"
+      },
+      {
+        "adaptive_limit": 13969.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 121,
+        "reservations": {
+          "BALANCED": 3549.5,
+          "BEST": 8702.0,
+          "FAST": 1717.5
+        },
+        "task_identity": "mbpp:Mbpp/725"
+      },
+      {
+        "adaptive_limit": 14823.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 191,
+        "reservations": {
+          "BALANCED": 3766.5,
+          "BEST": 9234.0,
+          "FAST": 1822.5
+        },
+        "task_identity": "humaneval:HumanEval/0"
+      },
+      {
+        "adaptive_limit": 13786.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 106,
+        "reservations": {
+          "BALANCED": 3503.0,
+          "BEST": 8588.0,
+          "FAST": 1695.0
+        },
+        "task_identity": "mbpp:Mbpp/285"
+      },
+      {
+        "adaptive_limit": 16067.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 293,
+        "reservations": {
+          "BALANCED": 4082.7000000000003,
+          "BEST": 10009.199999999999,
+          "FAST": 1975.5
+        },
+        "task_identity": "humaneval:HumanEval/67"
+      },
+      {
+        "adaptive_limit": 13639.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 94,
+        "reservations": {
+          "BALANCED": 3465.8,
+          "BEST": 8496.8,
+          "FAST": 1677.0
+        },
+        "task_identity": "mbpp:Mbpp/454"
+      },
+      {
+        "adaptive_limit": 14896.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 197,
+        "reservations": {
+          "BALANCED": 3785.1,
+          "BEST": 9279.6,
+          "FAST": 1831.5
+        },
+        "task_identity": "humaneval:HumanEval/86"
+      },
+      {
+        "adaptive_limit": 14225.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 142,
+        "reservations": {
+          "BALANCED": 3614.6,
+          "BEST": 8861.6,
+          "FAST": 1749.0
+        },
+        "task_identity": "mbpp:Mbpp/590"
+      },
+      {
+        "adaptive_limit": 13712.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 100,
+        "reservations": {
+          "BALANCED": 3484.4,
+          "BEST": 8542.4,
+          "FAST": 1686.0
+        },
+        "task_identity": "mbpp:Mbpp/260"
+      },
+      {
+        "adaptive_limit": 14213.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 141,
+        "reservations": {
+          "BALANCED": 3611.5,
+          "BEST": 8854.0,
+          "FAST": 1747.5
+        },
+        "task_identity": "mbpp:Mbpp/75"
+      },
+      {
+        "adaptive_limit": 15921.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 281,
+        "reservations": {
+          "BALANCED": 4045.5,
+          "BEST": 9918.0,
+          "FAST": 1957.5
+        },
+        "task_identity": "humaneval:HumanEval/107"
+      },
+      {
+        "adaptive_limit": 13688.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 98,
+        "reservations": {
+          "BALANCED": 3478.2000000000003,
+          "BEST": 8527.199999999999,
+          "FAST": 1683.0
+        },
+        "task_identity": "mbpp:Mbpp/739"
+      },
+      {
+        "adaptive_limit": 14017.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 125,
+        "reservations": {
+          "BALANCED": 3561.9,
+          "BEST": 8732.4,
+          "FAST": 1723.5
+        },
+        "task_identity": "mbpp:Mbpp/587"
+      },
+      {
+        "adaptive_limit": 13786.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 106,
+        "reservations": {
+          "BALANCED": 3503.0,
+          "BEST": 8588.0,
+          "FAST": 1695.0
+        },
+        "task_identity": "mbpp:Mbpp/563"
+      },
+      {
+        "adaptive_limit": 14078.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 130,
+        "reservations": {
+          "BALANCED": 3577.4,
+          "BEST": 8770.4,
+          "FAST": 1731.0
+        },
+        "task_identity": "mbpp:Mbpp/162"
+      },
+      {
+        "adaptive_limit": 15274.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 228,
+        "reservations": {
+          "BALANCED": 3881.2000000000003,
+          "BEST": 9515.199999999999,
+          "FAST": 1878.0
+        },
+        "task_identity": "humaneval:HumanEval/133"
+      },
+      {
+        "adaptive_limit": 13981.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 122,
+        "reservations": {
+          "BALANCED": 3552.6,
+          "BEST": 8709.6,
+          "FAST": 1719.0
+        },
+        "task_identity": "mbpp:Mbpp/390"
+      },
+      {
+        "adaptive_limit": 14042.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 127,
+        "reservations": {
+          "BALANCED": 3568.1,
+          "BEST": 8747.6,
+          "FAST": 1726.5
+        },
+        "task_identity": "mbpp:Mbpp/300"
+      },
+      {
+        "adaptive_limit": 13883.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 114,
+        "reservations": {
+          "BALANCED": 3527.8,
+          "BEST": 8648.8,
+          "FAST": 1707.0
+        },
+        "task_identity": "mbpp:Mbpp/101"
+      },
+      {
+        "adaptive_limit": 14554.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 169,
+        "reservations": {
+          "BALANCED": 3698.3,
+          "BEST": 9066.8,
+          "FAST": 1789.5
+        },
+        "task_identity": "mbpp:Mbpp/88"
+      },
+      {
+        "adaptive_limit": 14042.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 127,
+        "reservations": {
+          "BALANCED": 3568.1,
+          "BEST": 8747.6,
+          "FAST": 1726.5
+        },
+        "task_identity": "mbpp:Mbpp/475"
+      },
+      {
+        "adaptive_limit": 13810.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 108,
+        "reservations": {
+          "BALANCED": 3509.2000000000003,
+          "BEST": 8603.199999999999,
+          "FAST": 1698.0
+        },
+        "task_identity": "mbpp:Mbpp/744"
+      },
+      {
+        "adaptive_limit": 13651.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 95,
+        "reservations": {
+          "BALANCED": 3468.9,
+          "BEST": 8504.4,
+          "FAST": 1678.5
+        },
+        "task_identity": "mbpp:Mbpp/448"
+      },
+      {
+        "adaptive_limit": 13969.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 121,
+        "reservations": {
+          "BALANCED": 3549.5,
+          "BEST": 8702.0,
+          "FAST": 1717.5
+        },
+        "task_identity": "mbpp:Mbpp/310"
+      },
+      {
+        "adaptive_limit": 13627.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 93,
+        "reservations": {
+          "BALANCED": 3462.7000000000003,
+          "BEST": 8489.199999999999,
+          "FAST": 1675.5
+        },
+        "task_identity": "mbpp:Mbpp/113"
+      },
+      {
+        "adaptive_limit": 13993.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 123,
+        "reservations": {
+          "BALANCED": 3555.7000000000003,
+          "BEST": 8717.199999999999,
+          "FAST": 1720.5
+        },
+        "task_identity": "mbpp:Mbpp/85"
+      },
+      {
+        "adaptive_limit": 13834.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 110,
+        "reservations": {
+          "BALANCED": 3515.4,
+          "BEST": 8618.4,
+          "FAST": 1701.0
+        },
+        "task_identity": "mbpp:Mbpp/732"
+      },
+      {
+        "adaptive_limit": 16604.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 337,
+        "reservations": {
+          "BALANCED": 4219.1,
+          "BEST": 10343.6,
+          "FAST": 2041.5
+        },
+        "task_identity": "humaneval:HumanEval/81"
+      },
+      {
+        "adaptive_limit": 13834.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 110,
+        "reservations": {
+          "BALANCED": 3515.4,
+          "BEST": 8618.4,
+          "FAST": 1701.0
+        },
+        "task_identity": "mbpp:Mbpp/555"
+      },
+      {
+        "adaptive_limit": 13981.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 122,
+        "reservations": {
+          "BALANCED": 3552.6,
+          "BEST": 8709.6,
+          "FAST": 1719.0
+        },
+        "task_identity": "humaneval:HumanEval/85"
+      },
+      {
+        "adaptive_limit": 14005.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 124,
+        "reservations": {
+          "BALANCED": 3558.8,
+          "BEST": 8724.8,
+          "FAST": 1722.0
+        },
+        "task_identity": "mbpp:Mbpp/139"
+      },
+      {
+        "adaptive_limit": 14213.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 141,
+        "reservations": {
+          "BALANCED": 3611.5,
+          "BEST": 8854.0,
+          "FAST": 1747.5
+        },
+        "task_identity": "mbpp:Mbpp/610"
+      },
+      {
+        "adaptive_limit": 14164.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 137,
+        "reservations": {
+          "BALANCED": 3599.1,
+          "BEST": 8823.6,
+          "FAST": 1741.5
+        },
+        "task_identity": "mbpp:Mbpp/239"
+      },
+      {
+        "adaptive_limit": 13798.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 107,
+        "reservations": {
+          "BALANCED": 3506.1,
+          "BEST": 8595.6,
+          "FAST": 1696.5
+        },
+        "task_identity": "mbpp:Mbpp/69"
+      },
+      {
+        "adaptive_limit": 14115.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 133,
+        "reservations": {
+          "BALANCED": 3586.7000000000003,
+          "BEST": 8793.199999999999,
+          "FAST": 1735.5
+        },
+        "task_identity": "mbpp:Mbpp/733"
+      },
+      {
+        "adaptive_limit": 13712.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 100,
+        "reservations": {
+          "BALANCED": 3484.4,
+          "BEST": 8542.4,
+          "FAST": 1686.0
+        },
+        "task_identity": "mbpp:Mbpp/804"
+      },
+      {
+        "adaptive_limit": 13981.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 122,
+        "reservations": {
+          "BALANCED": 3552.6,
+          "BEST": 8709.6,
+          "FAST": 1719.0
+        },
+        "task_identity": "mbpp:Mbpp/731"
+      },
+      {
+        "adaptive_limit": 13871.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 113,
+        "reservations": {
+          "BALANCED": 3524.7000000000003,
+          "BEST": 8641.199999999999,
+          "FAST": 1705.5
+        },
+        "task_identity": "mbpp:Mbpp/305"
+      },
+      {
+        "adaptive_limit": 14652.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 177,
+        "reservations": {
+          "BALANCED": 3723.1,
+          "BEST": 9127.6,
+          "FAST": 1801.5
+        },
+        "task_identity": "humaneval:HumanEval/62"
+      },
+      {
+        "adaptive_limit": 14078.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 130,
+        "reservations": {
+          "BALANCED": 3577.4,
+          "BEST": 8770.4,
+          "FAST": 1731.0
+        },
+        "task_identity": "mbpp:Mbpp/94"
+      },
+      {
+        "adaptive_limit": 14383.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 155,
+        "reservations": {
+          "BALANCED": 3654.9,
+          "BEST": 8960.4,
+          "FAST": 1768.5
+        },
+        "task_identity": "mbpp:Mbpp/720"
+      },
+      {
+        "adaptive_limit": 14127.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 134,
+        "reservations": {
+          "BALANCED": 3589.8,
+          "BEST": 8800.8,
+          "FAST": 1737.0
+        },
+        "task_identity": "mbpp:Mbpp/611"
+      },
+      {
+        "adaptive_limit": 13688.4,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 98,
+        "reservations": {
+          "BALANCED": 3478.2000000000003,
+          "BEST": 8527.199999999999,
+          "FAST": 1683.0
+        },
+        "task_identity": "mbpp:Mbpp/56"
+      },
+      {
+        "adaptive_limit": 14371.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 154,
+        "reservations": {
+          "BALANCED": 3651.8,
+          "BEST": 8952.8,
+          "FAST": 1767.0
+        },
+        "task_identity": "humaneval:HumanEval/29"
+      },
+      {
+        "adaptive_limit": 14322.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 150,
+        "reservations": {
+          "BALANCED": 3639.4,
+          "BEST": 8922.4,
+          "FAST": 1761.0
+        },
+        "task_identity": "mbpp:Mbpp/753"
+      },
+      {
+        "adaptive_limit": 14078.8,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 130,
+        "reservations": {
+          "BALANCED": 3577.4,
+          "BEST": 8770.4,
+          "FAST": 1731.0
+        },
+        "task_identity": "mbpp:Mbpp/639"
+      },
+      {
+        "adaptive_limit": 15311.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 231,
+        "reservations": {
+          "BALANCED": 3890.5,
+          "BEST": 9538.0,
+          "FAST": 1882.5
+        },
+        "task_identity": "humaneval:HumanEval/99"
+      },
+      {
+        "adaptive_limit": 13920.2,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 117,
+        "reservations": {
+          "BALANCED": 3537.1,
+          "BEST": 8671.6,
+          "FAST": 1711.5
+        },
+        "task_identity": "mbpp:Mbpp/567"
+      },
+      {
+        "adaptive_limit": 14371.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 154,
+        "reservations": {
+          "BALANCED": 3651.8,
+          "BEST": 8952.8,
+          "FAST": 1767.0
+        },
+        "task_identity": "humaneval:HumanEval/35"
+      },
+      {
+        "adaptive_limit": 13664.0,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 96,
+        "reservations": {
+          "BALANCED": 3472.0,
+          "BEST": 8512.0,
+          "FAST": 1680.0
+        },
+        "task_identity": "mbpp:Mbpp/309"
+      },
+      {
+        "adaptive_limit": 14066.599999999999,
+        "max_output_tokens": 1024,
+        "reference_input_tokens": 129,
+        "reservations": {
+          "BALANCED": 3574.3,
+          "BEST": 8762.8,
+          "FAST": 1729.5
+        },
+        "task_identity": "mbpp:Mbpp/644"
+      }
+    ],
+    "total_token_baseline_b0": 4818407.599999999,
+    "total_token_cutoffs": [
+      1204601.8999999997,
+      2409203.7999999993,
+      3613805.6999999993,
+      4818407.599999999
+    ],
+    "unit": "billion_parameter_token_units"
+  },
+  "cpu": "Intel64 Family 6 Model 94 Stepping 3, GenuineIntel",
+  "docker_image": "ganler/evalplus:v0.3.1",
+  "docker_image_digest": "[\"ganler/evalplus@sha256:26b118098bef281fe8dfe999bf05f1d5b45374b4e6c00161ec0f30592aef4740\"]|sha256:26b118098bef281fe8dfe999bf05f1d5b45374b4e6c00161ec0f30592aef4740",
+  "ended_at": "2026-08-28T19:26:21.332394+00:00",
+  "exclusions": [],
+  "experiment_id": "awb-20260826T042018Z-s20260824-300eaad5",
+  "models": [
+    {
+      "digest": "sha256:d7372fd828518a4d38b1eb196c673c31a85f2ed302b3d1e406c4c2d1b64a0668",
+      "model": "qwen2.5-coder:1.5b",
+      "parameter_billions": 1.5,
+      "predicted_memory_bytes": 1232577611,
+      "provider": "ollama",
+      "quantization": "Q4_K_M",
+      "size_bytes": 986062089,
+      "tier": "FAST"
+    },
+    {
+      "digest": "sha256:f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "model": "qwen2.5-coder:3b",
+      "parameter_billions": 3.1,
+      "predicted_memory_bytes": 2412390782,
+      "provider": "ollama",
+      "quantization": "Q4_K_M",
+      "size_bytes": 1929912626,
+      "tier": "BALANCED"
+    },
+    {
+      "digest": "sha256:dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+      "model": "qwen2.5-coder:7b",
+      "parameter_billions": 7.6,
+      "predicted_memory_bytes": 5853859451,
+      "provider": "ollama",
+      "quantization": "Q4_K_M",
+      "size_bytes": 4683087561,
+      "tier": "BEST"
+    }
+  ],
+  "ollama_version": "0.30.10",
+  "os": "Windows-11-10.0.26200-SP0",
+  "physical_ram_bytes": 25652355072,
+  "python_version": "3.14.6",
+  "resource_limits": {
+    "docker_cpu_fraction_of_total": 0.2,
+    "docker_memory_bytes": 2147483648,
+    "docker_pids_limit": 64,
+    "hard_cpu_equivalent_for_readability": 2.0,
+    "hard_cpu_percent": 50.0,
+    "hard_ram_bytes": 12826177536,
+    "soft_cpu_equivalent_for_readability": 1.8,
+    "soft_cpu_percent": 45.0,
+    "soft_ram_bytes": 11543559782,
+    "verification_overhead_cpu_fraction": 0.05,
+    "verification_overhead_ram_bytes": 1282617753
+  },
+  "routing": {
+    "adaptive_path": [
+      "FAST",
+      "BALANCED",
+      "BEST"
+    ],
+    "conditions": [
+      "small_only",
+      "strong_only",
+      "adaptive"
+    ],
+    "one_attempt_per_tier": true,
+    "same_tier_retries": 0
+  },
+  "sampling": {
+    "num_ctx": 8192,
+    "num_predict": 1024,
+    "num_thread": 1,
+    "seed": 20260824,
+    "temperature": 0,
+    "top_p": 1
+  },
+  "seed": 20260824,
+  "source_tree_sha256": "0d24437e9297466c3f28a7af677a76d7e54c10dc6358edb7b724d586040e7859",
+  "started_at": "2026-08-26T04:20:33.848255+00:00",
+  "status": "completed",
+  "task_ids": [
+    "humaneval:HumanEval/92",
+    "humaneval:HumanEval/90",
+    "mbpp:Mbpp/422",
+    "mbpp:Mbpp/172",
+    "mbpp:Mbpp/106",
+    "humaneval:HumanEval/113",
+    "mbpp:Mbpp/18",
+    "mbpp:Mbpp/453",
+    "mbpp:Mbpp/760",
+    "mbpp:Mbpp/605",
+    "mbpp:Mbpp/805",
+    "humaneval:HumanEval/147",
+    "mbpp:Mbpp/166",
+    "mbpp:Mbpp/750",
+    "mbpp:Mbpp/455",
+    "humaneval:HumanEval/105",
+    "humaneval:HumanEval/91",
+    "mbpp:Mbpp/437",
+    "mbpp:Mbpp/456",
+    "humaneval:HumanEval/156",
+    "mbpp:Mbpp/296",
+    "mbpp:Mbpp/19",
+    "mbpp:Mbpp/579",
+    "mbpp:Mbpp/293",
+    "mbpp:Mbpp/7",
+    "humaneval:HumanEval/44",
+    "mbpp:Mbpp/292",
+    "mbpp:Mbpp/791",
+    "mbpp:Mbpp/281",
+    "mbpp:Mbpp/312",
+    "mbpp:Mbpp/807",
+    "mbpp:Mbpp/628",
+    "mbpp:Mbpp/259",
+    "mbpp:Mbpp/61",
+    "humaneval:HumanEval/47",
+    "mbpp:Mbpp/777",
+    "mbpp:Mbpp/404",
+    "mbpp:Mbpp/459",
+    "mbpp:Mbpp/100",
+    "mbpp:Mbpp/104",
+    "mbpp:Mbpp/135",
+    "mbpp:Mbpp/573",
+    "mbpp:Mbpp/105",
+    "mbpp:Mbpp/226",
+    "mbpp:Mbpp/781",
+    "humaneval:HumanEval/52",
+    "mbpp:Mbpp/631",
+    "mbpp:Mbpp/256",
+    "mbpp:Mbpp/465",
+    "mbpp:Mbpp/161",
+    "mbpp:Mbpp/749",
+    "mbpp:Mbpp/279",
+    "mbpp:Mbpp/269",
+    "mbpp:Mbpp/93",
+    "mbpp:Mbpp/12",
+    "humaneval:HumanEval/58",
+    "mbpp:Mbpp/440",
+    "mbpp:Mbpp/276",
+    "mbpp:Mbpp/734",
+    "humaneval:HumanEval/74",
+    "mbpp:Mbpp/109",
+    "humaneval:HumanEval/159",
+    "mbpp:Mbpp/59",
+    "humaneval:HumanEval/160",
+    "mbpp:Mbpp/62",
+    "mbpp:Mbpp/3",
+    "mbpp:Mbpp/57",
+    "humaneval:HumanEval/93",
+    "mbpp:Mbpp/559",
+    "humaneval:HumanEval/152",
+    "humaneval:HumanEval/94",
+    "mbpp:Mbpp/637",
+    "mbpp:Mbpp/165",
+    "humaneval:HumanEval/148",
+    "humaneval:HumanEval/106",
+    "humaneval:HumanEval/16",
+    "mbpp:Mbpp/433",
+    "mbpp:Mbpp/250",
+    "mbpp:Mbpp/757",
+    "mbpp:Mbpp/607",
+    "mbpp:Mbpp/294",
+    "humaneval:HumanEval/98",
+    "humaneval:HumanEval/11",
+    "mbpp:Mbpp/11",
+    "mbpp:Mbpp/224",
+    "mbpp:Mbpp/20",
+    "mbpp:Mbpp/585",
+    "mbpp:Mbpp/261",
+    "mbpp:Mbpp/798",
+    "humaneval:HumanEval/54",
+    "mbpp:Mbpp/237",
+    "mbpp:Mbpp/247",
+    "mbpp:Mbpp/769",
+    "mbpp:Mbpp/58",
+    "mbpp:Mbpp/629",
+    "mbpp:Mbpp/245",
+    "mbpp:Mbpp/97",
+    "humaneval:HumanEval/9",
+    "humaneval:HumanEval/130",
+    "mbpp:Mbpp/128",
+    "humaneval:HumanEval/141",
+    "mbpp:Mbpp/257",
+    "mbpp:Mbpp/782",
+    "mbpp:Mbpp/394",
+    "mbpp:Mbpp/271",
+    "humaneval:HumanEval/117",
+    "humaneval:HumanEval/48",
+    "mbpp:Mbpp/414",
+    "mbpp:Mbpp/308",
+    "mbpp:Mbpp/445",
+    "mbpp:Mbpp/726",
+    "mbpp:Mbpp/457",
+    "humaneval:HumanEval/50",
+    "mbpp:Mbpp/722",
+    "mbpp:Mbpp/6",
+    "mbpp:Mbpp/432",
+    "mbpp:Mbpp/721",
+    "mbpp:Mbpp/566",
+    "mbpp:Mbpp/723",
+    "mbpp:Mbpp/560",
+    "humaneval:HumanEval/88",
+    "humaneval:HumanEval/136",
+    "mbpp:Mbpp/775",
+    "mbpp:Mbpp/406",
+    "mbpp:Mbpp/119",
+    "mbpp:Mbpp/602",
+    "mbpp:Mbpp/116",
+    "mbpp:Mbpp/558",
+    "mbpp:Mbpp/311",
+    "humaneval:HumanEval/60",
+    "humaneval:HumanEval/144",
+    "mbpp:Mbpp/63",
+    "humaneval:HumanEval/84",
+    "mbpp:Mbpp/138",
+    "humaneval:HumanEval/13",
+    "mbpp:Mbpp/780",
+    "humaneval:HumanEval/150",
+    "humaneval:HumanEval/146",
+    "mbpp:Mbpp/99",
+    "mbpp:Mbpp/270",
+    "mbpp:Mbpp/755",
+    "mbpp:Mbpp/232",
+    "mbpp:Mbpp/421",
+    "humaneval:HumanEval/2",
+    "mbpp:Mbpp/230",
+    "humaneval:HumanEval/55",
+    "mbpp:Mbpp/784",
+    "mbpp:Mbpp/89",
+    "mbpp:Mbpp/64",
+    "mbpp:Mbpp/603",
+    "mbpp:Mbpp/14",
+    "humaneval:HumanEval/30",
+    "mbpp:Mbpp/630",
+    "mbpp:Mbpp/436",
+    "mbpp:Mbpp/418",
+    "humaneval:HumanEval/96",
+    "mbpp:Mbpp/65",
+    "humaneval:HumanEval/158",
+    "mbpp:Mbpp/801",
+    "mbpp:Mbpp/398",
+    "humaneval:HumanEval/26",
+    "mbpp:Mbpp/9",
+    "mbpp:Mbpp/96",
+    "humaneval:HumanEval/82",
+    "mbpp:Mbpp/588",
+    "humaneval:HumanEval/19",
+    "mbpp:Mbpp/596",
+    "mbpp:Mbpp/71",
+    "humaneval:HumanEval/71",
+    "mbpp:Mbpp/424",
+    "humaneval:HumanEval/155",
+    "mbpp:Mbpp/141",
+    "humaneval:HumanEval/95",
+    "mbpp:Mbpp/283",
+    "mbpp:Mbpp/77",
+    "mbpp:Mbpp/758",
+    "humaneval:HumanEval/56",
+    "mbpp:Mbpp/92",
+    "humaneval:HumanEval/162",
+    "mbpp:Mbpp/429",
+    "humaneval:HumanEval/64",
+    "mbpp:Mbpp/80",
+    "mbpp:Mbpp/299",
+    "mbpp:Mbpp/754",
+    "mbpp:Mbpp/470",
+    "mbpp:Mbpp/82",
+    "mbpp:Mbpp/86",
+    "mbpp:Mbpp/778",
+    "mbpp:Mbpp/591",
+    "mbpp:Mbpp/741",
+    "humaneval:HumanEval/125",
+    "humaneval:HumanEval/101",
+    "mbpp:Mbpp/592",
+    "mbpp:Mbpp/430",
+    "humaneval:HumanEval/53",
+    "mbpp:Mbpp/273",
+    "mbpp:Mbpp/767",
+    "mbpp:Mbpp/735",
+    "mbpp:Mbpp/771",
+    "humaneval:HumanEval/43",
+    "humaneval:HumanEval/66",
+    "mbpp:Mbpp/632",
+    "mbpp:Mbpp/620",
+    "humaneval:HumanEval/163",
+    "mbpp:Mbpp/748",
+    "mbpp:Mbpp/405",
+    "mbpp:Mbpp/577",
+    "mbpp:Mbpp/120",
+    "humaneval:HumanEval/22",
+    "mbpp:Mbpp/130",
+    "mbpp:Mbpp/238",
+    "mbpp:Mbpp/410",
+    "mbpp:Mbpp/564",
+    "humaneval:HumanEval/149",
+    "mbpp:Mbpp/586",
+    "humaneval:HumanEval/103",
+    "mbpp:Mbpp/419",
+    "mbpp:Mbpp/597",
+    "humaneval:HumanEval/31",
+    "mbpp:Mbpp/557",
+    "mbpp:Mbpp/242",
+    "humaneval:HumanEval/83",
+    "mbpp:Mbpp/272",
+    "mbpp:Mbpp/606",
+    "humaneval:HumanEval/132",
+    "humaneval:HumanEval/121",
+    "mbpp:Mbpp/87",
+    "mbpp:Mbpp/809",
+    "humaneval:HumanEval/111",
+    "humaneval:HumanEval/39",
+    "humaneval:HumanEval/6",
+    "mbpp:Mbpp/792",
+    "humaneval:HumanEval/154",
+    "humaneval:HumanEval/129",
+    "mbpp:Mbpp/426",
+    "mbpp:Mbpp/751",
+    "mbpp:Mbpp/131",
+    "mbpp:Mbpp/615",
+    "mbpp:Mbpp/280",
+    "mbpp:Mbpp/803",
+    "mbpp:Mbpp/460",
+    "mbpp:Mbpp/468",
+    "mbpp:Mbpp/730",
+    "mbpp:Mbpp/604",
+    "humaneval:HumanEval/8",
+    "humaneval:HumanEval/79",
+    "mbpp:Mbpp/589",
+    "humaneval:HumanEval/100",
+    "mbpp:Mbpp/2",
+    "mbpp:Mbpp/265",
+    "mbpp:Mbpp/619",
+    "mbpp:Mbpp/599",
+    "mbpp:Mbpp/129",
+    "mbpp:Mbpp/793",
+    "mbpp:Mbpp/123",
+    "mbpp:Mbpp/264",
+    "mbpp:Mbpp/240",
+    "mbpp:Mbpp/478",
+    "mbpp:Mbpp/462",
+    "mbpp:Mbpp/413",
+    "humaneval:HumanEval/142",
+    "humaneval:HumanEval/12",
+    "mbpp:Mbpp/145",
+    "humaneval:HumanEval/127",
+    "mbpp:Mbpp/770",
+    "mbpp:Mbpp/268",
+    "mbpp:Mbpp/752",
+    "mbpp:Mbpp/797",
+    "humaneval:HumanEval/139",
+    "humaneval:HumanEval/68",
+    "humaneval:HumanEval/104",
+    "mbpp:Mbpp/477",
+    "mbpp:Mbpp/473",
+    "humaneval:HumanEval/124",
+    "mbpp:Mbpp/262",
+    "mbpp:Mbpp/124",
+    "humaneval:HumanEval/134",
+    "humaneval:HumanEval/10",
+    "mbpp:Mbpp/785",
+    "humaneval:HumanEval/110",
+    "mbpp:Mbpp/255",
+    "mbpp:Mbpp/788",
+    "humaneval:HumanEval/120",
+    "mbpp:Mbpp/74",
+    "mbpp:Mbpp/800",
+    "humaneval:HumanEval/37",
+    "mbpp:Mbpp/622",
+    "mbpp:Mbpp/68",
+    "humaneval:HumanEval/34",
+    "mbpp:Mbpp/4",
+    "mbpp:Mbpp/274",
+    "mbpp:Mbpp/787",
+    "mbpp:Mbpp/773",
+    "mbpp:Mbpp/583",
+    "mbpp:Mbpp/799",
+    "mbpp:Mbpp/297",
+    "mbpp:Mbpp/223",
+    "humaneval:HumanEval/38",
+    "mbpp:Mbpp/278",
+    "mbpp:Mbpp/743",
+    "humaneval:HumanEval/140",
+    "humaneval:HumanEval/97",
+    "mbpp:Mbpp/287",
+    "mbpp:Mbpp/388",
+    "mbpp:Mbpp/762",
+    "humaneval:HumanEval/65",
+    "humaneval:HumanEval/143",
+    "humaneval:HumanEval/70",
+    "mbpp:Mbpp/736",
+    "mbpp:Mbpp/635",
+    "mbpp:Mbpp/235",
+    "mbpp:Mbpp/282",
+    "mbpp:Mbpp/267",
+    "mbpp:Mbpp/641",
+    "mbpp:Mbpp/90",
+    "mbpp:Mbpp/624",
+    "humaneval:HumanEval/112",
+    "mbpp:Mbpp/233",
+    "mbpp:Mbpp/125",
+    "mbpp:Mbpp/98",
+    "humaneval:HumanEval/145",
+    "mbpp:Mbpp/740",
+    "mbpp:Mbpp/392",
+    "mbpp:Mbpp/395",
+    "mbpp:Mbpp/578",
+    "mbpp:Mbpp/581",
+    "mbpp:Mbpp/251",
+    "mbpp:Mbpp/439",
+    "mbpp:Mbpp/786",
+    "humaneval:HumanEval/161",
+    "humaneval:HumanEval/123",
+    "mbpp:Mbpp/168",
+    "humaneval:HumanEval/21",
+    "mbpp:Mbpp/102",
+    "mbpp:Mbpp/554",
+    "mbpp:Mbpp/556",
+    "mbpp:Mbpp/728",
+    "mbpp:Mbpp/170",
+    "mbpp:Mbpp/415",
+    "mbpp:Mbpp/160",
+    "mbpp:Mbpp/66",
+    "mbpp:Mbpp/724",
+    "mbpp:Mbpp/222",
+    "mbpp:Mbpp/562",
+    "humaneval:HumanEval/135",
+    "mbpp:Mbpp/409",
+    "humaneval:HumanEval/45",
+    "mbpp:Mbpp/618",
+    "mbpp:Mbpp/451",
+    "mbpp:Mbpp/140",
+    "mbpp:Mbpp/766",
+    "mbpp:Mbpp/568",
+    "humaneval:HumanEval/46",
+    "mbpp:Mbpp/127",
+    "humaneval:HumanEval/137",
+    "mbpp:Mbpp/427",
+    "mbpp:Mbpp/17",
+    "humaneval:HumanEval/72",
+    "humaneval:HumanEval/5",
+    "mbpp:Mbpp/643",
+    "mbpp:Mbpp/623",
+    "humaneval:HumanEval/7",
+    "humaneval:HumanEval/28",
+    "humaneval:HumanEval/63",
+    "mbpp:Mbpp/472",
+    "mbpp:Mbpp/253",
+    "mbpp:Mbpp/450",
+    "humaneval:HumanEval/18",
+    "mbpp:Mbpp/412",
+    "mbpp:Mbpp/95",
+    "mbpp:Mbpp/16",
+    "mbpp:Mbpp/572",
+    "mbpp:Mbpp/614",
+    "humaneval:HumanEval/122",
+    "mbpp:Mbpp/763",
+    "mbpp:Mbpp/474",
+    "mbpp:Mbpp/111",
+    "mbpp:Mbpp/266",
+    "humaneval:HumanEval/76",
+    "humaneval:HumanEval/57",
+    "mbpp:Mbpp/447",
+    "humaneval:HumanEval/73",
+    "mbpp:Mbpp/435",
+    "humaneval:HumanEval/1",
+    "mbpp:Mbpp/569",
+    "humaneval:HumanEval/32",
+    "humaneval:HumanEval/25",
+    "mbpp:Mbpp/118",
+    "mbpp:Mbpp/476",
+    "mbpp:Mbpp/389",
+    "humaneval:HumanEval/89",
+    "mbpp:Mbpp/137",
+    "humaneval:HumanEval/119",
+    "humaneval:HumanEval/24",
+    "mbpp:Mbpp/84",
+    "mbpp:Mbpp/471",
+    "mbpp:Mbpp/616",
+    "mbpp:Mbpp/790",
+    "mbpp:Mbpp/808",
+    "mbpp:Mbpp/72",
+    "mbpp:Mbpp/70",
+    "mbpp:Mbpp/765",
+    "humaneval:HumanEval/20",
+    "mbpp:Mbpp/397",
+    "mbpp:Mbpp/608",
+    "mbpp:Mbpp/306",
+    "mbpp:Mbpp/626",
+    "mbpp:Mbpp/479",
+    "mbpp:Mbpp/8",
+    "mbpp:Mbpp/796",
+    "mbpp:Mbpp/598",
+    "humaneval:HumanEval/41",
+    "mbpp:Mbpp/252",
+    "humaneval:HumanEval/27",
+    "mbpp:Mbpp/745",
+    "mbpp:Mbpp/580",
+    "mbpp:Mbpp/759",
+    "mbpp:Mbpp/167",
+    "humaneval:HumanEval/108",
+    "humaneval:HumanEval/61",
+    "humaneval:HumanEval/36",
+    "humaneval:HumanEval/14",
+    "humaneval:HumanEval/51",
+    "mbpp:Mbpp/441",
+    "mbpp:Mbpp/132",
+    "humaneval:HumanEval/23",
+    "humaneval:HumanEval/157",
+    "humaneval:HumanEval/3",
+    "humaneval:HumanEval/4",
+    "mbpp:Mbpp/227",
+    "humaneval:HumanEval/78",
+    "humaneval:HumanEval/80",
+    "mbpp:Mbpp/612",
+    "mbpp:Mbpp/103",
+    "humaneval:HumanEval/102",
+    "humaneval:HumanEval/126",
+    "humaneval:HumanEval/115",
+    "mbpp:Mbpp/742",
+    "mbpp:Mbpp/425",
+    "mbpp:Mbpp/463",
+    "humaneval:HumanEval/75",
+    "mbpp:Mbpp/458",
+    "mbpp:Mbpp/79",
+    "humaneval:HumanEval/114",
+    "mbpp:Mbpp/391",
+    "mbpp:Mbpp/420",
+    "mbpp:Mbpp/764",
+    "mbpp:Mbpp/284",
+    "mbpp:Mbpp/277",
+    "mbpp:Mbpp/290",
+    "humaneval:HumanEval/118",
+    "humaneval:HumanEval/17",
+    "mbpp:Mbpp/234",
+    "mbpp:Mbpp/772",
+    "humaneval:HumanEval/116",
+    "mbpp:Mbpp/91",
+    "mbpp:Mbpp/806",
+    "mbpp:Mbpp/171",
+    "mbpp:Mbpp/428",
+    "humaneval:HumanEval/77",
+    "mbpp:Mbpp/142",
+    "mbpp:Mbpp/108",
+    "mbpp:Mbpp/126",
+    "mbpp:Mbpp/594",
+    "mbpp:Mbpp/600",
+    "humaneval:HumanEval/109",
+    "mbpp:Mbpp/737",
+    "humaneval:HumanEval/69",
+    "humaneval:HumanEval/59",
+    "humaneval:HumanEval/151",
+    "mbpp:Mbpp/633",
+    "mbpp:Mbpp/244",
+    "humaneval:HumanEval/33",
+    "humaneval:HumanEval/131",
+    "mbpp:Mbpp/593",
+    "mbpp:Mbpp/301",
+    "humaneval:HumanEval/49",
+    "mbpp:Mbpp/794",
+    "humaneval:HumanEval/128",
+    "mbpp:Mbpp/67",
+    "mbpp:Mbpp/133",
+    "mbpp:Mbpp/446",
+    "humaneval:HumanEval/153",
+    "mbpp:Mbpp/576",
+    "humaneval:HumanEval/40",
+    "mbpp:Mbpp/638",
+    "mbpp:Mbpp/286",
+    "humaneval:HumanEval/42",
+    "humaneval:HumanEval/138",
+    "humaneval:HumanEval/15",
+    "humaneval:HumanEval/87",
+    "mbpp:Mbpp/565",
+    "mbpp:Mbpp/725",
+    "humaneval:HumanEval/0",
+    "mbpp:Mbpp/285",
+    "humaneval:HumanEval/67",
+    "mbpp:Mbpp/454",
+    "humaneval:HumanEval/86",
+    "mbpp:Mbpp/590",
+    "mbpp:Mbpp/260",
+    "mbpp:Mbpp/75",
+    "humaneval:HumanEval/107",
+    "mbpp:Mbpp/739",
+    "mbpp:Mbpp/587",
+    "mbpp:Mbpp/563",
+    "mbpp:Mbpp/162",
+    "humaneval:HumanEval/133",
+    "mbpp:Mbpp/390",
+    "mbpp:Mbpp/300",
+    "mbpp:Mbpp/101",
+    "mbpp:Mbpp/88",
+    "mbpp:Mbpp/475",
+    "mbpp:Mbpp/744",
+    "mbpp:Mbpp/448",
+    "mbpp:Mbpp/310",
+    "mbpp:Mbpp/113",
+    "mbpp:Mbpp/85",
+    "mbpp:Mbpp/732",
+    "humaneval:HumanEval/81",
+    "mbpp:Mbpp/555",
+    "humaneval:HumanEval/85",
+    "mbpp:Mbpp/139",
+    "mbpp:Mbpp/610",
+    "mbpp:Mbpp/239",
+    "mbpp:Mbpp/69",
+    "mbpp:Mbpp/733",
+    "mbpp:Mbpp/804",
+    "mbpp:Mbpp/731",
+    "mbpp:Mbpp/305",
+    "humaneval:HumanEval/62",
+    "mbpp:Mbpp/94",
+    "mbpp:Mbpp/720",
+    "mbpp:Mbpp/611",
+    "mbpp:Mbpp/56",
+    "humaneval:HumanEval/29",
+    "mbpp:Mbpp/753",
+    "mbpp:Mbpp/639",
+    "humaneval:HumanEval/99",
+    "mbpp:Mbpp/567",
+    "humaneval:HumanEval/35",
+    "mbpp:Mbpp/309",
+    "mbpp:Mbpp/644"
+  ],
+  "verification": {
+    "base_and_plus_same_completion": true,
+    "container_network": "none",
+    "evaluator": "EvalPlus",
+    "evaluator_version": "v0.3.1",
+    "timeout_seconds": 120
+  }
+}

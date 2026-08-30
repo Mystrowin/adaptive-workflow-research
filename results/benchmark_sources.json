@@ -1,0 +1,68 @@
+[
+  {
+    "artifact_sha256": "b796127e635a67f93fb35c04f4cb03cf06f38c8072ee7cee8833d7bee06979ef",
+    "artifact_size": 44877,
+    "benchmark": "HumanEval",
+    "derived_from": [],
+    "license": "MIT (repository-level license; no separate dataset license asserted)",
+    "license_file": "licenses/HumanEval-MIT.txt",
+    "license_sha256": "bcba3de214851cce46ed5af42d6698044616eeace887c3231bc7a20474ab639e",
+    "retrieved_at": "2026-08-26T03:05:12.438560+00:00",
+    "source": "https://github.com/openai/human-eval",
+    "version": "6d43fb980f9fee3c892a914eda09951f772ad10d"
+  },
+  {
+    "artifact_sha256": "ca95deaa9a01ef0a6f439f88bcf0dd3db3563d22f22aad6cae04ebb9a8d8c8e9",
+    "artifact_size": 255053,
+    "benchmark": "MBPP",
+    "derived_from": [],
+    "license": "CC BY 4.0 International (dataset); Apache-2.0 (repository source)",
+    "license_file": "licenses/MBPP-CC-BY-4.0.txt",
+    "license_sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+    "retrieved_at": "2026-08-26T03:05:12.438560+00:00",
+    "source": "https://github.com/google-research/google-research/tree/master/mbpp",
+    "version": "f46ca8374b4cddef97ca4208ad986049d74d296a"
+  },
+  {
+    "artifact_sha256": "490f08728db1da8a73df89ada48f8ad0270fbd667895838348e64506095a2d49",
+    "artifact_size": 596473,
+    "benchmark": "EvalPlus",
+    "derived_from": [],
+    "license": "Apache-2.0",
+    "license_file": "licenses/EvalPlus-Apache-2.0.txt",
+    "license_sha256": "fcc1f77fe5443b21bfc4dfcc3d66f7654f599b91582df771850e5e876986a103",
+    "retrieved_at": "2026-08-26T03:05:12.438560+00:00",
+    "source": "https://github.com/evalplus/evalplus",
+    "version": "v0.3.1"
+  },
+  {
+    "artifact_sha256": "272720b90ac375502c8ed23cd791c2a93dfb22a911641a494da74a426c09f101",
+    "artifact_size": 925932,
+    "benchmark": "HumanEval+",
+    "derived_from": [
+      "HumanEval",
+      "EvalPlus"
+    ],
+    "license": "Apache-2.0 with upstream HumanEval MIT obligations retained",
+    "license_file": "licenses/HumanEvalPlus-Apache-2.0.txt",
+    "license_sha256": "fcc1f77fe5443b21bfc4dfcc3d66f7654f599b91582df771850e5e876986a103",
+    "retrieved_at": "2026-08-26T03:05:12.438560+00:00",
+    "source": "https://github.com/evalplus/humanevalplus_release",
+    "version": "v0.1.10"
+  },
+  {
+    "artifact_sha256": "af43697e8791c4c149bdfd6b489d8b5412507551ac20e28a439f650b8225db63",
+    "artifact_size": 336032,
+    "benchmark": "MBPP+",
+    "derived_from": [
+      "MBPP",
+      "EvalPlus"
+    ],
+    "license": "Apache-2.0 with upstream MBPP CC BY 4.0 obligations retained",
+    "license_file": "licenses/MBPPPlus-Apache-2.0.txt",
+    "license_sha256": "fcc1f77fe5443b21bfc4dfcc3d66f7654f599b91582df771850e5e876986a103",
+    "retrieved_at": "2026-08-26T03:05:12.438560+00:00",
+    "source": "https://github.com/evalplus/mbppplus_release",
+    "version": "v0.2.0"
+  }
+]

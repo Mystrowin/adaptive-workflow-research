@@ -1,0 +1,37 @@
+{
+  "entries": [
+    {
+      "attempt_number": 2,
+      "benchmark": "mbpp",
+      "condition": "adaptive",
+      "evidence_method": "llama_server_timing_counters",
+      "generation_cost_proxy": 217.0,
+      "input_tokens": 106,
+      "original_status": "resource_blocked",
+      "output_tokens": 70,
+      "selected_model": "qwen2.5-coder:3b",
+      "selected_tier": "BALANCED",
+      "task_id": "Mbpp/563",
+      "token_metrics_reconciled": true,
+      "total_token_cost_proxy": 545.6,
+      "total_tokens": 176
+    }
+  ],
+  "evidence_end_line": 482352,
+  "evidence_start_line": 482327,
+  "raw_measurements_unchanged": true,
+  "raw_results_sha256": "6926147073d0e5b3ffe93ecb3d9c8619707b24f0b48a843d25db6627602268da",
+  "reconciliation_sha256": "c420b99881c96d087b41ceee0c0b39a13f71965d777e52cd1031b8b365bc03a3",
+  "records_applied": 1,
+  "schema_version": 1,
+  "source_kind": "benchmark_owned_ollama_log",
+  "source_sha256": "cc8c3cb69de1208ce94314e5433b45c301a0020ad078012a6784a9119857b4a9",
+  "status": "applied",
+  "unreconciled_fields": [
+    "status",
+    "verification",
+    "wall_time_ms",
+    "model_load_time_ms",
+    "inference_time_ms"
+  ]
+}

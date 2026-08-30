@@ -1,0 +1,12 @@
+{
+  "errors": [],
+  "historical_raw_hashes": {
+    "raw_results_jsonl": "6926147073d0e5b3ffe93ecb3d9c8619707b24f0b48a843d25db6627602268da",
+    "results_sqlite": "138d04bc1c2f3b6609a56cc2a5e77a6d024035f22d948f81a674139ef06976e7"
+  },
+  "historical_records_modified": false,
+  "missing_generated_artifacts": [],
+  "publication_bundle_sha256": "6eec2f7d16a48ee0c5d0efeb3699439307406e74a56d99fcada5953486afb860",
+  "status": "passed",
+  "validated_at": "2026-08-29T22:20:34.099649+00:00"
+}

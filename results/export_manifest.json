@@ -1,0 +1,22 @@
+{
+  "experiment_id": "awb-20260826T042018Z-s20260824-300eaad5",
+  "files": [
+    "README.md",
+    "REPORT.md",
+    "benchmark_sources.json",
+    "checksums.txt",
+    "experiment_manifest.json",
+    "export_manifest.json",
+    "licenses/EvalPlus-Apache-2.0.txt",
+    "licenses/HumanEval-MIT.txt",
+    "licenses/HumanEvalPlus-Apache-2.0.txt",
+    "licenses/MBPP-CC-BY-4.0.txt",
+    "licenses/MBPPPlus-Apache-2.0.txt",
+    "methodology.md",
+    "publishable_safety_report.json",
+    "summary.csv",
+    "summary.json",
+    "task_results.jsonl",
+    "telemetry_reconciliation.json"
+  ]
+}
