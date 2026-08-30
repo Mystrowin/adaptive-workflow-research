@@ -88,8 +88,11 @@ claim. Do not cite the result as a leaderboard comparison.
 
 ## License
 
-Project code is MIT-licensed. The paper is provided for scholarly reuse; the
-benchmark datasets and tools retain their upstream licenses in licenses/.
+Project code is MIT-licensed. Original Adaptive Workflow research and
+benchmark-integration contributions are copyright (c) 2026 Neeraj Pragnya
+Krishna Vasagiri. Code derived from the OpenAI Agents Python project retains
+OpenAI's 2025 MIT copyright notice. The paper is provided for scholarly reuse;
+the benchmark datasets and tools retain their upstream licenses in licenses/.
 Those upstream notices are not relicensed by this repository.
 
 Nothing in this repository is automatically uploaded, published, committed,
