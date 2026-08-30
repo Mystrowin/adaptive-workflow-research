@@ -7,9 +7,9 @@ authors:
     given-names: "Neeraj Pragnya Krishna"
     affiliation: "Independent Researcher"
 version: "1.0.0-research"
-date-released: 2026-08-29
-# The repository URL is intentionally omitted until the author approves a
-# public host. This release is a local preprint bundle.
+date-released: 2026-08-30
+repository-code: "https://github.com/Mystrowin/adaptive-workflow-research"
+url: "https://github.com/Mystrowin/adaptive-workflow-research"
 license: MIT
 abstract: >-
   A controlled local study of verification-gated model cascading for
@@ -29,4 +29,4 @@ preferred-citation:
     - family-names: Vasagiri
       given-names: "Neeraj Pragnya Krishna"
   year: 2026
-  journal: "Local preprint"
+  url: "https://github.com/Mystrowin/adaptive-workflow-research"

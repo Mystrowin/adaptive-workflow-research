@@ -20,6 +20,6 @@ pdflatex -interaction=nonstopmode -halt-on-error main.tex
 pdflatex -interaction=nonstopmode -halt-on-error main.tex
 ~~~
 
-The checked-in paper.pdf is the local preprint artifact. It is not a
+The checked-in paper.pdf is the public GitHub-hosted preprint artifact. It is not a
 conference acceptance or a journal publication. The build script records
 whether native LaTeX or its deterministic ReportLab fallback produced it.

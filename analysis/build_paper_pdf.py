@@ -237,7 +237,7 @@ def build_reportlab() -> dict[str, str | int]:
             st["title"],
         ),
         para(
-            "Neeraj Pragnya Krishna Vasagiri | Independent Researcher<br/>29 August 2026 | Local preprint; not peer reviewed",
+            "Neeraj Pragnya Krishna Vasagiri | Independent Researcher<br/>29 August 2026 | Public GitHub preprint; not peer reviewed",
             st["author"],
         ),
         para(
@@ -617,7 +617,7 @@ def build_reportlab() -> dict[str, str | int]:
         canvas.drawString(
             0.8 * inch,
             0.28 * inch,
-            "Verification-Gated Model Cascading | Local preprint",
+            "Verification-Gated Model Cascading | Public GitHub preprint",
         )
         canvas.drawRightString(7.7 * inch, 0.28 * inch, f"Page {document.page}")
         canvas.restoreState()

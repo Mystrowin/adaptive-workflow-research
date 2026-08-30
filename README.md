@@ -83,8 +83,8 @@ dollar cost. See docs/LIMITATIONS.md and Section 7 of the paper.
 
 ## Citation
 
-See CITATION.cff. The paper is a local preprint and has no DOI or venue
-claim. Do not cite the result as a leaderboard comparison.
+See CITATION.cff. The paper is a public GitHub-hosted preprint and has no DOI
+or venue claim. Do not cite the result as a leaderboard comparison.
 
 ## License
 
@@ -95,5 +95,6 @@ OpenAI's 2025 MIT copyright notice. The paper is provided for scholarly reuse;
 the benchmark datasets and tools retain their upstream licenses in licenses/.
 Those upstream notices are not relicensed by this repository.
 
-Nothing in this repository is automatically uploaded, published, committed,
-or pushed. Review the contents and applicable licenses before public release.
+This repository is publicly available on GitHub. The benchmark and export
+tooling never automatically uploads, publishes, commits, or pushes artifacts;
+review the contents and applicable licenses before creating a future release.

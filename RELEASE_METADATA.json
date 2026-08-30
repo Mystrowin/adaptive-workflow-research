@@ -4,9 +4,15 @@
   "benchmark_run_id": "awb-20260826T042018Z-s20260824-300eaad5",
   "audit_version": "scientific-validity-audit-v1",
   "source_tree_sha256": "0d24437e9297466c3f28a7af677a76d7e54c10dc6358edb7b724d586040e7859",
-  "publication_bundle_sha256": "0fda80b038da786834f50b921e42459fc981131da514e91a9a99e44aaaf24a2b",
-  "status": "local_preprint_not_published",
+  "publication_bundle_sha256": "451a1895f28108a2a3d6aeaaa60038bf1cb7b642ac7d4894b029d86b1ba92d72",
+  "publication_bundle_hash_scope": "Calculated by analysis/run_checks.py from public release content; dynamic validation reports and RELEASE_METADATA.json are excluded.",
+  "publication_bundle_hash_change_reason": "Recalculated after public-release metadata, citation, documentation, and license-notice layout corrections; historical benchmark data and raw-result hashes are unchanged.",
+  "status": "published_github_release",
+  "repository_url": "https://github.com/Mystrowin/adaptive-workflow-research",
+  "github_release_tag": "v1.0.0-research",
+  "github_release_url": "https://github.com/Mystrowin/adaptive-workflow-research/releases/tag/v1.0.0-research",
+  "github_release_published_at": "2026-08-30T17:54:24Z",
   "doi": null,
   "venue": null,
-  "push_or_upload_authorized": false
+  "push_or_upload_authorized": true
 }
