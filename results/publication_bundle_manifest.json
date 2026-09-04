@@ -1,6 +1,6 @@
 {
   "algorithm": "sha256-path-manifest-v2-posix-relative-order",
-  "current_source_bundle_sha256": "cdf66e2591bc6c693f06304e8ba4b694ff7c1fb894d819f91ab0e28140b2fadd",
+  "current_source_bundle_sha256": "b3bd98590a2da3d328512279c0599a6a6d312397b7faccc8047b7858bb95601f",
   "current_source_file_count": 40,
   "current_source_files": {
     "analysis/README.md": "cf4c2187a84367cda29703a1f6beb543a138aef3043c69203c977cef87a2ac1b",
@@ -62,7 +62,7 @@
     "publication_checks.json",
     "reference_validation.json"
   ],
-  "publication_bundle_sha256": "dff17fcc2259789267bd580a1a3aa369739a5826600996226d2e24f202148411",
+  "publication_bundle_sha256": "7ff6f47c57a9fb2dc2f0df4723c7aefa5eda22726883460987b6e339ead86b3a",
   "publication_file_count": 100,
   "publication_files": {
     ".gitattributes": "7ea3bb2b9e1891d0741e011d530c1ce7df7f022e828e961da6c5ef1ba812daaf",
@@ -166,7 +166,7 @@
     "results/task_results.jsonl": "ff8d77ce61d38b6d5a3fc74484f9bc22d1002c38eada28e847f2b7f4bfc3ae8b",
     "results/telemetry_reconciliation.json": "de26c2467f7b0a7c21d71ea652e760876298d10e03670b2dc4d0f2cdad31369a"
   },
-  "recorded_release_bundle_sha256": "dff17fcc2259789267bd580a1a3aa369739a5826600996226d2e24f202148411",
-  "recorded_release_source_bundle_sha256": "cdf66e2591bc6c693f06304e8ba4b694ff7c1fb894d819f91ab0e28140b2fadd",
+  "recorded_release_bundle_sha256": "7ff6f47c57a9fb2dc2f0df4723c7aefa5eda22726883460987b6e339ead86b3a",
+  "recorded_release_source_bundle_sha256": "b3bd98590a2da3d328512279c0599a6a6d312397b7faccc8047b7858bb95601f",
   "verification_mode": "release-integrity"
 }

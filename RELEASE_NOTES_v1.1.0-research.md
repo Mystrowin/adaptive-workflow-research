@@ -30,5 +30,5 @@ failures is included with direct-versus-inferred confidence labels. The paper
 uses "paired pass-rate difference," cites the final ICLR 2025 Snell et al.
 publication, and distributes the reviewed article as a static PDF.
 
-No DOI or venue is claimed. Publication requires explicit user approval after
-review of this prepared state.
+The v1.1.0-research bundle is published in the public GitHub repository after
+final user approval. No DOI or venue is claimed.

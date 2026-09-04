@@ -5,14 +5,15 @@
   "audit_version": "scientific-validity-audit-v1",
   "historical_source_tree_sha256": "0d24437e9297466c3f28a7af677a76d7e54c10dc6358edb7b724d586040e7859",
   "hash_algorithm": "sha256-path-manifest-v2-posix-relative-order",
-  "publication_bundle_sha256": "dff17fcc2259789267bd580a1a3aa369739a5826600996226d2e24f202148411",
+  "publication_bundle_sha256": "7ff6f47c57a9fb2dc2f0df4723c7aefa5eda22726883460987b6e339ead86b3a",
   "publication_bundle_hash_scope": "Exact released-byte SHA-256, calculated by analysis/run_checks.py from public release content in explicit relative POSIX-path order. RELEASE_METADATA.json, dynamic validation/build reports, bytecode, caches, and the generated hash manifest are excluded. This is an integrity identifier, not a promise that noncanonical cross-platform Pillow PNG rendering is byte-identical.",
   "publication_bundle_manifest": "results/publication_bundle_manifest.json",
   "publication_bundle_hash_change_reason": "The v1.1 release content changed during final scientific, citation, provenance, terminology, evidence, canonical-build, license, and documentation corrections. Exact released-byte integrity is now explicitly separate from calculation-level reproduction: generated text uses UTF-8/LF, nonportable Pillow figure renders are staged unless explicitly replaced, and historical sanitized result artifacts retain their checksum-bound bytes. Excluded metadata and validation reports avoid self-reference and timestamp instability; historical benchmark data and historical raw hashes are unchanged.",
-  "current_source_bundle_sha256": "cdf66e2591bc6c693f06304e8ba4b694ff7c1fb894d819f91ab0e28140b2fadd",
+  "current_source_bundle_sha256": "b3bd98590a2da3d328512279c0599a6a6d312397b7faccc8047b7858bb95601f",
   "current_source_bundle_hash_scope": "analysis/, benchmark/, and paper/references.bib under the same explicit relative POSIX-path ordering algorithm.",
-  "status": "prepared_for_user_review_before_v1.1.0_release",
+  "status": "published_github_repository",
   "repository_url": "https://github.com/Mystrowin/adaptive-workflow-research",
+  "repository_published_at": "2026-09-04T20:50:01Z",
   "github_release_tag": null,
   "github_release_url": null,
   "github_release_published_at": null,
@@ -25,5 +26,5 @@
   },
   "doi": null,
   "venue": null,
-  "push_or_upload_authorized": false
+  "push_or_upload_authorized": true
 }

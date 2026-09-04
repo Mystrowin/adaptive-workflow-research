@@ -83,8 +83,8 @@ correctness. See `docs/LIMITATIONS.md` and the paper.
 
 ## Citation and release state
 
-See `CITATION.cff`. v1.1.0-research is prepared for user review and is not yet a
-published release or DOI. The historical v1.0.0-research tag remains unchanged;
+See `CITATION.cff`. v1.1.0-research is published in this public GitHub
+repository; no DOI or venue is claimed. The historical v1.0.0-research tag remains unchanged;
 its tag-message checksum errors are documented in `docs/PROVENANCE.md`.
 
 ## License

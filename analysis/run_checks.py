@@ -98,8 +98,8 @@ def main(mode: str = "release-integrity") -> None:
         errors.append("release metadata version mismatch")
     if release_metadata.get("doi") is not None or release_metadata.get("venue") is not None:
         errors.append("release metadata claims a DOI or venue that was not published")
-    if release_metadata.get("push_or_upload_authorized") is not False:
-        errors.append("release metadata incorrectly authorizes publication")
+    if not isinstance(release_metadata.get("push_or_upload_authorized"), bool):
+        errors.append("release metadata publication-authorization field is not boolean")
 
     paper_reader = PdfReader(
         str(ROOT / "paper" / "Verification-Gated-Local-Model-Cascading.pdf")
