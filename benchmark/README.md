@@ -1,7 +1,8 @@
 # Benchmark source and provenance
 
-engine/ is a publication-safe snapshot of the benchmark-local Adaptive
-Workflow subsystem. It is intentionally not the whole private application.
+engine/ is a publication-safe snapshot of the current benchmark-local Adaptive
+Workflow subsystem. It contains post-run improvements and is not the exact
+historical August 2026 source tree. It is intentionally not the whole private application.
 The snapshot includes the local-only adapter, router, verifier integration,
 resource accounting, lifecycle, audit, reporting, and export code needed to
 understand the protocol.

@@ -1,7 +1,9 @@
 # Adaptive Workflow Local Routing Benchmark Source
 
-This directory is the sanitized, reproducible source snapshot for the local-only Adaptive
-Workflow routing benchmark. It excludes model weights, virtual environments, caches, private raw
+This directory is the sanitized current benchmark harness for future local-only Adaptive
+Workflow studies. It contains post-run improvements and is not byte-identical to the August 2026
+historical source tree, whose preserved SHA-256 is documented in the repository provenance file.
+It excludes model weights, virtual environments, caches, private raw
 results, credentials, browser data, and benchmark prompt/test assets.
 
 Install Python 3.11+, Ollama, and Docker Desktop separately. Docker Desktop is never installed by
@@ -16,6 +18,11 @@ py -m venv .venv
 The benchmark defaults to same-family Qwen2.5-Coder 1.5B, 3B, and 7B local tiers. Preparation is
 the only network-enabled phase; detached execution is loopback-only, local, and has no cloud
 fallback.
+
+In the historical study, the finite EvalPlus Plus result both controlled Adaptive escalation and
+served as the endpoint. That oracle-gated, multi-attempt cascade does not establish independent-
+verifier or predictive-routing superiority. Future runs should add held-out verification and
+attempt-matched baselines when those claims are the target.
 
 ```powershell
 .\.venv\Scripts\python.exe -m agents.adaptive_workflow benchmark prepare

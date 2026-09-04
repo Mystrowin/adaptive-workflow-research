@@ -28,7 +28,10 @@ EXPECTED = {
         "Faster Cascades via Speculative Decoding",
         "2405.19261",
     ),
-    "snell2024testtime": ("Scaling LLM Test-Time Compute Optimally", "2408.03314"),
+    "snell2024testtime": (
+        "Scaling LLM Test-Time Compute Optimally",
+        "1b623663fd9b874366f3ce019fdfdd44",
+    ),
     "chen2023selfdebug": ("Teaching Large Language Models to Self-Debug", "2304.05128"),
     "wang2023selfconsistency": (
         "Self-Consistency Improves Chain of Thought Reasoning",
@@ -42,6 +45,16 @@ EXPECTED = {
         "Cost-Saving LLM Cascades with Early Abstention",
         "2502.09054",
     ),
+    "dekoninck2025unified": (
+        "A Unified Approach to Routing and Cascading for LLMs",
+        "proceedings.mlr.press/v267/dekoninck25a",
+    ),
+    "ding2025bestroute": (
+        "Route: Adaptive",
+        "proceedings.mlr.press/v267/ding25d",
+    ),
+    "jain2024livecodebench": ("LiveCodeBench", "2403.07974"),
+    "zhuo2024bigcodebench": ("BigCodeBench", "2406.15877"),
 }
 
 
@@ -54,18 +67,23 @@ def parse_entries(text: str) -> dict[str, str]:
     return entries
 
 
+def write_text(path: Path, text: str) -> None:
+    with path.open("w", encoding="utf-8", newline="\n") as stream:
+        stream.write(text)
+
+
 def main() -> None:
     entries = parse_entries(BIB.read_text(encoding="utf-8"))
     records = []
     errors = []
-    for key, (title, arxiv_id) in EXPECTED.items():
+    for key, (title, source_identifier) in EXPECTED.items():
         entry = entries.get(key, "")
         required = {
             "title": bool(re.search(r"\btitle\s*=", entry, re.IGNORECASE)),
             "author": bool(re.search(r"\bauthor\s*=", entry, re.IGNORECASE)),
             "year": bool(re.search(r"\byear\s*=", entry, re.IGNORECASE)),
             "source_identifier": bool(
-                re.search(rf"{re.escape(arxiv_id)}|doi\s*=", entry, re.IGNORECASE)
+                re.search(rf"{re.escape(source_identifier)}|doi\s*=", entry, re.IGNORECASE)
             ),
         }
         title_match = title.lower() in entry.lower()
@@ -78,7 +96,7 @@ def main() -> None:
             {
                 "key": key,
                 "expected_title_fragment": title,
-                "expected_arxiv_id": arxiv_id,
+                "expected_source_identifier": source_identifier,
                 "fields_present": required,
                 "title_fragment_present": title_match,
                 "status": status,
@@ -95,8 +113,9 @@ def main() -> None:
         "primary_source_registry": "URLs and metadata were checked against official arXiv, OpenReview, NeurIPS, ICLR, PMLR, and project pages during manuscript preparation.",
         "records": records,
     }
-    OUT.write_text(
-        json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    write_text(
+        OUT,
+        json.dumps(report, indent=2, sort_keys=True) + "\n",
     )
     print(
         json.dumps(

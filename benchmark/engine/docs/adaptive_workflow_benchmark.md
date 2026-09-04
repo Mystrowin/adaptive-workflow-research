@@ -1,8 +1,11 @@
 # Adaptive Workflow local routing benchmark
 
-The benchmark subsystem evaluates whether Adaptive Workflow's local routing completes more
-verified coding tasks under a frozen resource and model-weighted token budget than static model
-selection. It is an Adaptive Workflow benchmark, not an EHMN benchmark.
+The benchmark subsystem supports local studies of verification-gated model cascading and routing.
+It is an Adaptive Workflow benchmark, not an EHMN benchmark. The August 2026 study used the same
+finite EvalPlus Plus result as Adaptive's acceptance/escalation oracle and reported endpoint; it
+therefore does not establish independent-verifier effectiveness. Adaptive also received up to
+three attempts while static conditions received one, so operational pass rates are not by
+themselves equal-attempt or equal-budget evidence.
 
 Normal Adaptive Workflow execution is unchanged. Benchmark state, models, prompts, and results use
 a separate private directory and SQLite database. The detached worker accepts only a dedicated
@@ -56,6 +59,11 @@ where `P` is the frozen parameter value in billions. These are not measured FLOP
 compute. Primary fixed-budget curves use the predetermined 25%, 50%, 75%, and 100% cutoffs of the
 Strong-only reserved total-token baseline. CPU, RAM, and time measurements are the physical
 efficiency evidence.
+
+The historical router used hand-written task features and online statistics, was overwhelmingly
+FAST-first, and updated during the evaluation. FAST, BALANCED, and BEST observations are therefore
+conditionally selected rather than standalone capability estimates. Later tiers receive the
+original frozen prompt, not failed code or test feedback.
 
 Windows Job Object controls cap the native benchmark process tree at 50% of system CPU capacity
 and 50% of physical RAM, with 45% soft targets. Docker receives its own CPU, memory, PID, network,

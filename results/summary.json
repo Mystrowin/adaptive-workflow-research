@@ -553,6 +553,7 @@
   "resource_violation": false,
   "status": "completed",
   "strong_model_avoidance_rate": 0.8610271903323263,
+  "strong_model_avoidance_interpretation": "Tier-use composition among Adaptive EvalPlus Plus test passes; not an efficiency metric.",
   "task_condition_cells": 1626,
   "telemetry_reconciliation": {
     "entries": [

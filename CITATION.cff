@@ -1,32 +1,37 @@
 cff-version: 1.2.0
-title: "Verification-Gated Model Cascading for Local Coding Inference"
-message: "If you use this paper or analysis bundle, please cite the preprint and the exact research release."
+title: "Verification-Gated Local Model Cascading"
+message: "Please cite the corrected preprint and v1.1.0-research reproducibility release. Repository software is MIT; the paper and original figures/tables are CC BY 4.0; third-party materials retain upstream terms."
 type: article
 authors:
   - family-names: Vasagiri
     given-names: "Neeraj Pragnya Krishna"
     affiliation: "Independent Researcher"
-version: "1.0.0-research"
-date-released: 2026-08-30
+version: "1.1.0-research"
+date-released: 2026-09-01
 repository-code: "https://github.com/Mystrowin/adaptive-workflow-research"
 url: "https://github.com/Mystrowin/adaptive-workflow-research"
-license: MIT
+license: CC-BY-4.0
 abstract: >-
-  A controlled local study of verification-gated model cascading for
-  function-synthesis tasks, with paired EvalPlus outcomes, resource telemetry,
-  provenance, and a read-only scientific-validity audit.
+  An oracle-gated study of task-level complementarity among three local
+  Qwen2.5-Coder tiers on 542 EvalPlus tasks. The same EvalPlus Plus result
+  controlled cascade escalation and the final endpoint. The result supports
+  non-nested pass sets under oracle gating, not independent-verifier,
+  predictive-routing, equal-budget, or universal-efficiency superiority.
 keywords:
-  - model cascading
-  - LLM routing
   - code generation
+  - model cascading
+  - oracle-gated evaluation
+  - LLM routing
   - EvalPlus
+  - local inference
   - reproducibility
-  - verification
 preferred-citation:
   type: article
-  title: "Verification-Gated Model Cascading for Local Coding Inference"
+  title: "Verification-Gated Local Model Cascading"
+  subtitle: "An EvalPlus Reproducibility Study of Task-Level Complementarity"
   authors:
     - family-names: Vasagiri
       given-names: "Neeraj Pragnya Krishna"
   year: 2026
+  version: "1.1"
   url: "https://github.com/Mystrowin/adaptive-workflow-research"

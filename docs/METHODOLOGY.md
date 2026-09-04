@@ -1,54 +1,74 @@
 # Methodology
 
-## Scope
+## Scope and conditions
 
-The experiment evaluates a local-only Adaptive Workflow benchmark. It uses
-164 HumanEval+ tasks and 378 MBPP+ tasks, for 542 unique tasks. Base and Plus
-scores are two verification views of the same generated completion, not
-1,084 independent observations.
+The fixed workload contains 164 HumanEval+ and 378 MBPP+ tasks. Base and Plus
+are two test views of the same completion, not 1,084 independent observations.
 
-## Conditions
+- `small_only`: one FAST attempt.
+- `strong_only`: one BEST attempt.
+- `adaptive`: one attempt per reached tier, FAST -> BALANCED -> BEST.
 
-* small_only: one FAST local tier for every task.
-* strong_only: one BEST local tier for every task.
-* adaptive: initial route followed by at most one verified attempt per tier,
-  in the historical order FAST -> BALANCED -> BEST after a deterministic
-  failure. There are no same-tier retries.
+No historical Balanced-only, fixed-cascade, repeated-BEST, repeated-FAST, or
+budget-matched repeated-sampling baseline was run.
 
-The historical router was online-adaptive: routing statistics were updated as
-the sequence progressed. The audit reconstructs the chronological replay and
-does not treat the run as a frozen held-out router evaluation.
+## Oracle gate and structural asymmetry
 
-## Verification
+The same pinned EvalPlus Plus outcome controlled Adaptive acceptance/escalation
+and defined the primary endpoint. This is evaluator leakage by design and makes
+the experiment an oracle-gated complementarity study, not evidence for an
+independent verifier. Adaptive could retain an earlier-tier pass and later fall
+back to the same BEST tier used once by Strong-only. The design also gives
+Adaptive more oracle-checked attempts, so it does not isolate complementarity
+from a general more-attempts effect.
 
-Generated Python was evaluated with the pinned EvalPlus Docker image, with
-network disabled, a read-only root, dropped capabilities, an unprivileged user,
-task-scoped temporary storage, a PID cap, a timeout, and one verifier worker.
-Deterministic test execution is authoritative. Six MBPP tasks produced shared
-verifier/infrastructure failures in all three conditions; the primary result
-keeps those cells in the denominator.
+Later tiers always received the original frozen task prompt. They did not
+receive failed code, failure details, or evaluator feedback.
+
+## Routing
+
+The historical router used hand-written task features plus online
+RoutingStatistics. It started 531 tasks at FAST, none at BALANCED, and 11 at
+BEST. Its confidence field was a fixed implementation value, not a calibrated
+probability. Statistics were updated using earlier EvalPlus outcomes, so this
+was an online sequential evaluation rather than a held-out frozen-router test.
+FAST, BALANCED, and BEST saw progressively selected task subsets; their
+conditional success rates are not standalone capability estimates.
+
+## Evaluation
+
+Generated Python ran in the pinned EvalPlus Docker image with network disabled,
+a read-only root, dropped capabilities, an unprivileged user, task-scoped
+storage, PID/memory limits, timeout, and one worker. An EvalPlus Plus pass means
+passing the pinned finite suite, not proof of semantic correctness. Oracle or
+test-contract defects can cause false acceptance or rejection.
+
+Six MBPP tasks produced condition-independent infrastructure errors and remain
+in the primary denominator. Preserved errors directly establish the failure
+symptoms; static evidence strongly indicates task-specific adapter,
+deserialization, and cache-capacity causes; see `docs/PROVENANCE.md`.
 
 ## Expenditure accounting
 
-For a tier with frozen parameter value P in billions:
+For frozen parameter accounting value P in billions:
 
-* generation_cost_proxy = P * output_tokens
-* total_token_cost_proxy = P * (input_tokens + output_tokens)
+- `generation_cost_proxy = P * output_tokens`
+- `total_token_cost_proxy = P * (input_tokens + output_tokens)`
 
-These are model-size-weighted token proxies. They are not measured FLOPs,
-hardware compute, energy, API usage, credits, or dollar cost. Physical evidence
-is reported separately through CPU time/utilization, wall time, RAM, model-load
-time, inference time, and verification time.
+These are model-size-weighted token accounting proxies, not FLOPs, hardware
+work, energy, API usage, API credits, dollar cost, or generic resource
+consumption. CPU-seconds are sample-integrated estimates from periodic CPU
+samples. Wall seconds are summed generation-and-verification time, not total
+experiment elapsed time.
 
-The frozen total-token baseline was B0 = 4,818,407.6; cutoffs were
-25%, 50%, 75%, and 100% of B0. Every completed condition exhausted its
-task list before the first cutoff, so the frozen curves are nondiscriminating.
-The audit includes condition-relative cumulative curves as post-hoc diagnostics,
-not as equal-budget evidence.
+The frozen B0 budget cutoffs were nondiscriminating because every condition
+completed below the first cutoff. The successes-per-weighted-proxy ratio is a
+post-hoc secondary diagnostic, not equal-budget evidence.
 
-## Provenance
+## Historical retention
 
-The frozen manifest records benchmark commits/versions, licenses, model names,
-digests, sampling settings, resource limits, seed, task IDs, and source hash.
-The private raw hashes are recorded in results/audit.json; private raw
-prompts and generated programs are not included in this repository.
+Historical records retain task identity, tier/model metadata, tokens,
+verification status, telemetry, manifests, and hashes. Exact historical
+generated programs and their hashes were never retained, so output-level
+re-evaluation is impossible. The current harness stores more evidence for
+future runs and is not byte-identical to the historical source.

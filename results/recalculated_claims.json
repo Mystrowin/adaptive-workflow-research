@@ -22,6 +22,7 @@
     "BEST": 11,
     "FAST": 531
   },
+  "operating_point_interpretation": "Correctness/cost trade-off under one oracle-gated, architecturally asymmetric operating point; not evidence of universal, predictive-routing, independent-verifier, or equal-budget superiority.",
   "plus_pass_rates": {
     "adaptive": 0.6107011070110702,
     "small_only": 0.4059040590405904,
@@ -32,6 +33,8 @@
     "small_only": 220,
     "strong_only": 297
   },
+  "post_hoc_secondary_successes_per_weighted_total_proxy_relative_difference": 0.10647039124792745,
+  "proxy_interpretation": "Model-size-weighted token accounting proxy only; not FLOPs, hardware compute, energy, API usage, credits, or dollar cost.",
   "raw_hashes": {
     "raw_results_jsonl": "6926147073d0e5b3ffe93ecb3d9c8619707b24f0b48a843d25db6627602268da",
     "results_sqlite": "138d04bc1c2f3b6609a56cc2a5e77a6d024035f22d948f81a674139ef06976e7"
@@ -49,7 +52,7 @@
     "audited_current": "1cec3afa76d22414d5c8db9339649b2cc0fd9138bc8385143663a2aed62471c7",
     "frozen": "0d24437e9297466c3f28a7af677a76d7e54c10dc6358edb7b724d586040e7859"
   },
+  "strong_model_avoidance_interpretation": "Tier-use composition among Adaptive Plus-test passes; not an efficiency metric.",
   "strong_model_avoidance_rate": 0.8610271903323263,
-  "successes_per_weighted_total_proxy_relative_difference": 0.10647039124792745,
   "tasks": 542
 }

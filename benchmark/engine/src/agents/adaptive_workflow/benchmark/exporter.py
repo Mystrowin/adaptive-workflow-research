@@ -211,8 +211,11 @@ def _write_export_files(
         "# Methodology\n\n"
         "This Adaptive Workflow benchmark uses the same frozen task prompts and deterministic "
         "EvalPlus base/Plus tests for all conditions. Base and Plus outcomes come from the same "
-        "completion. Model-weighted token values are cost proxies, not FLOPs or hardware compute. "
-        "Physical efficiency evidence is CPU, RAM, and time measured during the run. "
+        "completion. In Adaptive, the finite Plus result is both the escalation oracle and endpoint; "
+        "this is not an independent-verifier evaluation. Adaptive may receive more attempts than "
+        "a static condition. Model-weighted token values are accounting proxies, not FLOPs or "
+        "hardware compute. Physical evidence is sample-integrated CPU, RAM, and summed "
+        "generation-and-verification time measured during the run. "
         + (
             "A checksum-bound post-run reconciliation restores one measured Ollama token "
             "counter pair while leaving raw records and verification outcomes unchanged.\n"

@@ -1,32 +1,42 @@
-# Adaptive Workflow Local Routing Benchmark
+# Adaptive Workflow oracle-gated cascade results
 
 Experiment: `awb-20260826T042018Z-s20260824-300eaad5`
 
-This report evaluates Adaptive Workflow. It is not an EHMN benchmark.
-Base and Plus scores use the same generated completions and are not independent samples.
-Model-weighted token values are cost proxies, not measured FLOPs or hardware compute.
-No efficiency advantage is claimed automatically; interpret budget curves together with measured CPU, RAM, and time.
+This is a fixed-workload Adaptive Workflow study, not an EHMN benchmark. Base
+and Plus are two test views of each completion. The same EvalPlus Plus outcome
+controlled Adaptive acceptance/escalation and the primary endpoint, so results
+measure oracle-gated complementarity rather than independent-verifier
+performance.
 
-## Results
+| Condition | HumanEval+ | MBPP+ | Overall |
+| --- | ---: | ---: | ---: |
+| Adaptive | 43/164 (26.22%) | 288/378 (76.19%) | 331/542 (61.07%) |
+| Strong-only | 34/164 (20.73%) | 263/378 (69.58%) | 297/542 (54.80%) |
+| Small-only | 26/164 (15.85%) | 194/378 (51.32%) | 220/542 (40.59%) |
 
-| Condition | Benchmark | n | Base pass rate | Plus pass rate | Escalations |
-|---|---:|---:|---:|---:|---:|
-| adaptive | humaneval | 164 | 0.2622 | 0.2622 | 255 |
-| adaptive | mbpp | 378 | 0.8492 | 0.7619 | 295 |
-| adaptive | overall | 542 | 0.6716 | 0.6107 | 550 |
-| small_only | humaneval | 164 | 0.1707 | 0.1585 | 0 |
-| small_only | mbpp | 378 | 0.5899 | 0.5132 | 0 |
-| small_only | overall | 542 | 0.4631 | 0.4059 | 0 |
-| strong_only | humaneval | 164 | 0.2073 | 0.2073 | 0 |
-| strong_only | mbpp | 378 | 0.7989 | 0.6958 | 0 |
-| strong_only | overall | 542 | 0.6199 | 0.5480 | 0 |
+Adaptive retained 34 passes not present in Strong-only: FAST 22, BALANCED 12,
+BEST 0. Paired outcomes are 297 both pass, 34 Adaptive only, 0 Strong-only
+only, and 211 both fail. Adaptive can retain earlier-tier passes and fall back
+to the same BEST tier, so this comparison is architecturally asymmetric and
+does not isolate the more-attempts effect.
 
-## Post-run telemetry reconciliation
+Adaptive used 259,722 raw total tokens versus 117,500; 1,092 model calls versus
+542; 1,091 evaluator calls versus 542; 38,137.61 versus 33,421.46
+sample-integrated CPU-seconds; and 78,701.93 versus 47,582.32 summed
+generation-and-verification wall seconds. The weighted total-token accounting
+proxy was 899,462.8 versus 893,000.0. Parameter-weighted tokens are not FLOPs,
+hardware work, energy, API usage, credits, or dollar cost. The 10.65%
+successes-per-proxy diagnostic is post-hoc and secondary; the frozen budget
+curve is nondiscriminating and provides no equal-budget evidence.
 
-1 attempt had token counters recovered from the checksum-bound benchmark-owned Ollama log. The raw SQLite and JSONL measurements remain unchanged; only derived token totals and cost proxies use the reconciled counters. The original attempt status and verification outcome were not changed.
+Initial routing was FAST 531, BALANCED 0, BEST 11. The heuristic router used
+online statistics and a fixed confidence field. Earlier EvalPlus labels could
+influence later decisions, and tier histories are conditionally selected.
 
-Raw token coverage: 2175/2176 attempts. Reconciled derived coverage: 2176/2176 attempts. Wall time, model-load time, inference time, generated code, and correctness were not reconstructed for the affected attempt.
-
-## Interpretation limits
-
-The saved paired task-level data supports later statistical analysis. This deterministic report does not fabricate significance tests. A negative or null result is retained.
+Six shared MBPP infrastructure failures remain in the denominator. Preserved
+errors and static inspection strongly indicate bypassed EvalPlus MBPP input
+deserialization for five tasks and a 512 MiB tmpfs binding limit for Mbpp/255;
+the failure symptoms are direct evidence, while the causal mapping is a strong
+inference because exact historical source is unavailable. Corrected
+outcomes would require a new run. Exact historical generated programs were not retained. No universal efficiency,
+predictive-routing, or general coding superiority claim is supported.

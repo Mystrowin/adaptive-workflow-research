@@ -2,14 +2,31 @@
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import re
 from datetime import datetime, timezone
 from pathlib import Path
 
+from pypdf import PdfReader
+
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "results"
+HASH_ALGORITHM = "sha256-path-manifest-v2-posix-relative-order"
+
+EXPECTED_PDF_METADATA = {
+    "/Title": "Verification-Gated Local Model Cascading",
+    "/Author": "Neeraj Pragnya Krishna Vasagiri",
+    "/Subject": (
+        "Oracle-gated study of task-level model complementarity and "
+        "verification-gated model cascading for local coding inference on EvalPlus"
+    ),
+    "/Keywords": (
+        "code generation, model cascading, oracle-gated evaluation, LLM routing, "
+        "EvalPlus, local inference, reproducibility"
+    ),
+}
 
 
 def sha256(path: Path) -> str:
@@ -20,7 +37,12 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def main() -> None:
+def write_text(path: Path, text: str) -> None:
+    with path.open("w", encoding="utf-8", newline="\n") as stream:
+        stream.write(text)
+
+
+def main(mode: str = "release-integrity") -> None:
     audit = json.loads((RESULTS / "audit.json").read_text(encoding="utf-8"))
     summary = json.loads((RESULTS / "summary.json").read_text(encoding="utf-8"))
     safety = json.loads(
@@ -48,6 +70,71 @@ def main() -> None:
         errors.append("summary status/resource violation mismatch")
     if safety["status"] != "passed" or safety["sensitive_matches"] != 0:
         errors.append("sanitized export safety report did not pass")
+
+    expected_passes = {"adaptive": 331, "strong_only": 297, "small_only": 220}
+    for condition, expected in expected_passes.items():
+        actual = audit["condition_results"][condition]["task_weighted"]["passes"]
+        if actual != expected:
+            errors.append(f"{condition} Plus-pass count is {actual}, expected {expected}")
+    if audit["integrity"]["frozen_source_tree_sha256"] != (
+        "0d24437e9297466c3f28a7af677a76d7e54c10dc6358edb7b724d586040e7859"
+    ):
+        errors.append("historical frozen source-tree hash differs from audited hash")
+
+    cff = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
+    for required in (
+        'version: "1.1.0-research"',
+        "repository-code: \"https://github.com/Mystrowin/adaptive-workflow-research\"",
+        "license: CC-BY-4.0",
+        "oracle-gated",
+    ):
+        if required not in cff:
+            errors.append(f"CITATION.cff missing required text: {required}")
+
+    release_metadata = json.loads(
+        (ROOT / "RELEASE_METADATA.json").read_text(encoding="utf-8")
+    )
+    if release_metadata.get("release_version") != "1.1.0-research":
+        errors.append("release metadata version mismatch")
+    if release_metadata.get("doi") is not None or release_metadata.get("venue") is not None:
+        errors.append("release metadata claims a DOI or venue that was not published")
+    if release_metadata.get("push_or_upload_authorized") is not False:
+        errors.append("release metadata incorrectly authorizes publication")
+
+    paper_reader = PdfReader(
+        str(ROOT / "paper" / "Verification-Gated-Local-Model-Cascading.pdf")
+    )
+    paper_metadata = {str(k): str(v) for k, v in (paper_reader.metadata or {}).items()}
+    for key, expected in EXPECTED_PDF_METADATA.items():
+        if paper_metadata.get(key) != expected:
+            errors.append(f"PDF metadata mismatch for {key}")
+    paper_text = "\n".join(page.extract_text() or "" for page in paper_reader.pages)
+    paper_text = paper_text.translate(
+        str.maketrans({"ﬁ": "fi", "ﬂ": "fl", "ﬀ": "ff", "ﬃ": "ffi", "ﬄ": "ffl"})
+    )
+    paper_text = " ".join(paper_text.split())
+    for required in (
+        "An EvalPlus Reproducibility Study of Task-Level Complementarity",
+        "Adaptive produced 331",
+        "Strong-only 297",
+        "Small-only 220",
+        "Corrected preprint",
+        "not evidence for an independently deployable verifier",
+    ):
+        if required.lower() not in paper_text.lower():
+            errors.append(f"canonical PDF missing required text: {required}")
+
+    if len(paper_reader.pages) != 9:
+        errors.append("canonical PDF page count is not nine")
+
+    failure_evidence = ROOT / "docs" / "MBPP_VERIFIER_FAILURE_ROOT_CAUSE.md"
+    if not failure_evidence.is_file():
+        errors.append("missing sanitized MBPP verifier-failure evidence")
+    else:
+        evidence_text = failure_evidence.read_text(encoding="utf-8")
+        for task_id in ("106", "124", "252", "255", "580", "720"):
+            if f"Mbpp/{task_id}" not in evidence_text:
+                errors.append(f"MBPP evidence missing Mbpp/{task_id}")
 
     # Scan source and publication text for actual credential/path-shaped values.
     # Deliberately do not flag ordinary words such as "token" or "password"
@@ -124,10 +211,10 @@ def main() -> None:
         "privacy_scan.json",
         "reference_validation.json",
         "RELEASE_METADATA.json",
-        "paper_build_metadata.json",
+        "publication_bundle_manifest.json",
     }
-    file_hashes = {}
-    for path in sorted(ROOT.rglob("*")):
+    included_files: list[tuple[str, Path]] = []
+    for path in ROOT.rglob("*"):
         relative = path.relative_to(ROOT)
         if (
             path.is_file()
@@ -135,12 +222,71 @@ def main() -> None:
             and not any(part in ignored_hash_dirs for part in relative.parts)
             and path.suffix.lower() not in {".pyc", ".pyo"}
         ):
-            file_hashes[relative.as_posix()] = sha256(path)
+            included_files.append((relative.as_posix(), path))
+    file_hashes = {
+        name: sha256(path)
+        for name, path in sorted(included_files, key=lambda item: item[0])
+    }
     bundle_digest = hashlib.sha256(
         "".join(f"{name}  {digest}\n" for name, digest in file_hashes.items()).encode(
             "utf-8"
         )
     ).hexdigest()
+
+    source_prefixes = ("analysis/", "benchmark/")
+    source_names = {"paper/references.bib"}
+    source_hashes = {
+        name: digest
+        for name, digest in file_hashes.items()
+        if name.startswith(source_prefixes) or name in source_names
+    }
+    current_source_digest = hashlib.sha256(
+        "".join(
+            f"{name}  {digest}\n" for name, digest in source_hashes.items()
+        ).encode("utf-8")
+    ).hexdigest()
+    hash_manifest = {
+        "algorithm": HASH_ALGORITHM,
+        "publication_bundle_sha256": bundle_digest,
+        "publication_file_count": len(file_hashes),
+        "publication_files": file_hashes,
+        "current_source_bundle_sha256": current_source_digest,
+        "current_source_scope": (
+            "analysis/, benchmark/, and paper/references.bib"
+        ),
+        "current_source_file_count": len(source_hashes),
+        "current_source_files": source_hashes,
+        "excluded_dynamic_basenames": sorted(ignored_hash_names),
+        "excluded_directories": sorted(ignored_hash_dirs),
+    }
+    hash_manifest["verification_mode"] = mode
+    hash_manifest["recorded_release_bundle_sha256"] = release_metadata.get(
+        "publication_bundle_sha256"
+    )
+    hash_manifest["recorded_release_source_bundle_sha256"] = release_metadata.get(
+        "current_source_bundle_sha256"
+    )
+    write_text(
+        RESULTS / "publication_bundle_manifest.json",
+        json.dumps(hash_manifest, indent=2, sort_keys=True) + "\n",
+    )
+
+    recorded_publication_hash = release_metadata.get("publication_bundle_sha256")
+    release_byte_integrity = (
+        "passed"
+        if recorded_publication_hash in {None, bundle_digest}
+        else "not_matched"
+    )
+    if mode == "release-integrity" and release_byte_integrity != "passed":
+        errors.append("RELEASE_METADATA publication bundle hash is stale")
+    recorded_source_hash = release_metadata.get("current_source_bundle_sha256")
+    source_byte_integrity = (
+        "passed"
+        if recorded_source_hash in {None, current_source_digest}
+        else "not_matched"
+    )
+    if mode == "release-integrity" and source_byte_integrity != "passed":
+        errors.append("RELEASE_METADATA current source bundle hash is stale")
     privacy_report = {
         "validated_at": datetime.now(timezone.utc).isoformat(),
         "status": "passed" if not matches else "failed",
@@ -149,8 +295,9 @@ def main() -> None:
         "matches": matches,
         "allowlist_note": "Publication files are generated from sanitized results; private raw artifacts and test vectors are excluded.",
     }
-    (RESULTS / "privacy_scan.json").write_text(
-        json.dumps(privacy_report, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    write_text(
+        RESULTS / "privacy_scan.json",
+        json.dumps(privacy_report, indent=2, sort_keys=True) + "\n",
     )
     checks = {
         "validated_at": datetime.now(timezone.utc).isoformat(),
@@ -158,14 +305,31 @@ def main() -> None:
         "errors": errors,
         "missing_generated_artifacts": missing,
         "publication_bundle_sha256": bundle_digest,
+        "recorded_release_bundle_sha256": recorded_publication_hash,
+        "release_byte_integrity": release_byte_integrity,
+        "hash_algorithm": HASH_ALGORITHM,
+        "current_source_bundle_sha256": current_source_digest,
+        "recorded_release_source_bundle_sha256": recorded_source_hash,
+        "source_byte_integrity": source_byte_integrity,
+        "current_source_bundle_scope": (
+            "analysis/, benchmark/, and paper/references.bib; "
+            "excludes historical private artifacts and generated PDF/results"
+        ),
+        "canonical_paper_pdf_sha256": sha256(
+            ROOT / "paper" / "Verification-Gated-Local-Model-Cascading.pdf"
+        ),
         "historical_raw_hashes": {
             "raw_results_jsonl": audit["integrity"]["raw_results_sha256"],
             "results_sqlite": audit["integrity"]["sqlite_sha256"],
+            "frozen_source_tree": audit["integrity"]["frozen_source_tree_sha256"],
         },
         "historical_records_modified": False,
+        "calculation_reproduction": "passed",
     }
-    (RESULTS / "publication_checks.json").write_text(
-        json.dumps(checks, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    checks["verification_mode"] = mode
+    write_text(
+        RESULTS / "publication_checks.json",
+        json.dumps(checks, indent=2, sort_keys=True) + "\n",
     )
     print(json.dumps(checks, indent=2))
     if errors:
@@ -173,4 +337,16 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--mode",
+        choices=("release-integrity", "calculation-reproduction"),
+        default="release-integrity",
+        help=(
+            "release-integrity requires exact release-byte hashes; "
+            "calculation-reproduction validates data/artifacts without claiming "
+            "cross-platform PNG byte identity"
+        ),
+    )
+    args = parser.parse_args()
+    main(mode=args.mode)

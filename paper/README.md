@@ -1,25 +1,18 @@
-# Paper build
+# Research article
 
-The manuscript source is main.tex; references are in references.bib.
-Run the analysis script first so that figures/ and tables/ exist:
+The reviewed article is distributed as a static PDF:
 
-~~~powershell
-python analysis/make_publication_artifacts.py
-~~~
+- **Title:** Verification-Gated Local Model Cascading
+- **Subtitle:** An EvalPlus Reproducibility Study of Task-Level Complementarity
+- **Genre:** Empirical Research Article
+- **Version:** 1.1 - August 2026
+- **Status:** Corrected preprint - Not peer reviewed
+- **PDF:** `Verification-Gated-Local-Model-Cascading.pdf`
 
-To build the checked-in PDF from the repository root, run:
+This repository is for reproducing the Adaptive Workflow experiment and
+auditing its published results. It intentionally does not include a public
+manuscript compiler or editable manuscript source.
 
-~~~powershell
-python analysis/build_paper_pdf.py
-~~~
-
-If a LaTeX engine is installed, compile from this directory:
-
-~~~powershell
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
-~~~
-
-The checked-in paper.pdf is the public GitHub-hosted preprint artifact. It is not a
-conference acceptance or a journal publication. The build script records
-whether native LaTeX or its deterministic ReportLab fallback produced it.
+Paper text and original figures/tables are CC BY 4.0; see
+`LICENSE-CC-BY-4.0.txt`. Project software is MIT. Third-party material retains
+upstream terms.

@@ -1,8 +1,8 @@
 {
   "allowlist_note": "Publication files are generated from sanitized results; private raw artifacts and test vectors are excluded.",
-  "files_scanned": 93,
+  "files_scanned": 100,
   "matches": [],
   "sensitive_matches": 0,
   "status": "passed",
-  "validated_at": "2026-08-30T19:26:30.513091+00:00"
+  "validated_at": "2026-09-04T17:59:22.203652+00:00"
 }

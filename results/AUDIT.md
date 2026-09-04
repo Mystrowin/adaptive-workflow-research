@@ -44,18 +44,24 @@ This is a read-only post-hoc audit. The completed benchmark records and the hist
 | strong_only | 34/164 (20.73%) | 263/378 (69.58%) | 297/542 (54.80%) | 45.15% |
 | adaptive | 43/164 (26.22%) | 288/378 (76.19%) | 331/542 (61.07%) | 51.20% |
 
-## Verified equivalence and complementarity
+## Observable equivalence and complementarity
 
-Adaptive FAST vs Small-only: 531 common attempts, 0 observable mismatches.
-Adaptive BEST vs Strong-only: 251 common attempts, 0 observable mismatches.
+Adaptive FAST vs Small-only: 531 common attempts, 0 observable metadata/outcome/token mismatches.
+Adaptive BEST vs Strong-only: 251 common attempts, 0 observable metadata/outcome/token mismatches.
+Exact generated text was not retained, so byte-for-byte equivalence cannot be established.
 Adaptive-only Plus passes vs Strong-only: 34 (FAST 22, BALANCED 12, BEST 0).
-Adaptive successful tasks avoiding BEST: 285/331 (86.10%).
+Adaptive successful tasks not invoking BEST: 285/331 (86.10%); this is tier-use composition, not an efficiency metric.
 
 ## Routing and failures
 
 Initial Adaptive tiers: {'FAST': 531, 'BEST': 11}; decisions differing from FAST-first: 11.
 Reconstructed online router rows: 1091; recorded-vs-online replay mismatches: 0.
 Common verifier-infrastructure tasks: 6; total verifier-error attempts: 18.
+The same EvalPlus Plus result controlled Adaptive escalation and the endpoint.
+The router updated online from earlier EvalPlus labels; FAST, BALANCED, and BEST
+saw conditionally selected task subsets. This is not a held-out frozen-router
+evaluation. Static root-cause findings for the six tasks are documented in
+`docs/PROVENANCE.md`.
 Post-hoc diagnostic excluding shared verifier failures: {'small_only': {'task_weighted': {'n': 536, 'passes': 220, 'rate': 0.41044776119402987}, 'by_benchmark': {'humaneval': {'n': 164, 'passes': 26, 'rate': 0.15853658536585366}, 'mbpp': {'n': 372, 'passes': 194, 'rate': 0.521505376344086}}, 'equal_benchmark_macro_average': 0.34002098085496985}, 'strong_only': {'task_weighted': {'n': 536, 'passes': 297, 'rate': 0.5541044776119403}, 'by_benchmark': {'humaneval': {'n': 164, 'passes': 34, 'rate': 0.2073170731707317}, 'mbpp': {'n': 372, 'passes': 263, 'rate': 0.706989247311828}}, 'equal_benchmark_macro_average': 0.45715316024127983}, 'adaptive': {'task_weighted': {'n': 536, 'passes': 331, 'rate': 0.6175373134328358}, 'by_benchmark': {'humaneval': {'n': 164, 'passes': 43, 'rate': 0.2621951219512195}, 'mbpp': {'n': 372, 'passes': 288, 'rate': 0.7741935483870968}}, 'equal_benchmark_macro_average': 0.5181943351691581}}.
 
 ## Expenditure terminology
@@ -71,21 +77,21 @@ All weighted token values below are model-size-weighted token proxies, not FLOPs
 | Weighted input proxy | 579460.7 | 600346.8 | -20886.1 |
 | Weighted output proxy | 320002.1 | 292653.2 | 27348.9 |
 | Weighted total proxy | 899462.8 | 893000.0 | 6462.8 |
-| CPU time (seconds) | 38137.61 | 33421.46 | 4716.15 |
-| Wall time (seconds) | 78701.93 | 47582.32 | 31119.61 |
+| Sample-integrated CPU-seconds estimate | 38137.61 | 33421.46 | 4716.15 |
+| Summed generation-and-verification wall seconds | 78701.93 | 47582.32 | 31119.61 |
 | Peak CPU (%) | 47.1225 | 46.8875 | 0.2350 |
 | Peak RAM (bytes) | 6897147346 | 6999388192 | -102240846 |
 | Model calls | 1092 | 542 | 550 |
 | Verifier calls | 1091 | 542 | 549 |
 
-Adaptive vs Strong-only weighted total-token proxy: 6462.8 (0.72%); raw total tokens: 142222 (121.04%); CPU time: 4716.15s (14.11%); wall time: 31119.61s (65.40%).
+Adaptive vs Strong-only weighted total-token proxy: 6462.8 (0.72%); raw total tokens: 142222 (121.04%); sample-integrated CPU estimate: 4716.15s (14.11%); summed generation-and-verification wall time: 31119.61s (65.40%).
 Frozen budget warning: The frozen 25/50/75/100% B0 cutoffs are nondiscriminating for this completed run: the first cutoff is at or above every condition's actual expenditure.
 Post-hoc empirical cumulative curves are condition-relative and are not equal-budget evidence.
 
 ## Statistical note
 
-Adaptive vs Strong-only exact two-sided McNemar test is post-hoc: b=34, c=0, p=1.16415321827e-10. This was not preregistered.
+Adaptive vs Strong-only exact two-sided McNemar test is post-hoc and secondary: b=34, c=0, p=1.16415321827e-10. Adaptive can retain earlier-tier passes and fall back to BEST, so the comparison is architecturally asymmetric. This was not preregistered.
 
 ## Limitations
 
-The run used one deterministic completion per tier and fixed seed; it does not measure sampling, seed, or prompt robustness. HumanEval/MBPP contamination is plausible. Exact generated programs were not persisted, so they cannot be independently re-evaluated. BALANCED and adaptive BEST outcomes are observed only after earlier-tier failures. The frozen budget curve is nondiscriminating because its first cutoff exceeds every method's actual expenditure. No external leaderboard or commercial API-cost claim is supported.
+The run used one deterministic completion per tier, one task order, one model and quantization family, one hardware configuration, and one fixed seed. HumanEval/MBPP contamination is plausible and repository-scale engineering is not measured. Exact generated programs were not persisted. BALANCED and adaptive BEST outcomes are selected after earlier failures. The same Plus result gated and scored Adaptive, more-attempts baselines are missing, and the frozen budget curve is nondiscriminating. No independent-verifier, predictive-routing, equal-budget, external leaderboard, or commercial API-cost claim is supported.

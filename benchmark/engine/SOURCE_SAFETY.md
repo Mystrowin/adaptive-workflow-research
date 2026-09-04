@@ -1,6 +1,7 @@
 # Source publication boundary
 
-This directory is an allowlisted reproduction source snapshot. It includes only the local
+This directory is an allowlisted current reproduction harness. It contains post-run
+improvements and is not byte-identical to the August 2026 historical source tree. It includes only the local
 benchmark harness, its routing primitives, one focused test module, methodology, packaging
 metadata, and the MIT license.
 
@@ -9,7 +10,9 @@ private experiment databases, raw JSONL, logs, prompts, generated solutions, ben
 model files, virtual environments, caches, GUI/provider integrations, internal planning files,
 and unrelated SDK source or documentation.
 
-The source was validated by running all 25 included tests, importing the local-only CLI, comparing
-representative Adaptive routing decisions against the experiment source, and scanning for local
-user paths and credential-shaped values. Review the bundle and upstream dataset licenses again
-before publication.
+Before the original sanitized export, the then-private project ran its 25-test
+harness suite and compared representative routing decisions. This public
+snapshot does not include that private historical test suite. The v1.1
+publication checks compile and inspect this current harness, test the
+publication analysis, and scan the public tree for paths and credential-shaped
+values. Review the bundle and upstream licenses again before publication.

@@ -149,14 +149,18 @@ def calculate_summary(
         "metric_labels": {
             "generation_cost_proxy": "model-size-weighted output-token proxy",
             "total_token_cost_proxy": "model-size-weighted total-token proxy",
-            "cpu_time_seconds": "measured CPU time",
-            "wall_time_ms": "measured wall-clock time",
+            "cpu_time_seconds": "sample-integrated CPU-seconds estimate",
+            "wall_time_ms": "summed generation-and-verification wall time",
             "peak_ram_bytes": "measured peak RAM",
         },
         "aggregates": aggregate_rows,
         "budget_curves": curves,
         "strong_model_avoidance_rate": (
             len(avoided) / len(adaptive_passes) if adaptive_passes else None
+        ),
+        "strong_model_avoidance_interpretation": (
+            "Tier-use composition among Adaptive EvalPlus Plus test passes; "
+            "not an efficiency metric."
         ),
         "experiment_resource_extrema": resource_extrema or {},
         "resource_violation": any(
@@ -325,10 +329,14 @@ def render_report(summary: dict[str, Any]) -> str:
         "",
         "This report evaluates Adaptive Workflow. It is not an EHMN benchmark.",
         "Base and Plus scores use the same generated completions and are not independent samples.",
+        "For Adaptive, the finite EvalPlus Plus result is both the acceptance/escalation oracle and "
+        "the reported endpoint; this does not evaluate an independent verifier.",
+        "Adaptive may retain an earlier-tier pass and fall back to BEST, while Strong-only receives "
+        "one BEST attempt. Operational final pass rates are therefore architecturally asymmetric.",
         "Model-size-weighted token values are token cost proxies, not measured FLOPs, "
         "hardware compute, energy, API usage, credits, or dollar cost.",
         "No efficiency advantage is claimed automatically; interpret budget curves together with "
-        "measured CPU, RAM, and time.",
+        "sample-integrated CPU, RAM, and summed generation-and-verification time.",
         "",
         "## Results",
         "",
@@ -357,7 +365,8 @@ def render_report(summary: dict[str, Any]) -> str:
                 f"Raw token coverage: {summary['raw_token_metrics_available_attempts']}/"
                 f"{summary['raw_token_metrics_total_attempts']} attempts. Reconciled derived "
                 f"coverage: {summary['derived_token_metrics_available_attempts']}/"
-                f"{summary['attempts']} attempts. Wall time, model-load time, inference time, "
+                f"{summary['attempts']} attempts. Summed generation-and-verification wall time, "
+                "model-load time, inference time, "
                 "generated code, and correctness were not reconstructed for the affected attempt.",
             ]
         )

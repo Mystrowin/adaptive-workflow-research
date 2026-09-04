@@ -1,0 +1,31 @@
+{
+  "title": "Verification-Gated Local Model Cascading",
+  "description": "Corrected preprint and reproducibility bundle for an oracle-gated study of task-level model complementarity on 542 EvalPlus tasks. The same EvalPlus Plus result controlled escalation and the endpoint; no independent-verifier, predictive-routing, equal-budget, or universal-efficiency superiority is claimed.",
+  "creators": [
+    {
+      "name": "Vasagiri, Neeraj Pragnya Krishna",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "version": "1.1.0-research",
+  "publication_date": "2026-09-01",
+  "keywords": [
+    "code generation",
+    "model cascading",
+    "oracle-gated evaluation",
+    "LLM routing",
+    "EvalPlus",
+    "local inference",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Mystrowin/adaptive-workflow-research",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

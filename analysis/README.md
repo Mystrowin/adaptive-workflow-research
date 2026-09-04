@@ -11,25 +11,25 @@ python -m pip install -r analysis/requirements.txt
 ~~~powershell
 python analysis/make_publication_artifacts.py
 python analysis/validate_references.py
-python analysis/build_paper_pdf.py
-python analysis/run_checks.py
+python analysis/run_checks.py --mode release-integrity
 ~~~
 
 make_publication_artifacts.py recalculates the headline values from the
-allowlisted audit and summary JSON, writes publication tables, and generates
-six deterministic PNG figures with Pillow. It also writes
-results/recalculated_claims.json.
+allowlisted audit and summary JSON, writes UTF-8/LF publication tables, and
+writes results/recalculated_claims.json. It renders the six Pillow figures in
+an ephemeral staging area and validates their dimensions without overwriting
+the released PNGs. Font rasterization is not portable byte-for-byte; use
+`--replace-canonical-figures` only for an explicit new-release update.
 
 validate_references.py checks that each BibTeX record has a title, author,
 year, and verifiable primary-source URL or DOI recorded in the manuscript
 source notes. It writes results/reference_validation.json.
 
-build_paper_pdf.py builds paper/paper.pdf with the native LaTeX toolchain when
-available. If no LaTeX engine is installed, it records that fact and produces
-a deterministic ReportLab PDF fallback; paper/main.tex remains the canonical
-source for a native rebuild.
+The reviewed publication PDF is a static artifact. This repository does not
+include a public manuscript compiler or editable manuscript source.
 
-run_checks.py validates result hashes and safety metadata, scans the public
-tree for credential-shaped strings and local paths, checks generated artifacts,
-and writes results/privacy_scan.json and results/publication_checks.json. Run it
-after the PDF build so the bundle hash covers the final PDF.
+run_checks.py has two explicit modes. `--mode release-integrity` verifies exact
+released-byte hashes. `--mode calculation-reproduction` validates arithmetic,
+metadata, safety, and generated text without claiming cross-platform PNG-byte
+identity. Both write UTF-8/LF dynamic reports, which are excluded from the
+release bundle hash.

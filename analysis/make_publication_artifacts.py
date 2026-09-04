@@ -7,8 +7,10 @@ opens a network connection.
 
 from __future__ import annotations
 
+import argparse
 import json
 import math
+import tempfile
 from pathlib import Path
 from typing import Any
 
@@ -48,7 +50,8 @@ def tex(value: Any) -> str:
 
 def write(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(text.rstrip() + "\n", encoding="utf-8")
+    with path.open("w", encoding="utf-8", newline="\n") as stream:
+        stream.write(text.rstrip() + "\n")
 
 
 def overall(summary: dict[str, Any], condition: str) -> dict[str, Any]:
@@ -244,7 +247,7 @@ def figure2(audit: dict[str, Any]) -> None:
             ]
         )
     image, draw = canvas(2100, 1150)
-    title(draw, "Figure 2. Verified Plus pass rates")
+    title(draw, "Figure 2. EvalPlus Plus test pass rates")
     x0, y0, x1, y1 = 180, 180, 1990, 920
     draw.line((x0, y0, x0, y1), fill=INK, width=3)
     draw.line((x0, y1, x1, y1), fill=INK, width=3)
@@ -306,6 +309,9 @@ def figure3(audit: dict[str, Any]) -> None:
         "tasks",
         320,
         integer_values=True,
+        footer_text=(
+            "Architecturally asymmetric: Adaptive may retain an earlier-tier pass and then fall back to BEST."
+        ),
     )
 
 
@@ -315,13 +321,16 @@ def figure4(audit: dict[str, Any]) -> None:
     vals = [dist[x] for x in labels]
     bar_chart(
         FIGURES / "figure4_success_tiers.png",
-        "Figure 4. Tier producing Adaptive verified successes",
+        "Figure 4. Tier producing Adaptive Plus-test passes",
         labels,
         vals,
         [BLUE, ORANGE, RED],
-        "successful tasks",
+        "Plus-test-passing tasks",
         240,
         integer_values=True,
+        footer_text=(
+            "Tier-use composition among 331 Adaptive passes; not an efficiency or standalone capability metric."
+        ),
     )
 
 
@@ -338,11 +347,11 @@ def figure5(audit: dict[str, Any]) -> None:
             / ex["weighted_total_token_proxy"]["strong_only"],
         ),
         (
-            "CPU seconds",
+            "Sample-integrated\nCPU-seconds",
             ex["cpu_time_seconds"]["adaptive"] / ex["cpu_time_seconds"]["strong_only"],
         ),
         (
-            "Wall seconds",
+            "Summed gen.+verify\nwall seconds",
             ex["wall_time_ms"]["adaptive"] / ex["wall_time_ms"]["strong_only"],
         ),
         (
@@ -465,7 +474,7 @@ def tables(
             "one thread; 1024 output cap",
         ),
         (
-            "Verifier",
+            "Oracle gate / endpoint",
             manifest["verification"]["evaluator"],
             manifest["verification"]["evaluator_version"],
             "Docker network none; 120 s timeout",
@@ -555,13 +564,13 @@ def tables(
             ex["weighted_total_token_proxy"]["relative_difference"],
         ),
         (
-            "CPU seconds",
+            "Sample-integrated CPU-seconds estimate",
             ex["cpu_time_seconds"]["adaptive"],
             ex["cpu_time_seconds"]["strong_only"],
             ex["cpu_time_seconds"]["relative_difference"],
         ),
         (
-            "Wall seconds",
+            "Summed generation-and-verification wall seconds",
             ex["wall_time_ms"]["adaptive"] / 1000,
             ex["wall_time_ms"]["strong_only"] / 1000,
             ex["wall_time_ms"]["relative_difference"],
@@ -619,8 +628,8 @@ def tables(
         f"Strong-only only & {paired['B_only_pass']} \\\\",
         f"Both fail & {paired['both_fail']} \\\\",
         r"\midrule",
-        f"Paired risk difference & {paired['paired_risk_difference'] * 100:.2f}\\% \\\\",
-        f"Exact McNemar p-value (post-hoc) & {paired['exact_mcnemar_two_sided_p_value']:.3e} \\\\",
+        f"Paired pass-rate difference & {paired['paired_risk_difference'] * 100:.2f}\\% \\\\",
+        f"Exact McNemar p-value (post-hoc; asymmetric) & {paired['exact_mcnemar_two_sided_p_value']:.3e} \\\\",
         r"\bottomrule",
         r"\end{tabular}",
     ]
@@ -651,7 +660,10 @@ def tables(
         r"\toprule",
         r"Threat & Treatment in this study \\",
         r"\midrule",
+        r"Oracle gate & The same finite EvalPlus Plus result controlled escalation and the endpoint; no independent verifier is evaluated. \\",
+        r"Attempt asymmetry & Adaptive could retain earlier-tier passes and fall back to BEST; repeated-model and fixed-cascade baselines are absent. \\",
         r"Conditional tiers & Label tier overlaps as observed conditional outcomes; no standalone Balanced baseline is claimed. \\",
+        r"Online selection & Routing statistics updated during evaluation; task order and earlier test labels could affect later routes. \\",
         r"Verifier failures & Keep six shared MBPP infrastructure failures in the primary denominator; exclusion is post-hoc. \\",
         r"Budget curve & Preserve frozen B0 and disclose that every condition exhausted before the first cutoff. \\",
         r"Output retention & State that exact historical generated programs were not persisted. \\",
@@ -663,22 +675,61 @@ def tables(
     write(TABLES / "table6_threats.tex", "\n".join(limitations))
 
 
-def main() -> None:
+def render_figures(output: Path, audit: dict[str, Any]) -> None:
+    global FIGURES
+    original = FIGURES
+    FIGURES = output
+    try:
+        output.mkdir(parents=True, exist_ok=True)
+        figure1()
+        figure2(audit)
+        figure3(audit)
+        figure4(audit)
+        figure5(audit)
+        figure6(audit)
+    finally:
+        FIGURES = original
+
+
+def validate_figure_stage(output: Path) -> None:
+    expected = {
+        "figure1_architecture.png": (1800, 1050),
+        "figure2_plus_pass_rates.png": (2100, 1150),
+        "figure3_paired_outcomes.png": (1800, 1050),
+        "figure4_success_tiers.png": (1800, 1050),
+        "figure5_tradeoffs.png": (2200, 1200),
+        "figure6_initial_routing.png": (1800, 1050),
+    }
+    for name, dimensions in expected.items():
+        path = output / name
+        if not path.is_file():
+            raise RuntimeError(f"missing staged figure: {name}")
+        with Image.open(path) as image:
+            if image.mode != "RGB" or image.size != dimensions:
+                raise RuntimeError(f"unexpected staged figure properties: {name}")
+
+
+def main(replace_canonical_figures: bool = False) -> None:
     audit = load("audit.json")
     summary = load("summary.json")
     manifest = load("experiment_manifest.json")
-    FIGURES.mkdir(parents=True, exist_ok=True)
     TABLES.mkdir(parents=True, exist_ok=True)
     tables(audit, manifest, summary)
-    figure1()
-    figure2(audit)
-    figure3(audit)
-    figure4(audit)
-    figure5(audit)
-    figure6(audit)
+    if replace_canonical_figures:
+        render_figures(FIGURES, audit)
+        figure_mode = "canonical figures explicitly replaced"
+    else:
+        # Font rasterization is not byte-identical across supported platforms.
+        # Exercise and validate figure generation in an ephemeral staging area
+        # without overwriting the exact released PNG artifacts.
+        with tempfile.TemporaryDirectory(prefix="adaptive-workflow-figures-") as temp:
+            stage = Path(temp)
+            render_figures(stage, audit)
+            validate_figure_stage(stage)
+        figure_mode = "staged semantic validation; canonical figures untouched"
 
     ex = audit["expenditure"]["adaptive_vs_strong"]
-    weighted_efficiency_ratio = (
+    post_hoc_successes_per_weighted_proxy_ratio = (
         ex["plus_successes"]["adaptive"] / ex["weighted_total_token_proxy"]["adaptive"]
     ) / (
         ex["plus_successes"]["strong_only"]
@@ -705,11 +756,23 @@ def main() -> None:
         "adaptive_strong_weighted_total_proxy_relative_difference": ex[
             "weighted_total_token_proxy"
         ]["relative_difference"],
-        "successes_per_weighted_total_proxy_relative_difference": weighted_efficiency_ratio
-        - 1,
+        "post_hoc_secondary_successes_per_weighted_total_proxy_relative_difference": (
+            post_hoc_successes_per_weighted_proxy_ratio - 1
+        ),
+        "proxy_interpretation": (
+            "Model-size-weighted token accounting proxy only; not FLOPs, hardware compute, "
+            "energy, API usage, credits, or dollar cost."
+        ),
+        "operating_point_interpretation": (
+            "Correctness/cost trade-off under one oracle-gated, architecturally asymmetric operating point; "
+            "not evidence of universal, predictive-routing, independent-verifier, or equal-budget superiority."
+        ),
         "strong_model_avoidance_rate": audit["complementarity"][
             "strong_model_avoidance"
         ]["rate"],
+        "strong_model_avoidance_interpretation": (
+            "Tier-use composition among Adaptive Plus-test passes; not an efficiency metric."
+        ),
         "initial_routes": audit["routing"]["initial_tier_counts"],
         "shared_verifier_error_tasks": audit["failures"][
             "common_verifier_error_task_ids_all_conditions"
@@ -737,6 +800,7 @@ def main() -> None:
                 "status": "ok",
                 "figures": 6,
                 "tables": 6,
+                "figure_mode": figure_mode,
                 "claims": str(RESULTS / "recalculated_claims.json"),
             },
             indent=2,
@@ -745,4 +809,14 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--replace-canonical-figures",
+        action="store_true",
+        help=(
+            "overwrite release PNGs after an explicit maintainer decision; this "
+            "changes release-byte integrity and requires a new release hash"
+        ),
+    )
+    args = parser.parse_args()
+    main(replace_canonical_figures=args.replace_canonical_figures)

@@ -950,12 +950,12 @@ def render_audit_markdown(result: dict[str, Any]) -> str:
     lines.extend(
         [
             "",
-            "## Verified equivalence and complementarity",
+            "## Observable equivalence and oracle-gated complementarity",
             "",
             f"Adaptive FAST vs Small-only: {result['deterministic_equivalence']['adaptive_fast_vs_small_only']['common_attempts']} common attempts, {result['deterministic_equivalence']['adaptive_fast_vs_small_only']['stored_metadata_or_outcome_mismatches']} observable mismatches.",
             f"Adaptive BEST vs Strong-only: {result['deterministic_equivalence']['adaptive_best_vs_strong_only']['common_attempts']} common attempts, {result['deterministic_equivalence']['adaptive_best_vs_strong_only']['stored_metadata_or_outcome_mismatches']} observable mismatches.",
             f"Adaptive-only Plus passes vs Strong-only: {complement['matrices']['Adaptive_vs_Strong_only']['A_only_pass']} (FAST {complement['adaptive_only_vs_strong_by_final_success_tier'].get('FAST', 0)}, BALANCED {complement['adaptive_only_vs_strong_by_final_success_tier'].get('BALANCED', 0)}, BEST {complement['adaptive_only_vs_strong_by_final_success_tier'].get('BEST', 0)}).",
-            f"Adaptive successful tasks avoiding BEST: {complement['strong_model_avoidance']['count']}/{complement['strong_model_avoidance']['denominator']} ({complement['strong_model_avoidance']['rate']:.2%}).",
+            f"Adaptive Plus-test passes produced without invoking BEST: {complement['strong_model_avoidance']['count']}/{complement['strong_model_avoidance']['denominator']} ({complement['strong_model_avoidance']['rate']:.2%}); this is tier-use composition, not an efficiency metric.",
             "",
             "## Routing and failures",
             "",
@@ -980,8 +980,8 @@ def render_audit_markdown(result: dict[str, Any]) -> str:
         ("Weighted input proxy", "weighted_input_token_proxy", ".1f"),
         ("Weighted output proxy", "weighted_output_token_proxy", ".1f"),
         ("Weighted total proxy", "weighted_total_token_proxy", ".1f"),
-        ("CPU time (seconds)", "cpu_time_seconds", ".2f"),
-        ("Wall time (seconds)", "wall_time_ms", ".2f"),
+        ("Sample-integrated CPU-seconds estimate", "cpu_time_seconds", ".2f"),
+        ("Summed generation-and-verification wall seconds", "wall_time_ms", ".2f"),
         ("Peak CPU (%)", "peak_cpu_percent", ".4f"),
         ("Peak RAM (bytes)", "peak_ram_bytes", ".0f"),
         ("Model calls", "model_invocations", ".0f"),
@@ -1009,17 +1009,17 @@ def render_audit_markdown(result: dict[str, Any]) -> str:
     lines.extend(
         [
             "",
-            f"Adaptive vs Strong-only weighted total-token proxy: {expenditure['weighted_total_token_proxy']['difference']:.1f} ({expenditure['weighted_total_token_proxy']['relative_difference']:.2%}); raw total tokens: {expenditure['raw_total_tokens']['difference']:.0f} ({expenditure['raw_total_tokens']['relative_difference']:.2%}); CPU time: {expenditure['cpu_time_seconds']['difference']:.2f}s ({expenditure['cpu_time_seconds']['relative_difference']:.2%}); wall time: {expenditure['wall_time_ms']['difference'] / 1000:.2f}s ({expenditure['wall_time_ms']['relative_difference']:.2%}).",
+            f"Adaptive vs Strong-only weighted total-token accounting proxy: {expenditure['weighted_total_token_proxy']['difference']:.1f} ({expenditure['weighted_total_token_proxy']['relative_difference']:.2%}); raw total tokens: {expenditure['raw_total_tokens']['difference']:.0f} ({expenditure['raw_total_tokens']['relative_difference']:.2%}); sample-integrated CPU estimate: {expenditure['cpu_time_seconds']['difference']:.2f}s ({expenditure['cpu_time_seconds']['relative_difference']:.2%}); summed generation-and-verification wall time: {expenditure['wall_time_ms']['difference'] / 1000:.2f}s ({expenditure['wall_time_ms']['relative_difference']:.2%}).",
             f"Frozen budget warning: {result['budget']['warning']}",
             "Post-hoc empirical cumulative curves are condition-relative and are not equal-budget evidence.",
             "",
             "## Statistical note",
             "",
-            f"Adaptive vs Strong-only exact two-sided McNemar test is post-hoc: b={paired['A_only_pass']}, c={paired['B_only_pass']}, p={paired['exact_mcnemar_two_sided_p_value']:.12g}. This was not preregistered.",
+            f"Adaptive vs Strong-only exact two-sided McNemar test is post-hoc and secondary: b={paired['A_only_pass']}, c={paired['B_only_pass']}, p={paired['exact_mcnemar_two_sided_p_value']:.12g}. Adaptive can retain an earlier-tier pass and fall back to BEST, so the comparison is architecturally asymmetric. This was not preregistered.",
             "",
             "## Limitations",
             "",
-            "The run used one deterministic completion per tier and fixed seed; it does not measure sampling, seed, or prompt robustness. HumanEval/MBPP contamination is plausible. Exact generated programs were not persisted, so they cannot be independently re-evaluated. BALANCED and adaptive BEST outcomes are observed only after earlier-tier failures. The frozen budget curve is nondiscriminating because its first cutoff exceeds every method's actual expenditure. No external leaderboard or commercial API-cost claim is supported.",
+            "The same finite EvalPlus Plus result gated escalation and scored the endpoint, so no independent verifier is evaluated. Adaptive received up to three oracle-checked attempts while Strong-only received one; repeated-FAST, repeated-BEST, fixed-cascade, Balanced-only, and budget-matched sampling baselines are absent. Routing statistics updated online, so earlier labels and task order could affect later routes. The run used one deterministic completion per tier, one fixed seed and order, one model/quantization family, and one hardware configuration. HumanEval/MBPP contamination is plausible and repository-scale engineering is not measured. Exact generated programs were not persisted. BALANCED and adaptive BEST outcomes are conditionally selected after earlier-tier failures. The frozen budget curve is nondiscriminating. No predictive-routing, equal-budget, external leaderboard, or commercial API-cost claim is supported.",
             "",
         ]
     )

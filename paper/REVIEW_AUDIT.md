@@ -1,29 +1,29 @@
-# Skeptical review audit
+# Final scientific review audit
 
-This document records an adversarial, publication-stage review of the
-manuscript against the immutable audit and sanitized result export.
+This review checks the corrected v1.1 manuscript against the immutable audit
+and sanitized result export. It does not rerun the benchmark.
 
-| Reviewer objection | Valid? | Manuscript/repository change | Remaining unresolved limitation |
-| --- | --- | --- | --- |
-| The 331 versus 297 comparison could be presented as universal superiority. | Yes | Abstract, Results, Analysis, and Conclusion now use bounded operating-point language and explicitly state that no universal advantage is established. | Generalization requires new tasks, seeds, and hardware. |
-| Weighted tokens could be mistaken for FLOPs or generic compute. | Yes | Every use is labeled a model-size-weighted token cost proxy; raw tokens and physical measurements are reported separately. | Parameter-weighted tokens remain an approximate accounting device. |
-| Prompt/prefill work might be omitted. | Yes | Input, output, and total tokens are reported; the total proxy includes input tokens. | One reconciled attempt lacks original timing/status fields even though token totals were recovered. |
-| Adaptive receives up to three attempts while Strong-only receives one. | Yes | Operational final pass rate is separated from expenditure discussion; equal-budget curves and their failure are described. | The frozen historical curve is nondiscriminating because actual spending is below the first cutoff. |
-| BALANCED outcomes are selected after failures and are not a baseline. | Yes | Conditional tier rows are explicitly labeled observed conditional outcomes; no standalone Balanced claim is made. | A future Balanced-only and fixed-cascade ablation is required. |
-| Initial routing may be overinterpreted as intelligent prediction. | Yes | The paper reports FAST 531, BALANCED 0, BEST 11 and calls evidence for initial predictive routing weak. | The historical online state was reconstructed rather than persisted at every decision. |
-| The cascade might be described as failure-feedback repair. | Yes | Architecture and related-work sections state that later tiers received the original prompt and no failed output or verifier feedback. | Feedback-aware escalation remains future work. |
-| Six verifier failures could be hidden by excluding them. | Yes | The primary denominator retains all 542 tasks; 536-task values are clearly post-hoc diagnostics. | The shared infrastructure defect was not repaired and rerun for the historical study. |
-| McNemar significance could replace practical effect size. | Yes | The test is labeled post-hoc and paired risk difference and counts are reported alongside it. | No preregistered statistical analysis exists for this historical run. |
-| Public benchmark contamination could invalidate absolute scores. | Yes | HumanEval/MBPP age and plausible contamination are listed as threats; no general-intelligence claim is made. | Newer/private task sets are needed. |
-| External leaderboard rankings could create unfair comparisons. | Yes | No GPT/Claude/Gemini ranking is reproduced; only method-level related work is cited. | Independent same-protocol comparisons remain future work. |
-| Historical outputs cannot be independently re-executed. | Yes | The output-retention limitation is stated in the method text, limitations, conclusion, and reproducibility guide. | Exact old generated programs were not retained. |
-| Citation metadata might be corrupted or fabricated. | Yes | Twelve references are checked by analysis/validate_references.py against primary-source URLs/DOIs and a validation report is included. | URLs should be rechecked if a future release changes versions. |
-| The paper could imply the study is an EHMN benchmark. | Yes | The title, abstract, README, and methodology identify it as an Adaptive Workflow study and explicitly distinguish it from EHMN. | The related conceptual paper is not analyzed as an experimental baseline. |
-| Privacy review might miss private paths or credentials. | Yes | The public bundle is allowlisted, the source snapshot omits private state, and analysis/run_checks.py records zero matches. | Users must review licenses and any later additions before release. |
+| Reviewer objection | Resolution in v1.1 | Remaining limitation |
+| --- | --- | --- |
+| The same EvalPlus Plus result controlled escalation and scored the endpoint. | The study is consistently labeled oracle-gated and no independent-verifier claim is made. | A held-out or deployment verifier requires a new experiment. |
+| Adaptive had up to three attempts while Strong-only had one. | The structural asymmetry and more-attempts confound are explicit; +34 tasks and +6.27 points are emphasized. | Repeated-FAST, repeated-BEST, fixed-cascade, Balanced-only, and budget-matched baselines were not run. |
+| McNemar's result could be overinterpreted. | The exact p-value is labeled post-hoc, secondary, and architecturally asymmetric. | There was no preregistered analysis. |
+| Tier success rates could be read as standalone capability. | FAST saw nearly all tasks; BALANCED and BEST saw selected residual failures. Tier-use composition is not called efficiency. | A full static Balanced-only condition is absent. |
+| Routing could be mistaken for a trained predictive router. | The paper states that hand-written features and online statistics routed 531 FAST, 0 BALANCED, and 11 BEST, with a fixed confidence value. | Predictive-routing superiority is not established. |
+| Online statistics can leak earlier labels into later routing. | The run is described as online sequential evaluation, not held-out frozen-router evaluation; task-order sensitivity is explicit. | Multiple orders and a frozen-router study require new runs. |
+| Escalation could be described as feedback-guided repair. | Later tiers are stated to receive the original prompt only, not failed code or test feedback. | Feedback-aware repair remains future work. |
+| Weighted tokens could be mistaken for physical compute or cost. | They are labeled model-size-weighted token accounting proxies. Raw tokens, calls, sample-integrated CPU estimates, RAM, and summed generation-and-verification time remain visible. | No FLOP, energy, API-credit, or dollar-cost measurement exists. |
+| The +10.65% successes-per-proxy value could become the headline. | It is retained only as a post-hoc secondary diagnostic. | The frozen budget curve is nondiscriminating and gives no equal-budget evidence. |
+| EvalPlus passing could be presented as proof of correctness. | The endpoint is called a finite Plus-test pass; false acceptance or rejection remains possible. | Independent re-evaluation of old candidates is impossible because generated programs were not retained. |
+| Six MBPP failures could be hidden. | All remain in the 542-task denominator. Sanitized tracebacks directly establish the failures; combined static evidence strongly indicates five deserialization mismatches and a tmpfs binding limit for Mbpp/255. | Exact historical source is unavailable, and corrected task outcomes require a new benchmark run. |
+| Old public benchmarks may be contaminated. | Plausible contamination and lack of repository-scale coverage are explicit; LiveCodeBench and BigCodeBench are cited as modern context only. | New benchmark experiments were not run. |
+| Current code could be mistaken for the historical source. | Documentation distinguishes the post-run improved harness from the unrecoverable exact historical tree and preserves its hash. | Exact historical source reconstruction is unavailable. |
+| Model licenses could be flattened under MIT. | The paper/repository separates project MIT, paper CC BY 4.0, OpenAI notices, benchmark obligations, and Qwen tier licenses. | Users must review upstream terms before redistributing model artifacts. |
+| AI involvement could be understated. | The paper and repository use the transparent AI-assistance disclosure. | AI assistance is not independent peer review. |
 
-## Review conclusion
+## Conclusion
 
-The valid objections are addressed in the manuscript and the reproducibility
-bundle. The remaining issues are empirical limitations that cannot be fixed
-without a new preregistered benchmark run. No historical records were modified
-to address the review.
+The manuscript and repository now support only the bounded conclusion that the
+three deterministic Qwen2.5-Coder tiers had non-nested EvalPlus pass sets and
+that an oracle-gated cascade retained 34 passes absent from the single 7B
+condition at this operating point. No historical result was modified.

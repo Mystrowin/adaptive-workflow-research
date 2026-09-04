@@ -1,12 +1,23 @@
 {
+  "calculation_reproduction": "passed",
+  "canonical_paper_pdf_sha256": "4e498f4344002f41cb78afdd96ccc74b9391c4d888178ddb31c63e9b07d4eabb",
+  "current_source_bundle_scope": "analysis/, benchmark/, and paper/references.bib; excludes historical private artifacts and generated PDF/results",
+  "current_source_bundle_sha256": "cdf66e2591bc6c693f06304e8ba4b694ff7c1fb894d819f91ab0e28140b2fadd",
   "errors": [],
+  "hash_algorithm": "sha256-path-manifest-v2-posix-relative-order",
   "historical_raw_hashes": {
+    "frozen_source_tree": "0d24437e9297466c3f28a7af677a76d7e54c10dc6358edb7b724d586040e7859",
     "raw_results_jsonl": "6926147073d0e5b3ffe93ecb3d9c8619707b24f0b48a843d25db6627602268da",
     "results_sqlite": "138d04bc1c2f3b6609a56cc2a5e77a6d024035f22d948f81a674139ef06976e7"
   },
   "historical_records_modified": false,
   "missing_generated_artifacts": [],
-  "publication_bundle_sha256": "451a1895f28108a2a3d6aeaaa60038bf1cb7b642ac7d4894b029d86b1ba92d72",
+  "publication_bundle_sha256": "dff17fcc2259789267bd580a1a3aa369739a5826600996226d2e24f202148411",
+  "recorded_release_bundle_sha256": "dff17fcc2259789267bd580a1a3aa369739a5826600996226d2e24f202148411",
+  "recorded_release_source_bundle_sha256": "cdf66e2591bc6c693f06304e8ba4b694ff7c1fb894d819f91ab0e28140b2fadd",
+  "release_byte_integrity": "passed",
+  "source_byte_integrity": "passed",
   "status": "passed",
-  "validated_at": "2026-08-30T19:26:30.513091+00:00"
+  "validated_at": "2026-09-04T17:59:22.203652+00:00",
+  "verification_mode": "release-integrity"
 }

@@ -1,4 +1,3 @@
 # Analysis-only dependencies. No model or network access is required.
 Pillow>=10,<13
 pypdf>=4,<7
-reportlab>=4,<5

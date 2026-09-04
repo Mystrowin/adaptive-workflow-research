@@ -1,28 +1,41 @@
 # Limitations and threats to validity
 
-1. The result is one deterministic run on one Windows machine and one hardware
-   configuration.
-2. HumanEval and MBPP are old public benchmarks; training-set contamination is
-   plausible.
-3. The run used one same-family Qwen2.5-Coder tier set. Results may not transfer
-   to other model families, quantizations, runtimes, or hardware.
-4. BALANCED and later BEST attempts were conditional on earlier deterministic
-   failures. Their observed overlap is not a full 542-task standalone baseline.
-5. There was no historical Balanced-only condition and no fixed-cascade ablation.
-6. The router updated statistics online. It was not evaluated as a frozen router
-   on an untouched held-out set.
-7. The historical run did not retain exact generated programs or output hashes,
-   preventing exact output-level re-evaluation.
-8. Six MBPP verifier/infrastructure failures were shared across conditions.
-   They remain in the primary denominator; excluding them is post-hoc only.
-9. The frozen equal-budget cutoffs were above every condition's actual
-   expenditure, so the stored budget curves do not discriminate conditions.
-10. Token proxies multiply parameter count by token counts. Parameter count does
-    not equal measured FLOPs, and the proxies do not represent energy, API
-    price, or generic resource consumption.
-11. CPU, wall time, RAM, and model-load measurements are machine-specific and
-    should not be generalized as universal costs.
-12. A single deterministic completion per task does not estimate pass@k or
-    stochastic variability.
-13. The task set measures function-level Python synthesis, not repository-scale
-    software engineering or general intelligence.
+1. The same EvalPlus Plus result controlled escalation and final scoring. The
+   experiment is oracle-gated and does not establish independent-verifier
+   effectiveness.
+2. Adaptive could retain earlier-tier passes and fall back to BEST, while
+   Strong-only received one BEST attempt. Zero Strong-only-only passes is
+   structurally unsurprising under deterministic-equivalent common attempts.
+3. The more-attempts confound is unresolved. Balanced-only, fixed cascade,
+   repeated-BEST, repeated-FAST, and budget-matched alternatives were not run.
+4. The router used hand-written features, online statistics, and a fixed
+   confidence value. It was overwhelmingly FAST-first, not a trained predictive
+   router.
+5. Online updates used earlier EvalPlus labels. One task order was tested, and
+   later routing can be order-sensitive.
+6. FAST saw nearly all tasks; BALANCED and BEST saw selected harder residuals.
+   Conditional tier rates are not standalone capability estimates.
+7. Later tiers received the original prompt only. No feedback-guided repair was
+   evaluated.
+8. EvalPlus is a finite measurement instrument, not proof of semantic
+   correctness. Oracle/test defects may cause false rejection or acceptance.
+9. Six shared MBPP failures remain in the 542-task denominator. Their preserved
+   evidence is documented, but the historical run was not rerun after fixes.
+10. Exact historical generated programs and output hashes were not retained,
+    preventing output-level re-evaluation.
+11. HumanEval and MBPP are old public benchmarks; contamination is plausible.
+    They do not measure repository-scale engineering or general modern coding
+    ability. LiveCodeBench and BigCodeBench are future contexts, not results.
+12. One model family, Q4_K_M quantization family, hardware configuration,
+    runtime configuration, seed, deterministic sampling setting, and task order
+    were tested. No multi-seed robustness study was run.
+13. Model-size-weighted token proxies are not FLOPs, energy, API cost, or
+    hardware work. The +10.65% successes-per-proxy value is post-hoc and
+    secondary.
+14. CPU-seconds are sample-integrated estimates and can miss sub-sample spikes.
+    Wall time is summed generation-and-verification time, not end-to-end elapsed
+    experiment time.
+15. The frozen equal-budget cutoffs are nondiscriminating and provide no
+    equal-budget evidence.
+16. The current public harness contains post-run improvements and is not
+    byte-identical to the historical source identified by the preserved hash.
